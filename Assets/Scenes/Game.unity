@@ -22700,8 +22700,8 @@ GameObject:
   - component: {fileID: 1006128963}
   - component: {fileID: 1006128962}
   - component: {fileID: 1006128961}
-  - component: {fileID: 1006128965}
   - component: {fileID: 1006128966}
+  - component: {fileID: 1006128965}
   m_Layer: 0
   m_Name: Game
   m_TagString: Untagged
@@ -22796,11 +22796,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1006128960}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e7c35bfabb6c4e448e8a9a1e5494557, type: 3}
+  m_Script: {fileID: 11500000, guid: a09ef33796e2fd04194fcccebaef1809, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Map: {fileID: 82805245}
-  mapPosition: {x: 0, y: 0}
+  CountryList: []
 --- !u!114 &1006128966
 MonoBehaviour:
   m_ObjectHideFlags: 0

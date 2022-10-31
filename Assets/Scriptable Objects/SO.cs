@@ -114,5 +114,6 @@ public class Country : ScriptableObject
     public int Stail;
     public int Topluvo;
     public int Kauchuk;
+    public int Popularity;
 
 }
