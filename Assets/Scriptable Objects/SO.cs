@@ -109,5 +109,10 @@ public class Country : ScriptableObject
     public int Stabilnisty;
     public int ProcentViyskovoZob;
     public int KilkistyRecruit;
+    public int Money;
+    public int BuildResourse;
+    public int Stail;
+    public int Topluvo;
+    public int Kauchuk;
 
 }
