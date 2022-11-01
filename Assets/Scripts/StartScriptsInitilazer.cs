@@ -35,6 +35,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             {
                 sumSteps += DivisionList[i].polks[j].Step;
                 kilkPols++;
+                DivisionList[i].Price += DivisionList[i].polks[j].Price;
             }
             DivisionList[i].ZagStep = sumSteps / kilkPols;
         }

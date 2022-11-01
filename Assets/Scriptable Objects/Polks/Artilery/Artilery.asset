@@ -9,11 +9,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: Garrizon
-  m_EditorClassIdentifier: Assembly-CSharp::Garrizon
-  Name: Garrizon
-  Type: 0
-  Price: 10
-  Hit: 10
-  Damage: 1
+  m_Name: Artilery
+  m_EditorClassIdentifier: Assembly-CSharp::Artilery
+  Name: Artilery
+  Type: 2
+  Price: 200
+  Hit: 100
+  Damage: 40
   Step: 1

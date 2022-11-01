@@ -32,7 +32,7 @@ public class Artilery : Polk
 [CreateAssetMenu(fileName = "Tanks", menuName = "Create objects/Polk/Tanks")]
 public class Tanks : Polk
 {
-    public string Bronya;
+    public int Bronya;
 }
 
 [CreateAssetMenu(fileName = "Motorized", menuName = "Create objects/Polk/Motorized")]

@@ -66,6 +66,7 @@ public class Polk : ScriptableObject {
     public TypePolk Type;
     public int Price;
     public int Hit;
+    public int Damage;
     public int Step;
 
 }
@@ -78,6 +79,7 @@ public class Flot : ScriptableObject
     public TypeFlot Type;
     public int Price;
     public int Hit;
+    public int Damage;
     public int Bronya;
     public int Step;
 
@@ -90,6 +92,7 @@ public class Flotiliya : ScriptableObject
     public string Name;
     public List<Flot> flots;
     public double ZagStep;
+    public int Price;
 
 }
 
@@ -99,7 +102,8 @@ public class Division : ScriptableObject
 
     public string Name;
     public List<Polk> polks;
-    public int ZagStep; 
+    public int ZagStep;
+    public int Price;
 
 }
 
