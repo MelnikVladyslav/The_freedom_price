@@ -22,6 +22,15 @@ public enum TypePolk
     Btr
 }
 
+public enum TypeFlot
+{
+    Submarine,
+    Esminec,
+    Kreyser,
+    Linkor,
+    Airship
+}
+
 public enum TypeCountry
 {
     Neutrall,
@@ -46,7 +55,7 @@ public class Build : ScriptableObject
 {
     public string Name;
     public TypeBuild Type;
-    public string Price;
+    public int Price;
 
 }
 
@@ -55,9 +64,32 @@ public class Polk : ScriptableObject {
 
     public string Name;
     public TypePolk Type;
-    public string Price;
-    public string Hit;
-    public string Step;
+    public int Price;
+    public int Hit;
+    public int Step;
+
+}
+
+[CreateAssetMenu(fileName = "Flot", menuName = "Create objects/Flot")]
+public class Flot : ScriptableObject
+{
+
+    public string Name;
+    public TypeFlot Type;
+    public int Price;
+    public int Hit;
+    public int Bronya;
+    public int Step;
+
+}
+
+[CreateAssetMenu(fileName = "Flotiliya", menuName = "Create objects/Flotiliya")]
+public class Flotiliya : ScriptableObject
+{
+
+    public string Name;
+    public List<Flot> flots;
+    public double ZagStep;
 
 }
 
@@ -67,6 +99,7 @@ public class Division : ScriptableObject
 
     public string Name;
     public List<Polk> polks;
+    public int ZagStep; 
 
 }
 

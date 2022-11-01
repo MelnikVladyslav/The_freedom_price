@@ -6,9 +6,13 @@ using UnityEngine.SceneManagement;
 public class StartScriptsInitilazer : MonoBehaviour
 {
     public List<Country> CountryList = new List<Country>();
+    public List<Division> DivisionList = new List<Division>();
 
     public void Start()
     {
+        int sumSteps = 0;
+        int kilkPols = 0;
+
         for (int i = 0; i < CountryList.Count; i++)
         {
             CountryList[i].Stabilnisty = 50 + (100 / CountryList[i].Popularity);
@@ -23,6 +27,16 @@ public class StartScriptsInitilazer : MonoBehaviour
             CountryList[i].Stail = 2500;
             CountryList[i].Topluvo = 1000;
             CountryList[i].Kauchuk = 1000;
+        }
+
+        for (int i = 0; i < DivisionList.Count; i++)
+        {
+            for (int j = 0; j < DivisionList[i].polks.Count; j++)
+            {
+                sumSteps += DivisionList[i].polks[j].Step;
+                kilkPols++;
+            }
+            DivisionList[i].ZagStep = sumSteps / kilkPols;
         }
     }
 
