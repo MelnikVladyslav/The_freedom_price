@@ -22,6 +22,12 @@ public enum TypePolk
     Btr
 }
 
+public enum TypeAir
+{
+    Fighter,
+    Bomber
+}
+
 public enum TypeFlot
 {
     Submarine,
@@ -64,6 +70,19 @@ public class Polk : ScriptableObject {
 
     public string Name;
     public TypePolk Type;
+    public int Price;
+    public int Hit;
+    public int Damage;
+    public int Step;
+
+}
+
+[CreateAssetMenu(fileName = "Air", menuName = "Create objects/Air")]
+public class Air : ScriptableObject
+{
+
+    public string Name;
+    public TypeAir Type;
     public int Price;
     public int Hit;
     public int Damage;
