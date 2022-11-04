@@ -12,6 +12,7 @@ public class StartScriptsInitilazer : MonoBehaviour
     {
         int sumSteps = 0;
         int kilkPols = 0;
+        int kilkNayn = 0;
 
         for (int i = 0; i < CountryList.Count; i++)
         {
@@ -19,9 +20,13 @@ public class StartScriptsInitilazer : MonoBehaviour
             for (int j = 0; j < CountryList[i].regions.Count; j++)
             {
                 CountryList[i].PopulationCount += CountryList[i].regions[j].Population;
+                for (int a = 0; a < CountryList[i].regions[j].divisions.Count; a++)
+                {
+                    kilkNayn += CountryList[i].regions[j].divisions[a].polks.Count * 100;
+                }
             }
             CountryList[i].ProcentViyskovoZob = 10;
-            CountryList[i].KilkistyRecruit = CountryList[i].PopulationCount * (100 / CountryList[i].ProcentViyskovoZob);
+            CountryList[i].KilkistyRecruit = CountryList[i].PopulationCount * (100 / CountryList[i].ProcentViyskovoZob) - kilkNayn;
             CountryList[i].Money = 10000;
             CountryList[i].BuildResourse = 5000;
             CountryList[i].Stail = 2500;
