@@ -147,7 +147,10 @@ public class Technology : ScriptableObject
     public int Time;
     public List<Technology> TechsNeed;
     public List<Build> builds;
-    public List<Polk> polks; 
+    public List<Polk> polks;
+    public int PlusCiv;
+    public int PlusArm;
+    public int PlusCount;
 
 }
 

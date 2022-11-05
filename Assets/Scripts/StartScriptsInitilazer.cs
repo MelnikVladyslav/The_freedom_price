@@ -7,11 +7,12 @@ public class StartScriptsInitilazer : MonoBehaviour
 {
     public List<Country> CountryList = new List<Country>();
     public List<Division> DivisionList = new List<Division>();
+    public List<Technology> TechnologyList = new List<Technology>();
+    public List<Polk> PolkList = new List<Polk>();
+    public List<Build> BuildList = new List<Build>();
 
     public void Start()
     {
-        int sumSteps = 0;
-        int kilkPols = 0;
         int kilkNayn = 0;
 
         for (int i = 0; i < CountryList.Count; i++)
@@ -32,23 +33,39 @@ public class StartScriptsInitilazer : MonoBehaviour
             CountryList[i].Stail = 2500;
             CountryList[i].Topluvo = 1000;
             CountryList[i].Kauchuk = 1000;
+            CountryList[i].techs.Add(TechnologyList[0]);
         }
 
-        for (int i = 0; i < DivisionList.Count; i++)
-        {
-            for (int j = 0; j < DivisionList[i].polks.Count; j++)
-            {
-                sumSteps += DivisionList[i].polks[j].Step;
-                kilkPols++;
-                DivisionList[i].Price += DivisionList[i].polks[j].Price;
-            }
-            DivisionList[i].ZagStep = sumSteps / kilkPols;
-        }
+        InitilizerTechnology();
+    }
+
+    void InitilizerTechnology()
+    {
+        // Initilization Basic technology
+        TechnologyList[0].polks.Add(PolkList[0]);
+        TechnologyList[0].polks.Add(PolkList[1]);
+        TechnologyList[0].builds.Add(BuildList[0]);
+
     }
 
     public void Update()
     {
-        
+        int sumSteps = 0;
+        int kilkPols = 0;
+        if (DivisionList.Count > 0)
+        {
+            for (int i = 0; i < DivisionList.Count; i++)
+            {
+                for (int j = 0; j < DivisionList[i].polks.Count; j++)
+                {
+                    sumSteps += DivisionList[i].polks[j].Step;
+                    kilkPols++;
+                    DivisionList[i].Price += DivisionList[i].polks[j].Price;
+                }
+                DivisionList[i].ZagStep = sumSteps / kilkPols;
+            }
+        }
+
     }
 
 }
