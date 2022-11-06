@@ -22799,13 +22799,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a09ef33796e2fd04194fcccebaef1809, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CountryList: []
-  DivisionList: []
-  TechnologyList:
-  - {fileID: 11400000, guid: ad94dda27cec0394b9fc2d57f5bf2ccd, type: 2}
-  PolkList:
-  - {fileID: 11400000, guid: 3c51534efe591c643917a325d3335bbe, type: 2}
-  BuildList: []
 --- !u!114 &1006128966
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -56,17 +56,20 @@ public enum Idelogies
 }
 
 
-[CreateAssetMenu(fileName = "Build", menuName = "Create objects/Build")]
-public class Build : ScriptableObject
+public class Build
 {
     public string Name;
     public TypeBuild Type;
     public int Price;
+    public int Dohid;
+    public int ZnArmy;
+    public int Hit;
+    public int Damage;
 
 }
 
-[CreateAssetMenu(fileName = "Polk", menuName = "Create objects/Polk")]
-public class Polk : ScriptableObject {
+public class Polk
+{
 
     public string Name;
     public TypePolk Type;
@@ -74,11 +77,11 @@ public class Polk : ScriptableObject {
     public int Hit;
     public int Damage;
     public int Step;
+    public int Bronya;
 
 }
 
-[CreateAssetMenu(fileName = "Air", menuName = "Create objects/Air")]
-public class Air : ScriptableObject
+public class Air 
 {
 
     public string Name;
@@ -90,8 +93,7 @@ public class Air : ScriptableObject
 
 }
 
-[CreateAssetMenu(fileName = "Flot", menuName = "Create objects/Flot")]
-public class Flot : ScriptableObject
+public class Flot
 {
 
     public string Name;
@@ -104,8 +106,7 @@ public class Flot : ScriptableObject
 
 }
 
-[CreateAssetMenu(fileName = "Flotiliya", menuName = "Create objects/Flotiliya")]
-public class Flotiliya : ScriptableObject
+public class Flotiliya
 {
 
     public string Name;
@@ -115,8 +116,7 @@ public class Flotiliya : ScriptableObject
 
 }
 
-[CreateAssetMenu(fileName = "Division", menuName = "Create objects/Division")]
-public class Division : ScriptableObject
+public class Division
 {
 
     public string Name;
@@ -126,8 +126,7 @@ public class Division : ScriptableObject
 
 }
 
-[CreateAssetMenu(fileName = "Region", menuName = "Create objects/Region")]
-public class Region : ScriptableObject
+public class Region 
 {
 
     public string Name;
@@ -139,8 +138,7 @@ public class Region : ScriptableObject
 
 }
 
-[CreateAssetMenu(fileName = "Technology", menuName = "Create objects/Technology")]
-public class Technology : ScriptableObject
+public class Technology 
 {
 
     public string Name;
@@ -154,8 +152,7 @@ public class Technology : ScriptableObject
 
 }
 
-[CreateAssetMenu(fileName = "Country", menuName = "Create objects/Country")]
-public class Country : ScriptableObject
+public class Country 
 {
 
     public string Name;
