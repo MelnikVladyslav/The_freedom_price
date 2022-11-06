@@ -236,17 +236,163 @@ public class StartScriptsInitilazer : MonoBehaviour
         };
         TechnologyList = new List<Technology>()
         {
+            //1935
+            //0
             new Technology
             {
                 Name = "Basic technology",
                 Time = 0
+            },
+            //1936
+            // Civil
+            //1
+            new Technology
+            {
+                Name = "Construction I",
+                Time = 2,
+                PlusCiv = 10 // silskGospod
+            },
+            // Viyskova pr
+            //2
+            new Technology
+            {
+                Name = "Basic machine tools",
+                Time = 2,
+                PlusArm = 2
+            },
+            // Country bonus
+            //3
+            new Technology
+            {
+                Name = "Electronic mechanical engineering",
+                Time = 2,
+                PlusCount = 1 //stabilnisty
+            },
+            //Army
+            //4
+            new Technology
+            {
+                Name = "Infantry Equipment I",
+                Time = 2,
+                PlusArm = 5 // Add damage Garrizon and Pihota polks
+            },
+            //5
+            new Technology
+            {
+                Name = "Motorized",
+                Time = 2
+            },
+            // Technika
+            //6
+            new Technology
+            {
+                Name = "Light Tank I",
+                Time = 2
+            },
+            //Air
+            //7
+            new Technology
+            {
+                Name = "Fighter I and Bomber I",
+                Time = 2,
+                PlusArm = 10 // Add Hit and Damage
+            },
+            //Flot
+            //8
+            new Technology
+            {
+                Name = "Flot I",
+                Time = 2,
+                PlusArm = 10 // Add Hit and Damage
+            },
+            // Land doctrines
+            //9
+            new Technology
+            {
+                Name = "Mobile Warfare",
+                Time = 2
+            },
+            //10
+            new Technology
+            {
+                Name = "Superior Firepower",
+                Time = 2,
+                PlusArm = 5 // Add damage artillery
+            },
+            //11
+            new Technology
+            {
+                Name = "Trench Warfare",
+                Time = 2
+            },
+            //12
+            new Technology
+            {
+                Name = "Mass Assault",
+                Time = 2,
+                PlusArm = 5 // Minus 5% to price pihota
+            },
+            // Air doctrines
+            //13
+            new Technology
+            {
+                Name = "Air Superiority",
+                Time = 2,
+                PlusArm = 5 // Add damage fighters
+            },
+            //14
+            new Technology
+            {
+                Name = "Formation Flying",
+                Time = 2,
+                PlusArm = 7 // Add damage fighters
+            },
+            //15
+            new Technology
+            {
+                Name = "Force Rotation",
+                Time = 2,
+                PlusArm = 8 // Add Hit fighters
+            },
+            // Naval doctrines
+            //16
+            new Technology
+            {
+                Name = "Fleet In Being",
+                Time = 2,
+                PlusArm = 5 // Add damage and hit esminec, kreyser and linkor
+            },
+            //17
+            new Technology
+            {
+                Name = "Trade Interdiction",
+                Time = 2,
+                PlusArm = 5 // Add damage and hit esminec and submarine
+            },
+            //18
+            new Technology
+            {
+                Name = "Base Strike",
+                Time = 2,
+                PlusArm = 5 // Add damage and hit airship and bombers
             }
+            //1937
+
         };
 
         // Initilization BasicTechnology
         TechnologyList[0].builds.Add(BuildList[0]);
+        TechnologyList[0].builds.Add(BuildList[2]);
+        TechnologyList[0].builds.Add(BuildList[3]);
+        TechnologyList[0].builds.Add(BuildList[4]);
         TechnologyList[0].polks.Add(PolkList[0]);
         TechnologyList[0].polks.Add(PolkList[1]);
+        TechnologyList[0].polks.Add(PolkList[2]);
+
+        // Initilization technology 1936
+        TechnologyList[1].builds.Add(BuildList[1]);
+        TechnologyList[5].polks.Add(PolkList[4]);
+        TechnologyList[6].polks.Add(PolkList[6]);
     }
 
     void InitilizerCountry()
