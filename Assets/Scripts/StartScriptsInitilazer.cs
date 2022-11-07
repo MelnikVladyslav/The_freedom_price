@@ -274,7 +274,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             {
                 Name = "Infantry Equipment I",
                 Time = 2,
-                PlusArm = 5 // Add damage Garrizon and Pihota polks
+                PlusArm = 5 // Add hit and damage Garrizon and Pihota polks
             },
             //5
             new Technology
@@ -481,6 +481,120 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Name = "Convoy Escorts",
                 Time = 2,
                 PlusArm = 5 // Add damage and hit esminecs
+            },
+            //1938
+            // Civil
+            //33
+            new Technology
+            {
+                Name = "Construction III",
+                Time = 2,
+                PlusCiv = 10 // civilPromka
+            },
+            // Viyskova pr
+            //34
+            new Technology
+            {
+                Name = "Advanced machine tools",
+                Time = 2,
+                PlusArm = 2
+            },
+            // Army
+            //35
+            new Technology
+            {
+                Name = "Improved Infantry Equipment I",
+                Time = 2,
+                PlusArm = 5 //Add damage garrizon, pihota and motorized/mechanized polks
+            },
+            // Country bonus
+            //36
+            new Technology
+            {
+                Name = "Decimetric radar",
+                Time = 2,
+                PlusCount = 3 //stabilnisty
+            },
+            //Flot
+            //37
+            new Technology
+            {
+                Name = "Flot III",
+                Time = 2,
+                PlusArm = 10 // Add Hit and Damage
+            },
+            // Land doctrines
+            //38
+            new Technology
+            {
+                Name = "Elastic Defense",
+                Time = 2,
+                PlusArm = 5 // Add bronya tanks and btrs
+            },
+            //39
+            new Technology
+            {
+                Name = "Mobile Defense",
+                Time = 2,
+                PlusArm = 5 // Add bronya pihota, garrizons and motorized/mechanized
+            },
+            //40
+            new Technology
+            {
+                Name = "Prepared Defense",
+                Time = 2,
+                PlusArm = 7 // Add bronya pihota, garrizons and motorized/mechanized
+            },
+            //41
+            new Technology
+            {
+                Name = "Defense in Depth",
+                Time = 2,
+                PlusArm = 5 // Add 5 to hit pihota polks
+            },
+            // Air doctrines
+            //42
+            new Technology
+            {
+                Name = "Naval Strike Tactics",
+                Time = 2,
+                PlusArm = 5 // Add damage airships
+            },
+            //43
+            new Technology
+            {
+                Name = "Direct Ground Support",
+                Time = 2,
+                PlusArm = 7 // Add hit fighters
+            },
+            //44
+            new Technology
+            {
+                Name = "Low Echelon Support",
+                Time = 2,
+                PlusArm = 8 // Add hit fighters
+            },
+            // Naval doctrines
+            //45
+            new Technology
+            {
+                Name = "Convoy Escorts in Being",
+                Time = 2,
+                PlusArm = 5 // Add damage and hit esminecs
+            },
+            //46
+            new Technology
+            {
+                Name = "Capital Ship Raiders",
+                Time = 2,
+                PlusArm = 5 // Add damage and hit linkors
+            },
+            //47
+            new Technology
+            {
+                Name = "Undersea Blockade",
+                Time = 2,
+                PlusArm = 5 // Add damage and hit submarinecs
             }
 
 

@@ -143,7 +143,6 @@ public class Technology
 
     public string Name;
     public int Time;
-    public List<Technology> TechsNeed;
     public List<Build> builds;
     public List<Polk> polks;
     public int PlusCiv;
