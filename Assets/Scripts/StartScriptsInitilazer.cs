@@ -375,8 +375,114 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Name = "Base Strike",
                 Time = 2,
                 PlusArm = 5 // Add damage and hit airship and bombers
-            }
+            },
             //1937
+            // Civil
+            //19
+            new Technology
+            {
+                Name = "Construction II",
+                Time = 2,
+                PlusCiv = 10 // civilPromka
+            },
+            // Viyskova pr
+            //20
+            new Technology
+            {
+                Name = "Improved machine tools",
+                Time = 2,
+                PlusArm = 2
+            },
+            // Country bonus
+            //21
+            new Technology
+            {
+                Name = "Radio",
+                Time = 2,
+                PlusCount = 3 //stabilnisty
+            },
+            //Flot
+            //22
+            new Technology
+            {
+                Name = "Flot II",
+                Time = 2,
+                PlusArm = 10 // Add Hit and Damage
+            },
+            // Land doctrines
+            //23
+            new Technology
+            {
+                Name = "Delay Mob War",
+                Time = 2,
+                PlusArm = 5 // Add hit pihota and motorized/mehanized
+            },
+            //24
+            new Technology
+            {
+                Name = "Delay",
+                Time = 2,
+                PlusArm = 3 // Add hit pihota
+            },
+            //25
+            new Technology
+            {
+                Name = "Grand Battle Plan",
+                Time = 2,
+                PlusArm = 7 // Zmenchenya price for polks 
+            },
+            //26
+            new Technology
+            {
+                Name = "Pocket Defense",
+                Time = 2,
+                PlusArm = 5 // Add 5% to hit polks in kotels
+            },
+            // Air doctrines
+            //27
+            new Technology
+            {
+                Name = "Infrastructure Destruction",
+                Time = 2,
+                PlusArm = 5 // Add damage bombers
+            },
+            //28
+            new Technology
+            {
+                Name = "Dive Bombing",
+                Time = 2,
+                PlusArm = 7 // Add damage airships
+            },
+            //29
+            new Technology
+            {
+                Name = "Fighter Baiting",
+                Time = 2,
+                PlusArm = 8 // Add Hit fighters
+            },
+            // Naval doctrines
+            //30
+            new Technology
+            {
+                Name = "Submarine Operations",
+                Time = 2,
+                PlusArm = 5 // Add damage and hit submarines
+            },
+            //31
+            new Technology
+            {
+                Name = "Carrier Operations",
+                Time = 2,
+                PlusArm = 5 // Add damage and hit airships
+            },
+            //32
+            new Technology
+            {
+                Name = "Convoy Escorts",
+                Time = 2,
+                PlusArm = 5 // Add damage and hit esminecs
+            }
+
 
         };
 
@@ -412,7 +518,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             }
             CountryList[i].ProcentViyskovoZob = 10;
             CountryList[i].KilkistyRecruit = CountryList[i].PopulationCount * (100 / CountryList[i].ProcentViyskovoZob) - kilkNayn;
-            CountryList[i].Money = 10000;
+            CountryList[i].Money = 5000;
             CountryList[i].BuildResourse = 5000;
             CountryList[i].Stail = 2500;
             CountryList[i].Topluvo = 1000;
