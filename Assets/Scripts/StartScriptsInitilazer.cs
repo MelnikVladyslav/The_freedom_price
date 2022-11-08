@@ -708,8 +708,127 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Name = "Floating Airfield",
                 Time = 2,
                 PlusArm = 5 // Add damage and hit airships
+            },
+            //1940
+            // Civil
+            //63
+            new Technology
+            {
+                Name = "Construction V",
+                Time = 2,
+                PlusCiv = 10 // civilPromka
+            },
+            // Army
+            //64
+            new Technology
+            {
+                Name = "Improved Infantry Equipment II",
+                Time = 2,
+                PlusArm = 5 ////Add damage garrizon, pihota and motorized/mechanized polks
+            },
+            //65
+            new Technology
+            {
+                Name = "Mechanized Equipment I",
+                Time = 2
+            },
+            // Air
+            //66
+            new Technology
+            {
+                Name = "Fighter II and Bomber II",
+                Time = 2,
+                PlusArm = 10 // Add Hit and Damage
+            },
+            // Country bonus
+            //67
+            new Technology
+            {
+                Name = "Centimetric radar",
+                Time = 2,
+                PlusCount = 7 //stabilnisty
+            },
+            //Flot
+            //68
+            new Technology
+            {
+                Name = "Flot V",
+                Time = 2,
+                PlusArm = 10 // Add Hit and Damage
+            },
+            // Land doctrines
+            //69
+            new Technology
+            {
+                Name = "Schwerpunkt",
+                Time = 2,
+                PlusArm = 5 // Add hit and bronya tanks
+            },
+            //70
+            new Technology
+            {
+                Name = "Overwhelming Firepower",
+                Time = 2,
+                PlusArm = 5 // Add damage artillery
+            },
+            //71
+            new Technology
+            {
+                Name = "Mechanized Offensive",
+                Time = 2,
+                PlusArm = 7 // Add hit garrizons, pihota, motorized/mechanized polks
+            },
+            //72
+            new Technology
+            {
+                Name = "Infantry Offensive",
+                Time = 2,
+                PlusArm = 5 // Add 5 to hit pihota polks
+            },
+            // Air doctrines
+            //73
+            new Technology
+            {
+                Name = "Multi-Altitude Flying",
+                Time = 2,
+                PlusArm = 5 // Add hit fighters
+            },
+            //74
+            new Technology
+            {
+                Name = "Hunt and Destroy",
+                Time = 2,
+                PlusArm = 7 // Add damage airs
+            },
+            //75
+            new Technology
+            {
+                Name = "Operational Destruction",
+                Time = 2,
+                PlusArm = 8 // Add damage bombers
+            },
+            // Naval doctrines
+            //76
+            new Technology
+            {
+                Name = "Integrated Convoy Defense",
+                Time = 2,
+                PlusArm = 5 // Add damage and hit kreysers
+            },
+            //77
+            new Technology
+            {
+                Name = "Advanced Submarine Warfare",
+                Time = 2,
+                PlusArm = 5 // Add damage and hit submarine
+            },
+            //78
+            new Technology
+            {
+                Name = "Submarine Offensive",
+                Time = 2,
+                PlusArm = 5 // Add damage and hit submarine
             }
-
 
         };
 
@@ -729,6 +848,9 @@ public class StartScriptsInitilazer : MonoBehaviour
 
         // Initilization technology 1939
         TechnologyList[50].polks.Add(PolkList[7]);
+
+        // Initilization technology 1940
+        TechnologyList[65].polks.Add(PolkList[5]);
     }
 
     void InitilizerCountry()
