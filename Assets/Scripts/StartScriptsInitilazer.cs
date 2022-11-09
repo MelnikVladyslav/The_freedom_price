@@ -828,6 +828,126 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Name = "Submarine Offensive",
                 Time = 2,
                 PlusArm = 5 // Add damage and hit submarine
+            },
+            //1941
+            // Civil
+            //79
+            new Technology
+            {
+                Name = "Construction VI",
+                Time = 2,
+                PlusCiv = 10 // civilPromka
+            },
+            // Viyskova pr
+            //80
+            new Technology
+            {
+                Name = "Assembly line production",
+                Time = 2,
+                PlusArm = 2
+            },
+            // Technika
+            //81
+            new Technology
+            {
+                Name = "Light Tank II",
+                Time = 2,
+                PlusArm = 10 // Add Hit and Damage light tank
+            },
+            //82
+            new Technology
+            {
+                Name = "Medium Tank II",
+                Time = 2,
+                PlusArm = 10 // Add Hit and Damage medium tank
+            },
+            //83
+            new Technology
+            {
+                Name = "Heavy Tank II",
+                Time = 2,
+                PlusArm = 10 // Add Hit and Damage heavy tank
+            },
+            // Country bonus
+            //84
+            new Technology
+            {
+                Name = "Improved centimetric radar",
+                Time = 2,
+                PlusCount = 9 //stabilnisty
+            },
+            // Land doctrines
+            //85
+            new Technology
+            {
+                Name = "Blitzkrieg",
+                Time = 2,
+                PlusArm = 5 // Add hit polks
+            },
+            //86
+            new Technology
+            {
+                Name = "Mechanized Offensive",
+                Time = 2,
+                PlusArm = 5 // Add bronya tanks
+            },
+            //87
+            new Technology
+            {
+                Name = "Assault Concentration",
+                Time = 2,
+                PlusArm = 7 // Add hit polks
+            },
+            //88
+            new Technology
+            {
+                Name = "Large Front Offensive",
+                Time = 2,
+                PlusArm = 5 // Add hit pihota polks
+            },
+            // Air doctrines
+            //89
+            new Technology
+            {
+                Name = "Logistical Bombing",
+                Time = 2,
+                PlusArm = 5 // Add damage bombers
+            },
+            //90
+            new Technology
+            {
+                Name = "Combat Unit Destruction",
+                Time = 2,
+                PlusArm = 7 // Add damage airs
+            },
+            //91
+            new Technology
+            {
+                Name = "Ground Attack Veteran Initiative",
+                Time = 2,
+                PlusArm = 8 // Add damage bombers
+            },
+            // Naval doctrines
+            //92
+            new Technology
+            {
+                Name = "Floating Airfield",
+                Time = 2,
+                PlusArm = 5 // Add damage and hit airships
+            },
+            //93
+            new Technology
+            {
+                Name = "Combined Operations Raiding",
+                Time = 2,
+                PlusArm = 5 // Add damage and hit flots
+            },
+            //94
+            new Technology
+            {
+                Name = "Floating Fortress",
+                Time = 2,
+                PlusArm = 5 // Add damage and hit linkors
             }
 
         };
