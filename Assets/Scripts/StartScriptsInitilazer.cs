@@ -14,6 +14,7 @@ public class StartScriptsInitilazer : MonoBehaviour
     List<Flot> FlotList;
     List<Region> RegionList;
     List<Flotiliya> FlotiliyaList = new List<Flotiliya>();
+    public List<GameObject> towns = new List<GameObject>();
 
     public void Start()
     {
@@ -948,9 +949,259 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Name = "Floating Fortress",
                 Time = 2,
                 PlusArm = 5 // Add damage and hit linkors
+            },
+            //1942
+            // Civil
+            //95
+            new Technology
+            {
+                Name = "Construction VII",
+                Time = 2,
+                PlusCiv = 10 // civilPromka
+            },
+            // Army
+            //96
+            new Technology
+            {
+                Name = "Infantry Anti-Tank I",
+                Time = 2,
+                PlusArm = 10 // Add Damage pihotas polks protu techniks
+            },
+            //97
+            new Technology
+            {
+                Name = "Mechanized Equipment II",
+                Time = 2,
+                PlusArm = 10 // Add Hit and Damage mehanized polks
+            },
+            // Country bonus
+            //98
+            new Technology
+            {
+                Name = "Advanced centimetric radar",
+                Time = 2,
+                PlusCount = 11 //stabilnisty
+            },
+            // Land doctrines
+            //99
+            new Technology
+            {
+                Name = "Kampfgruppe",
+                Time = 2,
+                PlusArm = 10 // Add hit pohotas polks
+            },
+            //100
+            new Technology
+            {
+                Name = "Centralized Fire Control",
+                Time = 2,
+                PlusArm = 5 // Add damage artillery and pihotas polks
+            },
+            //101
+            new Technology
+            {
+                Name = "Branch Inter-Operation",
+                Time = 2,
+                PlusArm = 7 // Add damage pihotas and tanks polks
+            },
+            //102
+            new Technology
+            {
+                Name = "Human Wave Offensive",
+                Time = 2,
+                PlusArm = 5 // Add hit pihota polks
+            },
+            // Air doctrines
+            //103
+            new Technology
+            {
+                Name = "Night Bombing",
+                Time = 2,
+                PlusArm = 5 // Add damage bombers
+            },
+            //104
+            new Technology
+            {
+                Name = "Battlefield Support",
+                Time = 2,
+                PlusArm = 7 // Add damage airs
+            },
+            //105
+            new Technology
+            {
+                Name = "Carousel Bombing",
+                Time = 2,
+                PlusArm = 8 // Add damage bombers
+            },
+            // Naval doctrines
+            //106
+            new Technology
+            {
+                Name = "Grand Battlefleet",
+                Time = 2,
+                PlusArm = 5 // Add damage and hit linkors
+            },
+            //107
+            new Technology
+            {
+                Name = "Carrier Battlegroups",
+                Time = 2,
+                PlusArm = 5 // Add damage and hit linkors and esminecs and kreysers
+            },
+            //1943
+            // Civil
+            //108
+            new Technology
+            {
+                Name = "Construction VIII",
+                Time = 2,
+                PlusCiv = 10 // civilPromka
+            },
+            // Viyskov prom
+            //109
+            new Technology
+            {
+                Name = "Flexible line",
+                Time = 2,
+                PlusArm = 10 // viyskovPromka
+            },
+            // Army
+            //110
+            new Technology
+            {
+                Name = "Night Vision I",
+                Time = 2,
+                PlusArm = 10 // Add Damage pihotas polks protu pihotas
+            },
+            // Land doctrines
+            //111
+            new Technology
+            {
+                Name = "Volkssturm",
+                Time = 2,
+                PlusArm = 10 // Add % viyskova obovyazane
+            },
+            //112
+            new Technology
+            {
+                Name = "Forward Observers",
+                Time = 2,
+                PlusArm = 5 // Add hit artillery
+            },
+            //113
+            new Technology
+            {
+                Name = "Central Planning",
+                Time = 2,
+                PlusArm = 7 // Add hit polks
+            },
+            //114
+            new Technology
+            {
+                Name = "Guerrilla Warfare",
+                Time = 2,
+                PlusArm = 5 // Add hit polks
+            },
+            // Air doctrines
+            //115
+            new Technology
+            {
+                Name = "Massed Bomber Formations",
+                Time = 2,
+                PlusArm = 5 // Add damage bombers
+            },
+            //116
+            new Technology
+            {
+                Name = "Naval Strike Torpedo Tactics",
+                Time = 2,
+                PlusArm = 7 // Add damage airships
+            },
+            //117
+            new Technology
+            {
+                Name = "Infiltration Bombing",
+                Time = 2,
+                PlusArm = 8 // Add hit bombers
+            },
+            //1944
+            // Civil
+            //118
+            new Technology
+            {
+                Name = "Construction IX",
+                Time = 2,
+                PlusCiv = 10 // civilPromka
+            },
+            // Army
+            //119
+            new Technology
+            {
+                Name = "Infantry Equipment III",
+                Time = 2,
+                PlusArm = 10 // Add Damage pihotas polks
+            },
+            //120
+            new Technology
+            {
+                Name = "Mechanized Equipment III	",
+                Time = 2,
+                PlusArm = 10 // Add Damage mechanized polks
+            },
+            // Land doctrines
+            //121
+            new Technology
+            {
+                Name = "Non-Discriminatory Conscription",
+                Time = 2,
+                PlusArm = 10 // Add % viyskova obovyazane
+            },
+            //122
+            new Technology
+            {
+                Name = "Advanced Firebases",
+                Time = 2,
+                PlusArm = 5 // Add bronya artillery
+            },
+            //123
+            new Technology
+            {
+                Name = "C3I",
+                Time = 2,
+                PlusArm = 7 // Add hit polks
+            },
+            //124
+            new Technology
+            {
+                Name = "Guerrilla Warfare",
+                Time = 2,
+                PlusArm = 5 // Add hit polks
+            },
+            // Air doctrines
+            //125
+            new Technology
+            {
+                Name = "Flying Fortress",
+                Time = 2,
+                PlusArm = 5 // Add hit bombers
+            },
+            //126
+            new Technology
+            {
+                Name = "Strategic Destruction",
+                Time = 2,
+                PlusArm = 7 // Add damage airs
+            },
+            //127
+            new Technology
+            {
+                Name = "Air Skirmish",
+                Time = 2,
+                PlusArm = 8 // Add hit airs
             }
 
         };
+
 
         // Initilization BasicTechnology
         TechnologyList[0].builds.Add(BuildList[0]);
@@ -960,6 +1211,7 @@ public class StartScriptsInitilazer : MonoBehaviour
         TechnologyList[0].polks.Add(PolkList[0]);
         TechnologyList[0].polks.Add(PolkList[1]);
         TechnologyList[0].polks.Add(PolkList[2]);
+        TechnologyList[0].polks.Add(PolkList[3]);
 
         // Initilization technology 1936
         TechnologyList[1].builds.Add(BuildList[1]);
