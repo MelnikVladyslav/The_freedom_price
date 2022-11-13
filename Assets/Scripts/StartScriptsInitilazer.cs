@@ -1795,7 +1795,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Region()
             {
                 Name = "Lutsk",
-                town = towns[13],
+                town = towns[49],
                 divisions = new List<Division>(),
                 builds = new List<Build>()
                 {
@@ -1807,13 +1807,26 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Region()
             {
                 Name = "Lviv",
-                town = towns[14],
+                town = towns[50],
                 divisions = new List<Division>(),
                 builds = new List<Build>()
                 {
                     BuildList[0]
                 },
                 Population = 19232
+            },
+            //Albania
+            //51
+            new Region()
+            {
+                Name = "Tirana",
+                town = towns[51],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 23360
             }
         };
 
