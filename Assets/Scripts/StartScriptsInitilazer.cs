@@ -6,14 +6,12 @@ using UnityEngine.SceneManagement;
 public class StartScriptsInitilazer : MonoBehaviour
 {
     List<Country> CountryList;
-    List<Division> DivisionList = new List<Division>();
     List<Technology> TechnologyList;
     List<Polk> PolkList;
     List<Build> BuildList;
     List<Air> AirList;
     List<Flot> FlotList;
     List<Region> RegionList;
-    List<Flotiliya> FlotiliyaList = new List<Flotiliya>();
     public List<GameObject> towns = new List<GameObject>();
 
     public void Start()
@@ -1201,6 +1199,203 @@ public class StartScriptsInitilazer : MonoBehaviour
             }
 
         };
+        RegionList = new List<Region>()
+        { 
+            //Germnany
+            //0
+            new Region()
+            {
+                Name = "Berlin",
+                town = towns[0],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 25712
+            },
+            //1
+            new Region()
+            {
+                Name = "Szczecun",
+                town = towns[1],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 9024
+            },
+            //2
+            new Region()
+            {
+                Name = "Breslau",
+                town = towns[2],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 12988
+            },
+            //3
+            new Region()
+            {
+                Name = "Drezden",
+                town = towns[3],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 20663
+            },
+            //4
+            new Region()
+            {
+                Name = "Leipzig",
+                town = towns[4],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 18611
+            },
+            //5
+            new Region()
+            {
+                Name = "Keninsberg",
+                town = towns[5],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 8768
+            },
+            //6
+            new Region()
+            {
+                Name = "Nuenberg",
+                town = towns[6],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 18674
+            },
+            //7
+            new Region()
+            {
+                Name = "Munich",
+                town = towns[7],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 19347
+            },
+            //8
+            new Region()
+            {
+                Name = "Gamburg",
+                town = towns[8],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 17980
+            },
+            //9
+            new Region()
+            {
+                Name = "Ganover",
+                town = towns[9],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 19060
+            },
+            //10
+            new Region()
+            {
+                Name = "Bremen",
+                town = towns[10],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 19389
+            },
+            //11
+            new Region()
+            {
+                Name = "Rostok",
+                town = towns[11],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 16932
+            },
+            //12
+            new Region()
+            {
+                Name = "Dortmund",
+                town = towns[12],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 20262
+            },
+            //13
+            new Region()
+            {
+                Name = "Keln",
+                town = towns[13],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 19763
+            },
+            //14
+            new Region()
+            {
+                Name = "Frankfurt",
+                town = towns[14],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 18357
+            },
+            //15
+            new Region()
+            {
+                Name = "Stugart",
+                town = towns[15],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 19704
+            }
+        };
+
 
 
         // Initilization BasicTechnology

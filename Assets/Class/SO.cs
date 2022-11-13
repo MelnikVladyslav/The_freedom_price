@@ -133,6 +133,7 @@ public class Region
     public GameObject region;
     public GameObject town;
     public List<Division> divisions;
+    public List<Flotiliya> flotiliya;
     public List<Build> builds;
     public int Population;
 
