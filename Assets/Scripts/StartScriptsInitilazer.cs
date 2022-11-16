@@ -1827,6 +1827,212 @@ public class StartScriptsInitilazer : MonoBehaviour
                     BuildList[0]
                 },
                 Population = 23360
+            },
+            //Grecia
+            //52
+            new Region()
+            {
+                Name = "Afinu",
+                town = towns[52],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24976
+            },
+            //53
+            new Region()
+            {
+                Name = "Saloniku",
+                town = towns[53],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 16446
+            },
+            //54
+            new Region()
+            {
+                Name = "Larisa",
+                town = towns[54],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 12424
+            },
+            //55
+            new Region()
+            {
+                Name = "Yoniana",
+                town = towns[55],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 9220
+            },
+            //Turcia
+            //56
+            new Region()
+            {
+                Name = "Ankara",
+                town = towns[56],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 20321
+            },
+            //57
+            new Region()
+            {
+                Name = "Stanbull",
+                town = towns[57],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 25512
+            },
+            //58
+            new Region()
+            {
+                Name = "Bursa",
+                town = towns[58],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 14790
+            },
+            //59
+            new Region()
+            {
+                Name = "Eskishehir",
+                town = towns[59],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 8253
+            },
+            //60
+            new Region()
+            {
+                Name = "Izmir",
+                town = towns[60],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 13349
+            },
+            //61
+            new Region()
+            {
+                Name = "Antalia",
+                town = towns[61],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 12809
+            },
+            //62
+            new Region()
+            {
+                Name = "Konya",
+                town = towns[62],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 8852
+            },
+            //63
+            new Region()
+            {
+                Name = "Mersin",
+                town = towns[63],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 14225
+            },
+            //64
+            new Region()
+            {
+                Name = "Adana",
+                town = towns[64],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 13440
+            },
+            //65
+            new Region()
+            {
+                Name = "Gazintem",
+                town = towns[65],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 14082
+            },
+            //66
+            new Region()
+            {
+                Name = "Kayseri",
+                town = towns[66],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 8489
+            },
+            //67
+            new Region()
+            {
+                Name = "Ordu",
+                town = towns[67],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 14037
+            },
+            //68
+            new Region()
+            {
+                Name = "Malatya",
+                town = towns[68],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 14113
             }
         };
 
