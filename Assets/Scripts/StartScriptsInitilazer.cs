@@ -16,8 +16,7 @@ public class StartScriptsInitilazer : MonoBehaviour
 
     public void Start()
     {
-        CreateLists();
-        InitilizerCountry();
+       
     }
     public void Update()
     {
@@ -2033,6 +2032,128 @@ public class StartScriptsInitilazer : MonoBehaviour
                     BuildList[0]
                 },
                 Population = 14113
+            },
+            //Bolgaria
+            //69
+            new Region()
+            {
+                Name = "Sofia",
+                town = towns[69],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 8424
+            },
+            //70
+            new Region()
+            {
+                Name = "Varna",
+                town = towns[70],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 13143
+            },
+            //71
+            new Region()
+            {
+                Name = "Plovdiv",
+                town = towns[71],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 14697
+            },
+            //Yugoslavia
+            //72
+            new Region()
+            {
+                Name = "Belgrade",
+                town = towns[72],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 25929
+            },
+            //73
+            new Region()
+            {
+                Name = "Kosovo",
+                town = towns[73],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 8716
+            },
+            //74
+            new Region()
+            {
+                Name = "Skope",
+                town = towns[74],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 22314
+            },
+            //75
+            new Region()
+            {
+                Name = "Podgorica",
+                town = towns[75],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 9199
+            },
+            //76
+            new Region()
+            {
+                Name = "Saraevo",
+                town = towns[76],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 8748
+            },
+            //77
+            new Region()
+            {
+                Name = "Zagreb",
+                town = towns[77],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //78
+            new Region()
+            {
+                Name = "Lublyana",
+                town = towns[78],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 21551
             }
         };
 

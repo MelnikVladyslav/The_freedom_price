@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using UnityEngine;
 
 public enum TypeBuild
@@ -55,7 +57,7 @@ public enum Idelogies
     Monarchy
 }
 
-
+[Serializable]
 public class Build
 {
     public string Name;
@@ -68,6 +70,7 @@ public class Build
 
 }
 
+[Serializable]
 public class Polk
 {
 
@@ -81,6 +84,7 @@ public class Polk
 
 }
 
+[Serializable]
 public class Air 
 {
 
@@ -93,6 +97,7 @@ public class Air
 
 }
 
+[Serializable]
 public class Flot
 {
 
@@ -106,6 +111,7 @@ public class Flot
 
 }
 
+[Serializable]
 public class Flotiliya
 {
 
@@ -116,6 +122,7 @@ public class Flotiliya
 
 }
 
+[Serializable]
 public class Division
 {
 
@@ -126,6 +133,7 @@ public class Division
 
 }
 
+[Serializable]
 public class Region 
 {
 
@@ -139,6 +147,7 @@ public class Region
 
 }
 
+[Serializable]
 public class Technology 
 {
 
@@ -152,6 +161,7 @@ public class Technology
 
 }
 
+[Serializable]
 public class Country 
 {
 
