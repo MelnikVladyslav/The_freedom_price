@@ -2154,6 +2154,248 @@ public class StartScriptsInitilazer : MonoBehaviour
                     BuildList[0]
                 },
                 Population = 21551
+            },
+            //Rumunia
+            //79
+            new Region()
+            {
+                Name = "Buharest",
+                town = towns[79],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 25929
+            },
+            //80
+            new Region()
+            {
+                Name = "Konstanca",
+                town = towns[80],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 8716
+            },
+            //81
+            new Region()
+            {
+                Name = "Kuchuniv",
+                town = towns[81],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 22314
+            },
+            //82
+            new Region()
+            {
+                Name = "Iasi",
+                town = towns[82],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 9199
+            },
+            //83
+            new Region()
+            {
+                Name = "Cluj-Napoka",
+                town = towns[83],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 8748
+            },
+            //84
+            new Region()
+            {
+                Name = "Timisoara",
+                town = towns[84],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //sssr
+            //85
+            new Region()
+            {
+                Name = "moskva",
+                town = towns[85],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 25929
+            },
+            //86
+            new Region()
+            {
+                Name = "minsk",
+                town = towns[86],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 8716
+            },
+            //87
+            new Region()
+            {
+                Name = "smolensk",
+                town = towns[87],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 22314
+            },
+            //88
+            new Region()
+            {
+                Name = "pskov",
+                town = towns[88],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 9199
+            },
+            //89
+            new Region()
+            {
+                Name = "orel",
+                town = towns[89],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 8748
+            },
+            //90
+            new Region()
+            {
+                Name = "velikiy novgorod",
+                town = towns[90],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //91
+            new Region()
+            {
+                Name = "voronezh",
+                town = towns[91],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 25929
+            },
+            //92
+            new Region()
+            {
+                Name = "rostov-na-donu",
+                town = towns[92],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 8716
+            },
+            //93
+            new Region()
+            {
+                Name = "gomel",
+                town = towns[93],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 22314
+            },
+            //94
+            new Region()
+            {
+                Name = "vitebsk",
+                town = towns[94],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 9199
+            },
+            //95
+            new Region()
+            {
+                Name = "tver",
+                town = towns[95],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 8748
+            },
+            //96
+            new Region()
+            {
+                Name = "kaluga",
+                town = towns[96],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //97
+            new Region()
+            {
+                Name = "tula",
+                town = towns[97],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 8748
+            },
+            //98
+            new Region()
+            {
+                Name = "mogulev",
+                town = towns[98],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
             }
         };
 
