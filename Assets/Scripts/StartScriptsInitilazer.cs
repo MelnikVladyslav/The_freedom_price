@@ -2396,6 +2396,128 @@ public class StartScriptsInitilazer : MonoBehaviour
                     BuildList[0]
                 },
                 Population = 24592
+            },
+            //Poland
+            //99
+            new Region()
+            {
+                Name = "Warshava",
+                town = towns[99],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 8716
+            },
+            //100
+            new Region()
+            {
+                Name = "Lublin",
+                town = towns[100],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 22314
+            },
+            //101
+            new Region()
+            {
+                Name = "Krakov",
+                town = towns[101],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 9199
+            },
+            //102
+            new Region()
+            {
+                Name = "Lodz",
+                town = towns[102],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 8748
+            },
+            //103
+            new Region()
+            {
+                Name = "Poznan",
+                town = towns[103],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //104
+            new Region()
+            {
+                Name = "Bilyastok",
+                town = towns[104],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 8748
+            },
+            //105
+            new Region()
+            {
+                Name = "Gdinya",
+                town = towns[105],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //106
+            new Region()
+            {
+                Name = "Grodno",
+                town = towns[106],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //Ugorchina
+            //107
+            new Region()
+            {
+                Name = "Budapest",
+                town = towns[107],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //108
+            new Region()
+            {
+                Name = "Debrecen",
+                town = towns[108],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
             }
         };
 
