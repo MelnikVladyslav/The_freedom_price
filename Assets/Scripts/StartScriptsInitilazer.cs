@@ -2518,6 +2518,81 @@ public class StartScriptsInitilazer : MonoBehaviour
                     BuildList[0]
                 },
                 Population = 24592
+            },
+            //Lutva
+            //109
+            new Region()
+            {
+                Name = "Vilnus",
+                town = towns[109],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //110
+            new Region()
+            {
+                Name = "Memel",
+                town = towns[110],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //Latvia
+            //111
+            new Region()
+            {
+                Name = "Riga",
+                town = towns[111],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //112
+            new Region()
+            {
+                Name = "Rezekne",
+                town = towns[112],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //Estonia
+            //113
+            new Region()
+            {
+                Name = "Talin",
+                town = towns[113],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //114
+            new Region()
+            {
+                Name = "Tartu",
+                town = towns[114],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
             }
         };
 
