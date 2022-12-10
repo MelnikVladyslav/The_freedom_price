@@ -3097,6 +3097,308 @@ public class StartScriptsInitilazer : MonoBehaviour
                     BuildList[0]
                 },
                 Population = 24592
+            },
+            //Italy
+            //156
+            new Region()
+            {
+                Name = "Rome",
+                town = towns[156],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //157
+            new Region()
+            {
+                Name = "Neapol",
+                town = towns[157],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //158
+            new Region()
+            {
+                Name = "Palermo",
+                town = towns[158],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //159
+            new Region()
+            {
+                Name = "Kataniya",
+                town = towns[159],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //160
+            new Region()
+            {
+                Name = "Bari",
+                town = towns[160],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //161
+            new Region()
+            {
+                Name = "San-Marino",
+                town = towns[161],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //162
+            new Region()
+            {
+                Name = "Florancya",
+                town = towns[162],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //163
+            new Region()
+            {
+                Name = "Bolonya",
+                town = towns[163],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //164
+            new Region()
+            {
+                Name = "Venecia",
+                town = towns[164],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //165
+            new Region()
+            {
+                Name = "Milan",
+                town = towns[165],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //166
+            new Region()
+            {
+                Name = "Genua",
+                town = towns[166],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //167
+            new Region()
+            {
+                Name = "Sardunya",
+                town = towns[167],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //France
+            //168
+            new Region()
+            {
+                Name = "Paris",
+                town = towns[168],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //169
+            new Region()
+            {
+                Name = "Lil",
+                town = towns[169],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //170
+            new Region()
+            {
+                Name = "Strasburg",
+                town = towns[170],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //171
+            new Region()
+            {
+                Name = "Kan",
+                town = towns[171],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //172
+            new Region()
+            {
+                Name = "Nant",
+                town = towns[172],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //173
+            new Region()
+            {
+                Name = "Lion",
+                town = towns[173],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //174
+            new Region()
+            {
+                Name = "Tulusa",
+                town = towns[174],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //175
+            new Region()
+            {
+                Name = "Marsel",
+                town = towns[175],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //176
+            new Region()
+            {
+                Name = "Monpelye",
+                town = towns[176],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //177
+            new Region()
+            {
+                Name = "Corsica",
+                town = towns[177],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //178
+            new Region()
+            {
+                Name = "Alchur",
+                town = towns[178],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //179
+            new Region()
+            {
+                Name = "Tunnis",
+                town = towns[179],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //180
+            new Region()
+            {
+                Name = "Klermon-Marmon",
+                town = towns[180],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
             }
         };
 
