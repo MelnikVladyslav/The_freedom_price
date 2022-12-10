@@ -2680,6 +2680,152 @@ public class StartScriptsInitilazer : MonoBehaviour
                     BuildList[0]
                 },
                 Population = 24592
+            },
+            //Portugal
+            //122
+            new Region()
+            {
+                Name = "Lisabon",
+                town = towns[122],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //123
+            new Region()
+            {
+                Name = "Porto",
+                town = towns[123],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //Spain
+            //124
+            new Region()
+            {
+                Name = "Madrid",
+                town = towns[124],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //125
+            new Region()
+            {
+                Name = "Barselona",
+                town = towns[125],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //126
+            new Region()
+            {
+                Name = "Saragoza",
+                town = towns[126],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //127
+            new Region()
+            {
+                Name = "Bilbao",
+                town = towns[127],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //128
+            new Region()
+            {
+                Name = "La-Korunya",
+                town = towns[128],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //129
+            new Region()
+            {
+                Name = "Valencia",
+                town = towns[129],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //130
+            new Region()
+            {
+                Name = "Murcia",
+                town = towns[130],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //131
+            new Region()
+            {
+                Name = "Malaga",
+                town = towns[131],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //132
+            new Region()
+            {
+                Name = "Sevilya",
+                town = towns[132],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //133
+            new Region()
+            {
+                Name = "Palma",
+                town = towns[133],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
             }
         };
 
