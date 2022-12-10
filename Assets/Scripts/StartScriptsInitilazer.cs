@@ -2593,6 +2593,93 @@ public class StartScriptsInitilazer : MonoBehaviour
                     BuildList[0]
                 },
                 Population = 24592
+            },
+            //Norwagy
+            //115
+            new Region()
+            {
+                Name = "Oslo",
+                town = towns[115],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //116
+            new Region()
+            {
+                Name = "Kristance",
+                town = towns[116],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //Sweden
+            //117
+            new Region()
+            {
+                Name = "Stokgolm",
+                town = towns[117],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //118
+            new Region()
+            {
+                Name = "Geterborg",
+                town = towns[118],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //119
+            new Region()
+            {
+                Name = "Malme",
+                town = towns[119],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //Daniya
+            //120
+            new Region()
+            {
+                Name = "Coppengagen",
+                town = towns[120],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //121
+            new Region()
+            {
+                Name = "Olborg",
+                town = towns[121],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
             }
         };
 
