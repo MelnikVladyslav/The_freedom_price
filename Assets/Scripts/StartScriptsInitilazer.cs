@@ -3010,6 +3010,93 @@ public class StartScriptsInitilazer : MonoBehaviour
                     BuildList[0]
                 },
                 Population = 24592
+            },
+            //Chechoslovakia
+            //149
+            new Region()
+            {
+                Name = "Praga",
+                town = towns[149],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //150
+            new Region()
+            {
+                Name = "Brno",
+                town = towns[150],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //151
+            new Region()
+            {
+                Name = "Kochuce",
+                town = towns[151],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //Austria
+            //152
+            new Region()
+            {
+                Name = "Vienna",
+                town = towns[152],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //153
+            new Region()
+            {
+                Name = "Insbruck",
+                town = towns[153],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //Swethariya
+            //154
+            new Region()
+            {
+                Name = "Curich",
+                town = towns[154],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //155
+            new Region()
+            {
+                Name = "Bern",
+                town = towns[155],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
             }
         };
 
