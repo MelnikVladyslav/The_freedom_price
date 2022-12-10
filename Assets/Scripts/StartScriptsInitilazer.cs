@@ -2826,6 +2826,152 @@ public class StartScriptsInitilazer : MonoBehaviour
                     BuildList[0]
                 },
                 Population = 24592
+            },
+            //Irland
+            //134
+            new Region()
+            {
+                Name = "Dublin",
+                town = towns[134],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //135
+            new Region()
+            {
+                Name = "Galuley",
+                town = towns[135],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //136
+            new Region()
+            {
+                Name = "Kork",
+                town = towns[136],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //Britain
+            //137
+            new Region()
+            {
+                Name = "London",
+                town = towns[137],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //138
+            new Region()
+            {
+                Name = "Plimut",
+                town = towns[138],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //139
+            new Region()
+            {
+                Name = "Birnigem",
+                town = towns[139],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //140
+            new Region()
+            {
+                Name = "Manchester",
+                town = towns[140],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //141
+            new Region()
+            {
+                Name = "Edinburg",
+                town = towns[141],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //142
+            new Region()
+            {
+                Name = "Invernes",
+                town = towns[142],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //143
+            new Region()
+            {
+                Name = "Belfast",
+                town = towns[143],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //144
+            new Region()
+            {
+                Name = "Gibraltar",
+                town = towns[144],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //145
+            new Region()
+            {
+                Name = "Kembrudg",
+                town = towns[145],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
             }
         };
 
