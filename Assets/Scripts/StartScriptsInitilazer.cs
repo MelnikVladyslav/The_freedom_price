@@ -2972,6 +2972,44 @@ public class StartScriptsInitilazer : MonoBehaviour
                     BuildList[0]
                 },
                 Population = 24592
+            },
+            //Netarland
+            //146
+            new Region()
+            {
+                Name = "Amsterdam",
+                town = towns[146],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //147
+            new Region()
+            {
+                Name = "Groningem",
+                town = towns[147],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //Belgiya
+            //148
+            new Region()
+            {
+                Name = "Brussel",
+                town = towns[148],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
             }
         };
 
