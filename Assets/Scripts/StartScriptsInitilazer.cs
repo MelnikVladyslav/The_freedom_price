@@ -3399,10 +3399,219 @@ public class StartScriptsInitilazer : MonoBehaviour
                     BuildList[0]
                 },
                 Population = 24592
+            },
+            //Luxemburg
+            //181
+            new Region()
+            {
+                Name = "Luxemburg",
+                town = towns[181],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            },
+            //Dancig
+            //182
+            new Region()
+            {
+                Name = "Dancig",
+                town = towns[182],
+                divisions = new List<Division>(),
+                builds = new List<Build>()
+                {
+                    BuildList[0]
+                },
+                Population = 24592
+            }
+        };
+        CountryList = new List<Country>()
+        {
+            //0
+            new Country()
+            {
+                Name = "Germany",
+                idelogy = Idelogies.Fascism
+            },
+            //1
+            new Country()
+            {
+                Name = "Soborna Ukraine",
+                idelogy = Idelogies.Nationalism
+            },
+            //2
+            new Country()
+            {
+                Name = "Albania",
+                idelogy = Idelogies.Neutrall
+            },
+            //3
+            new Country()
+            {
+                Name = "Grecia",
+                idelogy = Idelogies.Democraty
+            },
+            //4
+            new Country()
+            {
+                Name = "Turcia",
+                idelogy = Idelogies.Neutrall
+            },
+            //5
+            new Country()
+            {
+                Name = "Bolgaria",
+                idelogy = Idelogies.Monarchy
+            },
+            //6
+            new Country()
+            {
+                Name = "Yugoslavia",
+                idelogy = Idelogies.Monarchy
+            },
+            //7
+            new Country()
+            {
+                Name = "Rumina",
+                idelogy = Idelogies.Monarchy
+            },
+            //8
+            new Country()
+            {
+                Name = "sssr",
+                idelogy = Idelogies.Communism
+            },
+            //9
+            new Country()
+            {
+                Name = "Poland",
+                idelogy = Idelogies.Neutrall
+            },
+            //10
+            new Country()
+            {
+                Name = "Hungary",
+                idelogy = Idelogies.Neutrall
+            },
+            //11
+            new Country()
+            {
+                Name = "Lutva",
+                idelogy = Idelogies.Neutrall
+            },
+            //12
+            new Country()
+            {
+                Name = "Latvia",
+                idelogy = Idelogies.Neutrall
+            },
+            //13
+            new Country()
+            {
+                Name = "Estonia",
+                idelogy = Idelogies.Neutrall
+            },
+            //14
+            new Country()
+            {
+                Name = "Norway",
+                idelogy = Idelogies.Neutrall
+            },
+            //15
+            new Country()
+            {
+                Name = "Sweden",
+                idelogy = Idelogies.Neutrall
+            },
+            //16
+            new Country()
+            {
+                Name = "Daniya",
+                idelogy = Idelogies.Neutrall
+            },
+            //17
+            new Country()
+            {
+                Name = "Portugal",
+                idelogy = Idelogies.Neutrall
+            },
+            //18
+            new Country()
+            {
+                Name = "Spain",
+                idelogy = Idelogies.Democraty
+            },
+            //19
+            new Country()
+            {
+                Name = "Irland",
+                idelogy = Idelogies.Democraty
+            },
+            //20
+            new Country()
+            {
+                Name = "Britain",
+                idelogy = Idelogies.Democraty
+            },
+            //21
+            new Country()
+            {
+                Name = "Netharland",
+                idelogy = Idelogies.Democraty
+            },
+            //22
+            new Country()
+            {
+                Name = "Belgue",
+                idelogy = Idelogies.Democraty
+            },
+            //23
+            new Country()
+            {
+                Name = "Chehoslovakia",
+                idelogy = Idelogies.Democraty
+            },
+            //24
+            new Country()
+            {
+                Name = "Austria",
+                idelogy = Idelogies.Neutrall
+            },
+            //25
+            new Country()
+            {
+                Name = "Swithland",
+                idelogy = Idelogies.Neutrall
+            },
+            //26
+            new Country()
+            {
+                Name = "Italy",
+                idelogy = Idelogies.Fascism
+            },
+            //27
+            new Country()
+            {
+                Name = "France",
+                idelogy = Idelogies.Democraty
+            },
+            //28
+            new Country()
+            {
+                Name = "Luxemburg",
+                idelogy = Idelogies.Democraty
+            },
+            //29
+            new Country()
+            {
+                Name = "Dancig",
+                idelogy = Idelogies.Neutrall
             }
         };
 
-
+        InitilizerCountry();
 
         // Initilization BasicTechnology
         TechnologyList[0].builds.Add(BuildList[0]);
@@ -3450,6 +3659,27 @@ public class StartScriptsInitilazer : MonoBehaviour
             CountryList[i].Kauchuk = 1000;
             CountryList[i].techs.Add(TechnologyList[0]);
         }
+
+        //Initilize country
+        //0
+        CountryList[0].regions.Add(RegionList[0]);
+        CountryList[0].regions.Add(RegionList[1]);
+        CountryList[0].regions.Add(RegionList[2]);
+        CountryList[0].regions.Add(RegionList[3]);
+        CountryList[0].regions.Add(RegionList[4]);
+        CountryList[0].regions.Add(RegionList[5]);
+        CountryList[0].regions.Add(RegionList[6]);
+        CountryList[0].regions.Add(RegionList[7]);
+        CountryList[0].regions.Add(RegionList[8]);
+        CountryList[0].regions.Add(RegionList[9]);
+        CountryList[0].regions.Add(RegionList[10]);
+        CountryList[0].regions.Add(RegionList[11]);
+        CountryList[0].regions.Add(RegionList[12]);
+        CountryList[0].regions.Add(RegionList[13]);
+        CountryList[0].regions.Add(RegionList[14]);
+        CountryList[0].regions.Add(RegionList[15]);
+        //1
+
     }
 
 

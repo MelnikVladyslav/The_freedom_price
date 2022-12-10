@@ -17524,7 +17524,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &759694525
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17546,7 +17546,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -9.099976, y: 5.799988}
+  m_AnchoredPosition: {x: 179, y: -2}
   m_SizeDelta: {x: -130.1, y: -130.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &759694526
@@ -36603,7 +36603,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1631479744}
   m_Layer: 0
-  m_Name: SSSR
+  m_Name: sssr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
