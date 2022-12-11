@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class StartScriptsInitilazer : MonoBehaviour
 {
-    List<Country> CountryList;
+    public List<Country> CountryList;
     List<Technology> TechnologyList;
     List<Polk> PolkList;
     List<Build> BuildList;
@@ -3434,206 +3434,239 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Country()
             {
                 Name = "Germany",
-                idelogy = Idelogies.Fascism
+                idelogy = Idelogies.Fascism,
+                Popularity = 60
             },
             //1
             new Country()
             {
                 Name = "Soborna Ukraine",
-                idelogy = Idelogies.Nationalism
+                idelogy = Idelogies.Nationalism,
+                Popularity = 60
             },
             //2
             new Country()
             {
                 Name = "Albania",
-                idelogy = Idelogies.Neutrall
+                idelogy = Idelogies.Neutrall,
+                Popularity = 60
             },
             //3
             new Country()
             {
                 Name = "Grecia",
-                idelogy = Idelogies.Democraty
+                idelogy = Idelogies.Democraty,
+                Popularity = 60
             },
             //4
             new Country()
             {
                 Name = "Turcia",
-                idelogy = Idelogies.Neutrall
+                idelogy = Idelogies.Neutrall,
+                Popularity = 60
             },
             //5
             new Country()
             {
                 Name = "Bolgaria",
-                idelogy = Idelogies.Monarchy
+                idelogy = Idelogies.Monarchy,
+                Popularity = 60
             },
             //6
             new Country()
             {
                 Name = "Yugoslavia",
-                idelogy = Idelogies.Monarchy
+                idelogy = Idelogies.Monarchy,
+                Popularity = 60
             },
             //7
             new Country()
             {
                 Name = "Rumina",
-                idelogy = Idelogies.Monarchy
+                idelogy = Idelogies.Monarchy,
+                Popularity = 60
             },
             //8
             new Country()
             {
                 Name = "sssr",
-                idelogy = Idelogies.Communism
+                idelogy = Idelogies.Communism,
+                Popularity = 60
             },
             //9
             new Country()
             {
                 Name = "Poland",
-                idelogy = Idelogies.Neutrall
+                idelogy = Idelogies.Neutrall,
+                Popularity = 60
             },
             //10
             new Country()
             {
                 Name = "Hungary",
-                idelogy = Idelogies.Neutrall
+                idelogy = Idelogies.Neutrall,
+                Popularity = 60
             },
             //11
             new Country()
             {
                 Name = "Lutva",
-                idelogy = Idelogies.Neutrall
+                idelogy = Idelogies.Neutrall,
+                Popularity = 60
             },
             //12
             new Country()
             {
                 Name = "Latvia",
-                idelogy = Idelogies.Neutrall
+                idelogy = Idelogies.Neutrall,
+                Popularity = 60
             },
             //13
             new Country()
             {
                 Name = "Estonia",
-                idelogy = Idelogies.Neutrall
+                idelogy = Idelogies.Neutrall,
+                Popularity = 60
             },
             //14
             new Country()
             {
                 Name = "Norway",
-                idelogy = Idelogies.Neutrall
+                idelogy = Idelogies.Neutrall,
+                Popularity = 60
             },
             //15
             new Country()
             {
                 Name = "Sweden",
-                idelogy = Idelogies.Neutrall
+                idelogy = Idelogies.Neutrall,
+                Popularity = 60
             },
             //16
             new Country()
             {
                 Name = "Daniya",
-                idelogy = Idelogies.Neutrall
+                idelogy = Idelogies.Neutrall,
+                Popularity = 60
             },
             //17
             new Country()
             {
                 Name = "Portugal",
-                idelogy = Idelogies.Neutrall
+                idelogy = Idelogies.Neutrall,
+                Popularity = 60
             },
             //18
             new Country()
             {
                 Name = "Spain",
-                idelogy = Idelogies.Democraty
+                idelogy = Idelogies.Democraty,
+                Popularity = 60
             },
             //19
             new Country()
             {
                 Name = "Irland",
-                idelogy = Idelogies.Democraty
+                idelogy = Idelogies.Democraty,
+                Popularity = 60
             },
             //20
             new Country()
             {
                 Name = "Britain",
-                idelogy = Idelogies.Democraty
+                idelogy = Idelogies.Democraty,
+                Popularity = 60
             },
             //21
             new Country()
             {
                 Name = "Netharland",
-                idelogy = Idelogies.Democraty
+                idelogy = Idelogies.Democraty,
+                Popularity = 60
             },
             //22
             new Country()
             {
                 Name = "Belgue",
-                idelogy = Idelogies.Democraty
+                idelogy = Idelogies.Democraty,
+                Popularity = 60
             },
             //23
             new Country()
             {
                 Name = "Chehoslovakia",
-                idelogy = Idelogies.Democraty
+                idelogy = Idelogies.Democraty,
+                Popularity = 60
             },
             //24
             new Country()
             {
                 Name = "Austria",
-                idelogy = Idelogies.Neutrall
+                idelogy = Idelogies.Neutrall,
+                Popularity = 60
             },
             //25
             new Country()
             {
                 Name = "Swithland",
-                idelogy = Idelogies.Neutrall
+                idelogy = Idelogies.Neutrall,
+                Popularity = 60
             },
             //26
             new Country()
             {
                 Name = "Italy",
-                idelogy = Idelogies.Fascism
+                idelogy = Idelogies.Fascism,
+                Popularity = 60
             },
             //27
             new Country()
             {
                 Name = "France",
-                idelogy = Idelogies.Democraty
+                idelogy = Idelogies.Democraty,
+                Popularity = 60
             },
             //28
             new Country()
             {
                 Name = "Luxemburg",
-                idelogy = Idelogies.Democraty
+                idelogy = Idelogies.Democraty,
+                Popularity = 60
             },
             //29
             new Country()
             {
                 Name = "Dancig",
-                idelogy = Idelogies.Neutrall
+                idelogy = Idelogies.Neutrall,
+                Popularity = 60
             }
         };
 
         InitilizerCountry();
 
         // Initilization BasicTechnology
-        TechnologyList[0].builds.Add(BuildList[0]);
-        TechnologyList[0].builds.Add(BuildList[2]);
-        TechnologyList[0].builds.Add(BuildList[3]);
-        TechnologyList[0].builds.Add(BuildList[4]);
-        TechnologyList[0].polks.Add(PolkList[0]);
-        TechnologyList[0].polks.Add(PolkList[1]);
-        TechnologyList[0].polks.Add(PolkList[2]);
-        TechnologyList[0].polks.Add(PolkList[3]);
+        if (CountryList[0].techs != null)
+        {
+            TechnologyList[0].builds.Add(BuildList[0]);
+            TechnologyList[0].builds.Add(BuildList[2]);
+            TechnologyList[0].builds.Add(BuildList[3]);
+            TechnologyList[0].builds.Add(BuildList[4]);
+            TechnologyList[0].polks.Add(PolkList[0]);
+            TechnologyList[0].polks.Add(PolkList[1]);
+            TechnologyList[0].polks.Add(PolkList[2]);
+            TechnologyList[0].polks.Add(PolkList[3]);
 
-        // Initilization technology 1936
-        TechnologyList[1].builds.Add(BuildList[1]);
-        TechnologyList[5].polks.Add(PolkList[4]);
-        TechnologyList[6].polks.Add(PolkList[6]);
+            // Initilization technology 1936
+            TechnologyList[1].builds.Add(BuildList[1]);
+            TechnologyList[5].polks.Add(PolkList[4]);
+            TechnologyList[6].polks.Add(PolkList[6]);
 
-        // Initilization technology 1939
-        TechnologyList[50].polks.Add(PolkList[7]);
+            // Initilization technology 1939
+            TechnologyList[50].polks.Add(PolkList[7]);
 
-        // Initilization technology 1940
-        TechnologyList[65].polks.Add(PolkList[5]);
+            // Initilization technology 1940
+            TechnologyList[65].polks.Add(PolkList[5]);
+        }
     }
 
     void InitilizerCountry()
@@ -3643,13 +3676,27 @@ public class StartScriptsInitilazer : MonoBehaviour
         for (int i = 0; i < CountryList.Count; i++)
         {
             CountryList[i].Stabilnisty = 50 + (100 / CountryList[i].Popularity);
-            for (int j = 0; j < CountryList[i].regions.Count; j++)
+            if (CountryList[i].regions != null)
             {
-                CountryList[i].PopulationCount += CountryList[i].regions[j].Population;
-                for (int a = 0; a < CountryList[i].regions[j].divisions.Count; a++)
+                for (int j = 0; j < CountryList[i].regions.Count; j++)
                 {
-                    kilkNayn += CountryList[i].regions[j].divisions[a].polks.Count * 100;
+                    CountryList[i].PopulationCount += CountryList[i].regions[j].Population;
+                    for (int a = 0; a < CountryList[i].regions[j].divisions.Count; a++)
+                    {
+                        if (CountryList[i].regions[j].divisions.Count > 0)
+                        {
+                            kilkNayn += CountryList[i].regions[j].divisions[a].polks.Count * 100;
+                        }
+                        else
+                        {
+                            Debug.Log("Not division");
+                        }
+                    }
                 }
+            }
+            else
+            {
+                Debug.Log("Not regions");
             }
             CountryList[i].ProcentViyskovoZob = 10;
             CountryList[i].KilkistyRecruit = CountryList[i].PopulationCount * (100 / CountryList[i].ProcentViyskovoZob) - kilkNayn;
@@ -3658,222 +3705,232 @@ public class StartScriptsInitilazer : MonoBehaviour
             CountryList[i].Stail = 2500;
             CountryList[i].Topluvo = 1000;
             CountryList[i].Kauchuk = 1000;
-            CountryList[i].techs.Add(TechnologyList[0]);
+            if (CountryList[i].techs != null)
+            {
+                CountryList[i].techs.Add(TechnologyList[0]);
+            }
+            else
+            {
+                Debug.Log("Not tech");
+            }
         }
 
         //Initilize country
-        //0
-        CountryList[0].regions.Add(RegionList[0]);
-        CountryList[0].regions.Add(RegionList[1]);
-        CountryList[0].regions.Add(RegionList[2]);
-        CountryList[0].regions.Add(RegionList[3]);
-        CountryList[0].regions.Add(RegionList[4]);
-        CountryList[0].regions.Add(RegionList[5]);
-        CountryList[0].regions.Add(RegionList[6]);
-        CountryList[0].regions.Add(RegionList[7]);
-        CountryList[0].regions.Add(RegionList[8]);
-        CountryList[0].regions.Add(RegionList[9]);
-        CountryList[0].regions.Add(RegionList[10]);
-        CountryList[0].regions.Add(RegionList[11]);
-        CountryList[0].regions.Add(RegionList[12]);
-        CountryList[0].regions.Add(RegionList[13]);
-        CountryList[0].regions.Add(RegionList[14]);
-        CountryList[0].regions.Add(RegionList[15]);
-        //1
-        CountryList[1].regions.Add(RegionList[16]);
-        CountryList[1].regions.Add(RegionList[17]);
-        CountryList[1].regions.Add(RegionList[18]);
-        CountryList[1].regions.Add(RegionList[19]);
-        CountryList[1].regions.Add(RegionList[20]);
-        CountryList[1].regions.Add(RegionList[22]);
-        CountryList[1].regions.Add(RegionList[23]);
-        CountryList[1].regions.Add(RegionList[24]);
-        CountryList[1].regions.Add(RegionList[25]);
-        CountryList[1].regions.Add(RegionList[26]);
-        CountryList[1].regions.Add(RegionList[27]);
-        CountryList[1].regions.Add(RegionList[28]);
-        CountryList[1].regions.Add(RegionList[29]);
-        CountryList[1].regions.Add(RegionList[30]);
-        CountryList[1].regions.Add(RegionList[31]);
-        CountryList[1].regions.Add(RegionList[32]);
-        CountryList[1].regions.Add(RegionList[33]);
-        CountryList[1].regions.Add(RegionList[34]);
-        CountryList[1].regions.Add(RegionList[35]);
-        CountryList[1].regions.Add(RegionList[36]);
-        CountryList[1].regions.Add(RegionList[37]);
-        CountryList[1].regions.Add(RegionList[38]);
-        CountryList[1].regions.Add(RegionList[39]);
-        CountryList[1].regions.Add(RegionList[40]);
-        CountryList[1].regions.Add(RegionList[41]);
-        CountryList[1].regions.Add(RegionList[42]);
-        CountryList[1].regions.Add(RegionList[43]);
-        CountryList[1].regions.Add(RegionList[44]);
-        CountryList[1].regions.Add(RegionList[45]);
-        CountryList[1].regions.Add(RegionList[46]);
-        CountryList[1].regions.Add(RegionList[47]);
-        CountryList[1].regions.Add(RegionList[48]);
-        CountryList[1].regions.Add(RegionList[49]);
-        CountryList[1].regions.Add(RegionList[50]);
-        //2
-        CountryList[2].regions.Add(RegionList[51]);
-        //3
-        CountryList[3].regions.Add(RegionList[52]);
-        CountryList[3].regions.Add(RegionList[53]);
-        CountryList[3].regions.Add(RegionList[54]);
-        CountryList[3].regions.Add(RegionList[55]);
-        //4
-        CountryList[4].regions.Add(RegionList[56]);
-        CountryList[4].regions.Add(RegionList[57]);
-        CountryList[4].regions.Add(RegionList[58]);
-        CountryList[4].regions.Add(RegionList[59]);
-        CountryList[4].regions.Add(RegionList[60]);
-        CountryList[4].regions.Add(RegionList[61]);
-        CountryList[4].regions.Add(RegionList[62]);
-        CountryList[4].regions.Add(RegionList[63]);
-        CountryList[4].regions.Add(RegionList[64]);
-        CountryList[4].regions.Add(RegionList[65]);
-        CountryList[4].regions.Add(RegionList[66]);
-        CountryList[4].regions.Add(RegionList[67]);
-        CountryList[4].regions.Add(RegionList[68]);
-        //5
-        CountryList[5].regions.Add(RegionList[69]);
-        CountryList[5].regions.Add(RegionList[70]);
-        CountryList[5].regions.Add(RegionList[71]);
-        //6
-        CountryList[6].regions.Add(RegionList[72]);
-        CountryList[6].regions.Add(RegionList[73]);
-        CountryList[6].regions.Add(RegionList[74]);
-        CountryList[6].regions.Add(RegionList[75]);
-        CountryList[6].regions.Add(RegionList[76]);
-        CountryList[6].regions.Add(RegionList[77]);
-        CountryList[6].regions.Add(RegionList[78]);
-        //7
-        CountryList[7].regions.Add(RegionList[79]);
-        CountryList[7].regions.Add(RegionList[80]);
-        CountryList[7].regions.Add(RegionList[81]);
-        CountryList[7].regions.Add(RegionList[82]);
-        CountryList[7].regions.Add(RegionList[83]);
-        CountryList[7].regions.Add(RegionList[84]);
-        //8
-        CountryList[8].regions.Add(RegionList[85]);
-        CountryList[8].regions.Add(RegionList[86]);
-        CountryList[8].regions.Add(RegionList[87]);
-        CountryList[8].regions.Add(RegionList[88]);
-        CountryList[8].regions.Add(RegionList[89]);
-        CountryList[8].regions.Add(RegionList[90]);
-        CountryList[8].regions.Add(RegionList[91]);
-        CountryList[8].regions.Add(RegionList[92]);
-        CountryList[8].regions.Add(RegionList[93]);
-        CountryList[8].regions.Add(RegionList[94]);
-        CountryList[8].regions.Add(RegionList[94]);
-        CountryList[8].regions.Add(RegionList[96]);
-        CountryList[8].regions.Add(RegionList[97]);
-        CountryList[8].regions.Add(RegionList[98]);
-        //9
-        CountryList[9].regions.Add(RegionList[99]);
-        CountryList[9].regions.Add(RegionList[100]);
-        CountryList[9].regions.Add(RegionList[101]);
-        CountryList[9].regions.Add(RegionList[102]);
-        CountryList[9].regions.Add(RegionList[103]);
-        CountryList[9].regions.Add(RegionList[104]);
-        CountryList[9].regions.Add(RegionList[105]);
-        CountryList[9].regions.Add(RegionList[106]);
-        //10
-        CountryList[10].regions.Add(RegionList[107]);
-        CountryList[10].regions.Add(RegionList[108]);
-        //11
-        CountryList[11].regions.Add(RegionList[109]);
-        CountryList[11].regions.Add(RegionList[110]);
-        //12
-        CountryList[12].regions.Add(RegionList[111]);
-        CountryList[12].regions.Add(RegionList[112]);
-        //13
-        CountryList[13].regions.Add(RegionList[113]);
-        CountryList[13].regions.Add(RegionList[114]);
-        //14
-        CountryList[14].regions.Add(RegionList[115]);
-        CountryList[14].regions.Add(RegionList[116]);
-        //15
-        CountryList[15].regions.Add(RegionList[117]);
-        CountryList[15].regions.Add(RegionList[118]);
-        CountryList[15].regions.Add(RegionList[119]);
-        //16
-        CountryList[16].regions.Add(RegionList[120]);
-        CountryList[16].regions.Add(RegionList[121]);
-        //17
-        CountryList[17].regions.Add(RegionList[122]);
-        CountryList[17].regions.Add(RegionList[123]);
-        //18
-        CountryList[18].regions.Add(RegionList[124]);
-        CountryList[18].regions.Add(RegionList[125]);
-        CountryList[18].regions.Add(RegionList[126]);
-        CountryList[18].regions.Add(RegionList[127]);
-        CountryList[18].regions.Add(RegionList[128]);
-        CountryList[18].regions.Add(RegionList[129]);
-        CountryList[18].regions.Add(RegionList[130]);
-        CountryList[18].regions.Add(RegionList[131]);
-        CountryList[18].regions.Add(RegionList[132]);
-        CountryList[18].regions.Add(RegionList[133]);
-        //19
-        CountryList[19].regions.Add(RegionList[134]);
-        CountryList[19].regions.Add(RegionList[135]);
-        CountryList[19].regions.Add(RegionList[136]);
-        //20
-        CountryList[20].regions.Add(RegionList[137]);
-        CountryList[20].regions.Add(RegionList[138]);
-        CountryList[20].regions.Add(RegionList[139]);
-        CountryList[20].regions.Add(RegionList[140]);
-        CountryList[20].regions.Add(RegionList[141]);
-        CountryList[20].regions.Add(RegionList[142]);
-        CountryList[20].regions.Add(RegionList[143]);
-        CountryList[20].regions.Add(RegionList[144]);
-        CountryList[20].regions.Add(RegionList[145]);
-        //21
-        CountryList[21].regions.Add(RegionList[146]);
-        CountryList[21].regions.Add(RegionList[147]);
-        //22
-        CountryList[22].regions.Add(RegionList[148]);
-        //23
-        CountryList[23].regions.Add(RegionList[149]);
-        CountryList[23].regions.Add(RegionList[150]);
-        CountryList[23].regions.Add(RegionList[151]);
-        //24
-        CountryList[24].regions.Add(RegionList[152]);
-        CountryList[24].regions.Add(RegionList[153]);
-        //25
-        CountryList[25].regions.Add(RegionList[154]);
-        CountryList[25].regions.Add(RegionList[155]);
-        //26
-        CountryList[26].regions.Add(RegionList[156]);
-        CountryList[26].regions.Add(RegionList[157]);
-        CountryList[26].regions.Add(RegionList[158]);
-        CountryList[26].regions.Add(RegionList[159]);
-        CountryList[26].regions.Add(RegionList[160]);
-        CountryList[26].regions.Add(RegionList[161]);
-        CountryList[26].regions.Add(RegionList[162]);
-        CountryList[26].regions.Add(RegionList[163]);
-        CountryList[26].regions.Add(RegionList[164]);
-        CountryList[26].regions.Add(RegionList[165]);
-        CountryList[26].regions.Add(RegionList[166]);
-        CountryList[26].regions.Add(RegionList[167]);
-        //27
-        CountryList[27].regions.Add(RegionList[168]);
-        CountryList[27].regions.Add(RegionList[169]);
-        CountryList[27].regions.Add(RegionList[170]);
-        CountryList[27].regions.Add(RegionList[171]);
-        CountryList[27].regions.Add(RegionList[172]);
-        CountryList[27].regions.Add(RegionList[173]);
-        CountryList[27].regions.Add(RegionList[174]);
-        CountryList[27].regions.Add(RegionList[175]);
-        CountryList[27].regions.Add(RegionList[176]);
-        CountryList[27].regions.Add(RegionList[177]);
-        CountryList[27].regions.Add(RegionList[178]);
-        CountryList[27].regions.Add(RegionList[179]);
-        CountryList[27].regions.Add(RegionList[180]);
-        //28
-        CountryList[28].regions.Add(RegionList[181]);
-        //29
-        CountryList[29].regions.Add(RegionList[182]);
+        if (CountryList[0].regions.Count != null)
+        {
+            //0
+            CountryList[0].regions.Add(RegionList[0]);
+            CountryList[0].regions.Add(RegionList[1]);
+            CountryList[0].regions.Add(RegionList[2]);
+            CountryList[0].regions.Add(RegionList[3]);
+            CountryList[0].regions.Add(RegionList[4]);
+            CountryList[0].regions.Add(RegionList[5]);
+            CountryList[0].regions.Add(RegionList[6]);
+            CountryList[0].regions.Add(RegionList[7]);
+            CountryList[0].regions.Add(RegionList[8]);
+            CountryList[0].regions.Add(RegionList[9]);
+            CountryList[0].regions.Add(RegionList[10]);
+            CountryList[0].regions.Add(RegionList[11]);
+            CountryList[0].regions.Add(RegionList[12]);
+            CountryList[0].regions.Add(RegionList[13]);
+            CountryList[0].regions.Add(RegionList[14]);
+            CountryList[0].regions.Add(RegionList[15]);
+            //1
+            CountryList[1].regions.Add(RegionList[16]);
+            CountryList[1].regions.Add(RegionList[17]);
+            CountryList[1].regions.Add(RegionList[18]);
+            CountryList[1].regions.Add(RegionList[19]);
+            CountryList[1].regions.Add(RegionList[20]);
+            CountryList[1].regions.Add(RegionList[22]);
+            CountryList[1].regions.Add(RegionList[23]);
+            CountryList[1].regions.Add(RegionList[24]);
+            CountryList[1].regions.Add(RegionList[25]);
+            CountryList[1].regions.Add(RegionList[26]);
+            CountryList[1].regions.Add(RegionList[27]);
+            CountryList[1].regions.Add(RegionList[28]);
+            CountryList[1].regions.Add(RegionList[29]);
+            CountryList[1].regions.Add(RegionList[30]);
+            CountryList[1].regions.Add(RegionList[31]);
+            CountryList[1].regions.Add(RegionList[32]);
+            CountryList[1].regions.Add(RegionList[33]);
+            CountryList[1].regions.Add(RegionList[34]);
+            CountryList[1].regions.Add(RegionList[35]);
+            CountryList[1].regions.Add(RegionList[36]);
+            CountryList[1].regions.Add(RegionList[37]);
+            CountryList[1].regions.Add(RegionList[38]);
+            CountryList[1].regions.Add(RegionList[39]);
+            CountryList[1].regions.Add(RegionList[40]);
+            CountryList[1].regions.Add(RegionList[41]);
+            CountryList[1].regions.Add(RegionList[42]);
+            CountryList[1].regions.Add(RegionList[43]);
+            CountryList[1].regions.Add(RegionList[44]);
+            CountryList[1].regions.Add(RegionList[45]);
+            CountryList[1].regions.Add(RegionList[46]);
+            CountryList[1].regions.Add(RegionList[47]);
+            CountryList[1].regions.Add(RegionList[48]);
+            CountryList[1].regions.Add(RegionList[49]);
+            CountryList[1].regions.Add(RegionList[50]);
+            //2
+            CountryList[2].regions.Add(RegionList[51]);
+            //3
+            CountryList[3].regions.Add(RegionList[52]);
+            CountryList[3].regions.Add(RegionList[53]);
+            CountryList[3].regions.Add(RegionList[54]);
+            CountryList[3].regions.Add(RegionList[55]);
+            //4
+            CountryList[4].regions.Add(RegionList[56]);
+            CountryList[4].regions.Add(RegionList[57]);
+            CountryList[4].regions.Add(RegionList[58]);
+            CountryList[4].regions.Add(RegionList[59]);
+            CountryList[4].regions.Add(RegionList[60]);
+            CountryList[4].regions.Add(RegionList[61]);
+            CountryList[4].regions.Add(RegionList[62]);
+            CountryList[4].regions.Add(RegionList[63]);
+            CountryList[4].regions.Add(RegionList[64]);
+            CountryList[4].regions.Add(RegionList[65]);
+            CountryList[4].regions.Add(RegionList[66]);
+            CountryList[4].regions.Add(RegionList[67]);
+            CountryList[4].regions.Add(RegionList[68]);
+            //5
+            CountryList[5].regions.Add(RegionList[69]);
+            CountryList[5].regions.Add(RegionList[70]);
+            CountryList[5].regions.Add(RegionList[71]);
+            //6
+            CountryList[6].regions.Add(RegionList[72]);
+            CountryList[6].regions.Add(RegionList[73]);
+            CountryList[6].regions.Add(RegionList[74]);
+            CountryList[6].regions.Add(RegionList[75]);
+            CountryList[6].regions.Add(RegionList[76]);
+            CountryList[6].regions.Add(RegionList[77]);
+            CountryList[6].regions.Add(RegionList[78]);
+            //7
+            CountryList[7].regions.Add(RegionList[79]);
+            CountryList[7].regions.Add(RegionList[80]);
+            CountryList[7].regions.Add(RegionList[81]);
+            CountryList[7].regions.Add(RegionList[82]);
+            CountryList[7].regions.Add(RegionList[83]);
+            CountryList[7].regions.Add(RegionList[84]);
+            //8
+            CountryList[8].regions.Add(RegionList[85]);
+            CountryList[8].regions.Add(RegionList[86]);
+            CountryList[8].regions.Add(RegionList[87]);
+            CountryList[8].regions.Add(RegionList[88]);
+            CountryList[8].regions.Add(RegionList[89]);
+            CountryList[8].regions.Add(RegionList[90]);
+            CountryList[8].regions.Add(RegionList[91]);
+            CountryList[8].regions.Add(RegionList[92]);
+            CountryList[8].regions.Add(RegionList[93]);
+            CountryList[8].regions.Add(RegionList[94]);
+            CountryList[8].regions.Add(RegionList[94]);
+            CountryList[8].regions.Add(RegionList[96]);
+            CountryList[8].regions.Add(RegionList[97]);
+            CountryList[8].regions.Add(RegionList[98]);
+            //9
+            CountryList[9].regions.Add(RegionList[99]);
+            CountryList[9].regions.Add(RegionList[100]);
+            CountryList[9].regions.Add(RegionList[101]);
+            CountryList[9].regions.Add(RegionList[102]);
+            CountryList[9].regions.Add(RegionList[103]);
+            CountryList[9].regions.Add(RegionList[104]);
+            CountryList[9].regions.Add(RegionList[105]);
+            CountryList[9].regions.Add(RegionList[106]);
+            //10
+            CountryList[10].regions.Add(RegionList[107]);
+            CountryList[10].regions.Add(RegionList[108]);
+            //11
+            CountryList[11].regions.Add(RegionList[109]);
+            CountryList[11].regions.Add(RegionList[110]);
+            //12
+            CountryList[12].regions.Add(RegionList[111]);
+            CountryList[12].regions.Add(RegionList[112]);
+            //13
+            CountryList[13].regions.Add(RegionList[113]);
+            CountryList[13].regions.Add(RegionList[114]);
+            //14
+            CountryList[14].regions.Add(RegionList[115]);
+            CountryList[14].regions.Add(RegionList[116]);
+            //15
+            CountryList[15].regions.Add(RegionList[117]);
+            CountryList[15].regions.Add(RegionList[118]);
+            CountryList[15].regions.Add(RegionList[119]);
+            //16
+            CountryList[16].regions.Add(RegionList[120]);
+            CountryList[16].regions.Add(RegionList[121]);
+            //17
+            CountryList[17].regions.Add(RegionList[122]);
+            CountryList[17].regions.Add(RegionList[123]);
+            //18
+            CountryList[18].regions.Add(RegionList[124]);
+            CountryList[18].regions.Add(RegionList[125]);
+            CountryList[18].regions.Add(RegionList[126]);
+            CountryList[18].regions.Add(RegionList[127]);
+            CountryList[18].regions.Add(RegionList[128]);
+            CountryList[18].regions.Add(RegionList[129]);
+            CountryList[18].regions.Add(RegionList[130]);
+            CountryList[18].regions.Add(RegionList[131]);
+            CountryList[18].regions.Add(RegionList[132]);
+            CountryList[18].regions.Add(RegionList[133]);
+            //19
+            CountryList[19].regions.Add(RegionList[134]);
+            CountryList[19].regions.Add(RegionList[135]);
+            CountryList[19].regions.Add(RegionList[136]);
+            //20
+            CountryList[20].regions.Add(RegionList[137]);
+            CountryList[20].regions.Add(RegionList[138]);
+            CountryList[20].regions.Add(RegionList[139]);
+            CountryList[20].regions.Add(RegionList[140]);
+            CountryList[20].regions.Add(RegionList[141]);
+            CountryList[20].regions.Add(RegionList[142]);
+            CountryList[20].regions.Add(RegionList[143]);
+            CountryList[20].regions.Add(RegionList[144]);
+            CountryList[20].regions.Add(RegionList[145]);
+            //21
+            CountryList[21].regions.Add(RegionList[146]);
+            CountryList[21].regions.Add(RegionList[147]);
+            //22
+            CountryList[22].regions.Add(RegionList[148]);
+            //23
+            CountryList[23].regions.Add(RegionList[149]);
+            CountryList[23].regions.Add(RegionList[150]);
+            CountryList[23].regions.Add(RegionList[151]);
+            //24
+            CountryList[24].regions.Add(RegionList[152]);
+            CountryList[24].regions.Add(RegionList[153]);
+            //25
+            CountryList[25].regions.Add(RegionList[154]);
+            CountryList[25].regions.Add(RegionList[155]);
+            //26
+            CountryList[26].regions.Add(RegionList[156]);
+            CountryList[26].regions.Add(RegionList[157]);
+            CountryList[26].regions.Add(RegionList[158]);
+            CountryList[26].regions.Add(RegionList[159]);
+            CountryList[26].regions.Add(RegionList[160]);
+            CountryList[26].regions.Add(RegionList[161]);
+            CountryList[26].regions.Add(RegionList[162]);
+            CountryList[26].regions.Add(RegionList[163]);
+            CountryList[26].regions.Add(RegionList[164]);
+            CountryList[26].regions.Add(RegionList[165]);
+            CountryList[26].regions.Add(RegionList[166]);
+            CountryList[26].regions.Add(RegionList[167]);
+            //27
+            CountryList[27].regions.Add(RegionList[168]);
+            CountryList[27].regions.Add(RegionList[169]);
+            CountryList[27].regions.Add(RegionList[170]);
+            CountryList[27].regions.Add(RegionList[171]);
+            CountryList[27].regions.Add(RegionList[172]);
+            CountryList[27].regions.Add(RegionList[173]);
+            CountryList[27].regions.Add(RegionList[174]);
+            CountryList[27].regions.Add(RegionList[175]);
+            CountryList[27].regions.Add(RegionList[176]);
+            CountryList[27].regions.Add(RegionList[177]);
+            CountryList[27].regions.Add(RegionList[178]);
+            CountryList[27].regions.Add(RegionList[179]);
+            CountryList[27].regions.Add(RegionList[180]);
+            //28
+            CountryList[28].regions.Add(RegionList[181]);
+            //29
+            CountryList[29].regions.Add(RegionList[182]);
+        }
 
     }
 

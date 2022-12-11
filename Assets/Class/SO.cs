@@ -116,7 +116,7 @@ public class Flotiliya
 {
 
     public string Name;
-    public List<Flot> flots;
+    public List<Flot> flots = new List<Flot>();
     public double ZagStep;
     public int Price;
 
@@ -127,7 +127,7 @@ public class Division
 {
 
     public string Name;
-    public List<Polk> polks;
+    public List<Polk> polks = new List<Polk>();
     public int ZagStep;
     public int Price;
 
@@ -140,8 +140,8 @@ public class Region
     public string Name;
     public GameObject region;
     public GameObject town;
-    public List<Division> divisions;
-    public List<Flotiliya> flotiliya;
+    public List<Division> divisions = new List<Division>();
+    public List<Flotiliya> flotiliya = new List<Flotiliya>();
     public List<Build> builds;
     public int Population;
 
@@ -153,8 +153,8 @@ public class Technology
 
     public string Name;
     public int Time;
-    public List<Build> builds;
-    public List<Polk> polks;
+    public List<Build> builds = new List<Build>();
+    public List<Polk> polks = new List<Polk>();
     public int PlusCiv;
     public int PlusArm;
     public int PlusCount;
@@ -169,8 +169,8 @@ public class Country
     public TypeCountry Types;
     public int PopulationCount;
     public string NameAlliens;
-    public List<Region> regions;
-    public List<Technology> techs;
+    public List<Region> regions = new List<Region>();
+    public List<Technology> techs = new List<Technology>();
     public Idelogies idelogy;
     public int Stabilnisty;
     public int ProcentViyskovoZob;
