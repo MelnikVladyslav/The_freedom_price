@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class StartScriptsInitilazer : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class StartScriptsInitilazer : MonoBehaviour
     List<Flot> FlotList;
     List<Region> RegionList;
     public List<GameObject> towns = new List<GameObject>();
+    public List<Texture> flags = new List<Texture>();
 
     public void Start()
     {
@@ -3435,210 +3437,240 @@ public class StartScriptsInitilazer : MonoBehaviour
             {
                 Name = "Germany",
                 idelogy = Idelogies.Fascism,
-                Popularity = 60
+                Popularity = 60,
+                Flag = flags[0]
             },
             //1
             new Country()
             {
                 Name = "Soborna Ukraine",
                 idelogy = Idelogies.Nationalism,
-                Popularity = 60
+                Popularity = 60,
+                Flag = flags[1]
             },
             //2
             new Country()
             {
                 Name = "Albania",
                 idelogy = Idelogies.Neutrall,
-                Popularity = 60
+                Popularity = 60,
+                Flag = flags[2]
             },
             //3
             new Country()
             {
                 Name = "Grecia",
                 idelogy = Idelogies.Democraty,
-                Popularity = 60
+                Popularity = 60,
+                Flag = flags[3]
             },
             //4
             new Country()
             {
                 Name = "Turcia",
                 idelogy = Idelogies.Neutrall,
-                Popularity = 60
+                Popularity = 60,
+                Flag = flags[4]
             },
             //5
             new Country()
             {
                 Name = "Bolgaria",
                 idelogy = Idelogies.Monarchy,
-                Popularity = 60
+                Popularity = 60,
+                Flag = flags[5]
             },
             //6
             new Country()
             {
                 Name = "Yugoslavia",
                 idelogy = Idelogies.Monarchy,
-                Popularity = 60
+                Popularity = 60,
+                Flag = flags[6]
             },
             //7
             new Country()
             {
                 Name = "Rumina",
                 idelogy = Idelogies.Monarchy,
-                Popularity = 60
+                Popularity = 60,
+                Flag = flags[7]
             },
             //8
             new Country()
             {
                 Name = "sssr",
                 idelogy = Idelogies.Communism,
-                Popularity = 60
+                Popularity = 60,
+                Flag = flags[8]
             },
             //9
             new Country()
             {
                 Name = "Poland",
                 idelogy = Idelogies.Neutrall,
-                Popularity = 60
+                Popularity = 60,
+                Flag = flags[9]
             },
             //10
             new Country()
             {
                 Name = "Hungary",
                 idelogy = Idelogies.Neutrall,
-                Popularity = 60
+                Popularity = 60,
+                Flag = flags[10]
             },
             //11
             new Country()
             {
                 Name = "Lutva",
                 idelogy = Idelogies.Neutrall,
-                Popularity = 60
+                Popularity = 60,
+                Flag = flags[11]
             },
             //12
             new Country()
             {
                 Name = "Latvia",
                 idelogy = Idelogies.Neutrall,
-                Popularity = 60
+                Popularity = 60,
+                Flag = flags[12]
             },
             //13
             new Country()
             {
                 Name = "Estonia",
                 idelogy = Idelogies.Neutrall,
-                Popularity = 60
+                Popularity = 60,
+                Flag = flags[13]
             },
             //14
             new Country()
             {
                 Name = "Norway",
                 idelogy = Idelogies.Neutrall,
-                Popularity = 60
+                Popularity = 60,
+                Flag = flags[14]
             },
             //15
             new Country()
             {
                 Name = "Sweden",
                 idelogy = Idelogies.Neutrall,
-                Popularity = 60
+                Popularity = 60,
+                Flag = flags[15]
             },
             //16
             new Country()
             {
                 Name = "Daniya",
                 idelogy = Idelogies.Neutrall,
-                Popularity = 60
+                Popularity = 60,
+                Flag = flags[16]
             },
             //17
             new Country()
             {
                 Name = "Portugal",
                 idelogy = Idelogies.Neutrall,
-                Popularity = 60
+                Popularity = 60,
+                Flag = flags[17]
             },
             //18
             new Country()
             {
                 Name = "Spain",
                 idelogy = Idelogies.Democraty,
-                Popularity = 60
+                Popularity = 60,
+                Flag = flags[18]
             },
             //19
             new Country()
             {
                 Name = "Irland",
                 idelogy = Idelogies.Democraty,
-                Popularity = 60
+                Popularity = 60,
+                Flag = flags[19]
             },
             //20
             new Country()
             {
                 Name = "Britain",
                 idelogy = Idelogies.Democraty,
-                Popularity = 60
+                Popularity = 60,
+                Flag = flags[20]
             },
             //21
             new Country()
             {
                 Name = "Netharland",
                 idelogy = Idelogies.Democraty,
-                Popularity = 60
+                Popularity = 60,
+                Flag = flags[21]
             },
             //22
             new Country()
             {
                 Name = "Belgue",
                 idelogy = Idelogies.Democraty,
-                Popularity = 60
+                Popularity = 60,
+                Flag = flags[22]
             },
             //23
             new Country()
             {
                 Name = "Chehoslovakia",
                 idelogy = Idelogies.Democraty,
-                Popularity = 60
+                Popularity = 60,
+                Flag = flags[23]
             },
             //24
             new Country()
             {
                 Name = "Austria",
                 idelogy = Idelogies.Neutrall,
-                Popularity = 60
+                Popularity = 60,
+                Flag = flags[24]
             },
             //25
             new Country()
             {
                 Name = "Swithland",
                 idelogy = Idelogies.Neutrall,
-                Popularity = 60
+                Popularity = 60,
+                Flag = flags[25]
             },
             //26
             new Country()
             {
                 Name = "Italy",
                 idelogy = Idelogies.Fascism,
-                Popularity = 60
+                Popularity = 60,
+                Flag = flags[26]
             },
             //27
             new Country()
             {
                 Name = "France",
                 idelogy = Idelogies.Democraty,
-                Popularity = 60
+                Popularity = 60,
+                Flag = flags[27]
             },
             //28
             new Country()
             {
                 Name = "Luxemburg",
                 idelogy = Idelogies.Democraty,
-                Popularity = 60
+                Popularity = 60,
+                Flag = flags[28]
             },
             //29
             new Country()
             {
                 Name = "Dancig",
                 idelogy = Idelogies.Neutrall,
-                Popularity = 60
+                Popularity = 60,
+                Flag = flags[29]
             }
         };
 

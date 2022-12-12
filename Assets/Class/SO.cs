@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum TypeBuild
 {
@@ -181,5 +182,6 @@ public class Country
     public int Topluvo;
     public int Kauchuk;
     public int Popularity;
+    public Texture Flag;
 
 }

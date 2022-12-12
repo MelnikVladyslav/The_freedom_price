@@ -23037,6 +23037,37 @@ MonoBehaviour:
   - {fileID: 2052229031}
   - {fileID: 1446734112}
   - {fileID: 435519154}
+  flags:
+  - {fileID: 2800000, guid: 51a169866f8ca71498dc6a00d0eb9852, type: 3}
+  - {fileID: 2800000, guid: 1340db95be4b2f44d8012eaf6261fd1a, type: 3}
+  - {fileID: 2800000, guid: d79281228a9082d43ba2849bcc22d7b8, type: 3}
+  - {fileID: 2800000, guid: c2344591a8757ac409e3445e44bea063, type: 3}
+  - {fileID: 2800000, guid: baa87b42c61e798408cc5809f6807f04, type: 3}
+  - {fileID: 2800000, guid: 1c1b87f8897df5143bac497ea056248a, type: 3}
+  - {fileID: 2800000, guid: 59e1d50b08ff3ba4fafc1f16483a1548, type: 3}
+  - {fileID: 2800000, guid: ffc50a77063c1ee48a7bc753b27426a9, type: 3}
+  - {fileID: 2800000, guid: 435e3f5abe11d1546aa25ee4b6d9ea08, type: 3}
+  - {fileID: 2800000, guid: 45847b4eae8e3e947bed3ec9168aa058, type: 3}
+  - {fileID: 2800000, guid: ed7b6231e8d8f304eace73dcd16258ae, type: 3}
+  - {fileID: 2800000, guid: c7ce5cfd29541074686b8b7c25b1475d, type: 3}
+  - {fileID: 2800000, guid: 453685c531ad1334f8b2a59fab4ef392, type: 3}
+  - {fileID: 2800000, guid: 9fff238822a950c4d8027e36a69126d5, type: 3}
+  - {fileID: 2800000, guid: df6ff33cc2c5aa6448444e44a1334666, type: 3}
+  - {fileID: 2800000, guid: 1ff0c8f4c9bdd79498af19288a0dd3c5, type: 3}
+  - {fileID: 2800000, guid: 5fc3abcee68e70a42b0182a213f46d9c, type: 3}
+  - {fileID: 2800000, guid: 4c6e0e3bebf6d34438a0c56688a6032f, type: 3}
+  - {fileID: 2800000, guid: 72e27122fb78b68438935e9424563f12, type: 3}
+  - {fileID: 2800000, guid: fa788b3fa28d5634babf486df96a7a33, type: 3}
+  - {fileID: 2800000, guid: 35886618f807b0247abe1e9b4ff81264, type: 3}
+  - {fileID: 2800000, guid: cc1c1ccd27dbbf741849c06ad5034cfc, type: 3}
+  - {fileID: 2800000, guid: 942fca4390db0a64b8a773d14b07d21a, type: 3}
+  - {fileID: 2800000, guid: 71d1d6a79b0cf4c439e4b2ccda702019, type: 3}
+  - {fileID: 2800000, guid: 85b627402ec5e9c43a02bf3fc81520b8, type: 3}
+  - {fileID: 2800000, guid: 770c69447215aca4b8c817b1c2bc25ac, type: 3}
+  - {fileID: 2800000, guid: 085ca665fc35acd48969f41d7e97de8e, type: 3}
+  - {fileID: 2800000, guid: 4a7269eec3cd7434f93b476375c96fe6, type: 3}
+  - {fileID: 2800000, guid: bb4cf00a0e924b343aaeec8ee617dd33, type: 3}
+  - {fileID: 2800000, guid: 8bec9ff5307718541a1b514d917efa63, type: 3}
 --- !u!114 &1006128966
 MonoBehaviour:
   m_ObjectHideFlags: 0
