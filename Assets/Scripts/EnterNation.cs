@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.Experimental.UIElements;
 
 namespace Assets.Scripts
 {
@@ -9,6 +10,8 @@ namespace Assets.Scripts
         public Camera mainCamera;
         public StartScriptsInitilazer startScripts;
         GameObject capital;
+        Country countryPlayer;
+        Button town;
 
         public void EnterUpa()
         {
@@ -19,6 +22,10 @@ namespace Assets.Scripts
                 positionCapital = new Vector3(capital.transform.position.x, capital.transform.position.y);
 
                 mainCamera.transform.position = new Vector3(positionCapital.x, positionCapital.y);
+
+                countryPlayer = startScripts.CountryList[1];
+
+                countryPlayer.Types = TypeCountry.Player;
             }
             else
             {
@@ -35,6 +42,10 @@ namespace Assets.Scripts
                 positionCapital = new Vector3(capital.transform.position.x, capital.transform.position.y);
 
                 mainCamera.transform.position = new Vector3(positionCapital.x, positionCapital.y);
+
+                countryPlayer = startScripts.CountryList[0];
+
+                countryPlayer.Types = TypeCountry.Player;
             }
             else
             {
@@ -51,6 +62,10 @@ namespace Assets.Scripts
                 positionCapital = new Vector3(capital.transform.position.x, capital.transform.position.y);
 
                 mainCamera.transform.position = new Vector3(positionCapital.x, positionCapital.y);
+
+                countryPlayer = startScripts.CountryList[8];
+
+                countryPlayer.Types = TypeCountry.Player;
             }
             else
             {
@@ -67,6 +82,12 @@ namespace Assets.Scripts
                 positionCapital = new Vector3(capital.transform.position.x, capital.transform.position.y);
 
                 mainCamera.transform.position = new Vector3(positionCapital.x, positionCapital.y);
+
+                countryPlayer = startScripts.CountryList[9];
+
+                countryPlayer.Types = TypeCountry.Player;
+
+                startScripts.CountryList[29].Types = TypeCountry.Marionetka;
             }
             else
             {
@@ -83,6 +104,10 @@ namespace Assets.Scripts
                 positionCapital = new Vector3(capital.transform.position.x, capital.transform.position.y);
 
                 mainCamera.transform.position = new Vector3(positionCapital.x, positionCapital.y);
+
+                countryPlayer = startScripts.CountryList[7];
+
+                countryPlayer.Types = TypeCountry.Player;
             }
             else
             {

@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -45,7 +46,8 @@ public enum TypeCountry
     Neutrall,
     Player,
     Enemy,
-    Alliens
+    Alliens,
+    Marionetka
 }
 
 public enum Idelogies
