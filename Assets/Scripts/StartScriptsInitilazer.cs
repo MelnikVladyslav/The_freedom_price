@@ -3705,50 +3705,8 @@ public class StartScriptsInitilazer : MonoBehaviour
     {
         int kilkNayn = 0;
 
-        for (int i = 0; i < CountryList.Count; i++)
-        {
-            CountryList[i].Stabilnisty = 50 + (100 / CountryList[i].Popularity);
-            if (CountryList[i].regions != null)
-            {
-                for (int j = 0; j < CountryList[i].regions.Count; j++)
-                {
-                    CountryList[i].PopulationCount += CountryList[i].regions[j].Population;
-                    for (int a = 0; a < CountryList[i].regions[j].divisions.Count; a++)
-                    {
-                        if (CountryList[i].regions[j].divisions.Count > 0)
-                        {
-                            kilkNayn += CountryList[i].regions[j].divisions[a].polks.Count * 100;
-                        }
-                        else
-                        {
-                            Debug.Log("Not division");
-                        }
-                    }
-                }
-            }
-            else
-            {
-                Debug.Log("Not regions");
-            }
-            CountryList[i].ProcentViyskovoZob = 10;
-            CountryList[i].KilkistyRecruit = CountryList[i].PopulationCount * (100 / CountryList[i].ProcentViyskovoZob) - kilkNayn;
-            CountryList[i].Money = 5000;
-            CountryList[i].BuildResourse = 5000;
-            CountryList[i].Stail = 2500;
-            CountryList[i].Topluvo = 1000;
-            CountryList[i].Kauchuk = 1000;
-            if (CountryList[i].techs != null)
-            {
-                CountryList[i].techs.Add(TechnologyList[0]);
-            }
-            else
-            {
-                Debug.Log("Not tech");
-            }
-        }
-
         //Initilize country
-        if (CountryList[0].regions.Count != null)
+        if (CountryList[0].regions != null)
         {
             //0
             CountryList[0].regions.Add(RegionList[0]);
@@ -3962,6 +3920,48 @@ public class StartScriptsInitilazer : MonoBehaviour
             CountryList[28].regions.Add(RegionList[181]);
             //29
             CountryList[29].regions.Add(RegionList[182]);
+        }
+
+        for (int i = 0; i < CountryList.Count; i++)
+        {
+            CountryList[i].Stabilnisty = 50 + (100 / CountryList[i].Popularity);
+            if (CountryList[i].regions != null)
+            {
+                for (int j = 0; j < CountryList[i].regions.Count; j++)
+                {
+                    CountryList[i].PopulationCount += CountryList[i].regions[j].Population;
+                    for (int a = 0; a < CountryList[i].regions[j].divisions.Count; a++)
+                    {
+                        if (CountryList[i].regions[j].divisions.Count > 0)
+                        {
+                            kilkNayn += CountryList[i].regions[j].divisions[a].polks.Count * 100;
+                        }
+                        else
+                        {
+                            Debug.Log("Not division");
+                        }
+                    }
+                }
+            }
+            else
+            {
+                Debug.Log("Not regions");
+            }
+            CountryList[i].ProcentViyskovoZob = 10;
+            CountryList[i].KilkistyRecruit = CountryList[i].PopulationCount / (100 / CountryList[i].ProcentViyskovoZob) - kilkNayn;
+            CountryList[i].Money = 5000;
+            CountryList[i].BuildResourse = 5000;
+            CountryList[i].Stail = 2500;
+            CountryList[i].Topluvo = 1000;
+            CountryList[i].Kauchuk = 1000;
+            if (CountryList[i].techs != null)
+            {
+                CountryList[i].techs.Add(TechnologyList[0]);
+            }
+            else
+            {
+                Debug.Log("Not tech");
+            }
         }
 
     }

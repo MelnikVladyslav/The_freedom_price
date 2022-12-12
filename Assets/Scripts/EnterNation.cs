@@ -10,8 +10,7 @@ namespace Assets.Scripts
         public Camera mainCamera;
         public StartScriptsInitilazer startScripts;
         GameObject capital;
-        Country countryPlayer;
-        Button town;
+        public Country countryPlayer;
 
         public void EnterUpa()
         {
