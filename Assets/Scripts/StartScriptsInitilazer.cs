@@ -1315,7 +1315,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             //9
             new Region()
             {
-                Name = "Ganover",
+                Name = "Gannover",
                 town = towns[9],
                 divisions = new List<Division>(),
                 builds = new List<Build>()
@@ -1387,7 +1387,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             //15
             new Region()
             {
-                Name = "Stugart",
+                Name = "Shtugart",
                 town = towns[15],
                 divisions = new List<Division>(),
                 builds = new List<Build>()
@@ -1400,7 +1400,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             //16
             new Region()
             {
-                Name = "Kyiv",
+                Name = "Kiev",
                 town = towns[16],
                 divisions = new List<Division>(),
                 builds = new List<Build>()
@@ -2520,7 +2520,7 @@ public class StartScriptsInitilazer : MonoBehaviour
                 {
                     BuildList[0]
                 },
-                Population = 24592
+                Population = 15456
             },
             //Lutva
             //109
@@ -2545,7 +2545,7 @@ public class StartScriptsInitilazer : MonoBehaviour
                 {
                     BuildList[0]
                 },
-                Population = 24592
+                Population = 15456
             },
             //Latvia
             //111
@@ -2570,7 +2570,7 @@ public class StartScriptsInitilazer : MonoBehaviour
                 {
                     BuildList[0]
                 },
-                Population = 24592
+                Population = 15456
             },
             //Estonia
             //113
@@ -2595,7 +2595,7 @@ public class StartScriptsInitilazer : MonoBehaviour
                 {
                     BuildList[0]
                 },
-                Population = 24592
+                Population = 15456
             },
             //Norwagy
             //115
@@ -2620,7 +2620,7 @@ public class StartScriptsInitilazer : MonoBehaviour
                 {
                     BuildList[0]
                 },
-                Population = 24592
+                Population = 15456
             },
             //Sweden
             //117
@@ -2645,7 +2645,7 @@ public class StartScriptsInitilazer : MonoBehaviour
                 {
                     BuildList[0]
                 },
-                Population = 24592
+                Population = 15456
             },
             //119
             new Region()
@@ -2657,7 +2657,7 @@ public class StartScriptsInitilazer : MonoBehaviour
                 {
                     BuildList[0]
                 },
-                Population = 24592
+                Population = 17945
             },
             //Daniya
             //120
@@ -2682,7 +2682,7 @@ public class StartScriptsInitilazer : MonoBehaviour
                 {
                     BuildList[0]
                 },
-                Population = 24592
+                Population = 17945
             },
             //Portugal
             //122
@@ -2707,7 +2707,7 @@ public class StartScriptsInitilazer : MonoBehaviour
                 {
                     BuildList[0]
                 },
-                Population = 24592
+                Population = 17945
             },
             //Spain
             //124
@@ -2732,7 +2732,7 @@ public class StartScriptsInitilazer : MonoBehaviour
                 {
                     BuildList[0]
                 },
-                Population = 24592
+                Population = 17945
             },
             //126
             new Region()
@@ -2756,7 +2756,7 @@ public class StartScriptsInitilazer : MonoBehaviour
                 {
                     BuildList[0]
                 },
-                Population = 24592
+                Population = 17945
             },
             //128
             new Region()
@@ -2780,7 +2780,7 @@ public class StartScriptsInitilazer : MonoBehaviour
                 {
                     BuildList[0]
                 },
-                Population = 24592
+                Population = 17945
             },
             //130
             new Region()
@@ -2804,7 +2804,7 @@ public class StartScriptsInitilazer : MonoBehaviour
                 {
                     BuildList[0]
                 },
-                Population = 24592
+                Population = 17945
             },
             //132
             new Region()
@@ -2828,7 +2828,7 @@ public class StartScriptsInitilazer : MonoBehaviour
                 {
                     BuildList[0]
                 },
-                Population = 24592
+                Population = 17945
             },
             //Irland
             //134
@@ -2853,7 +2853,7 @@ public class StartScriptsInitilazer : MonoBehaviour
                 {
                     BuildList[0]
                 },
-                Population = 24592
+                Population = 17945
             },
             //136
             new Region()
@@ -2878,7 +2878,7 @@ public class StartScriptsInitilazer : MonoBehaviour
                 {
                     BuildList[0]
                 },
-                Population = 24592
+                Population = 17945
             },
             //138
             new Region()
@@ -2902,7 +2902,7 @@ public class StartScriptsInitilazer : MonoBehaviour
                 {
                     BuildList[0]
                 },
-                Population = 24592
+                Population = 17945
             },
             //140
             new Region()
@@ -2926,7 +2926,7 @@ public class StartScriptsInitilazer : MonoBehaviour
                 {
                     BuildList[0]
                 },
-                Population = 24592
+                Population = 17945
             },
             //142
             new Region()
@@ -2950,7 +2950,7 @@ public class StartScriptsInitilazer : MonoBehaviour
                 {
                     BuildList[0]
                 },
-                Population = 24592
+                Population = 17945
             },
             //144
             new Region()
@@ -2974,7 +2974,7 @@ public class StartScriptsInitilazer : MonoBehaviour
                 {
                     BuildList[0]
                 },
-                Population = 24592
+                Population = 17945
             },
             //Netarland
             //146
@@ -2999,7 +2999,7 @@ public class StartScriptsInitilazer : MonoBehaviour
                 {
                     BuildList[0]
                 },
-                Population = 24592
+                Population = 17945
             },
             //Belgiya
             //148
@@ -3037,7 +3037,7 @@ public class StartScriptsInitilazer : MonoBehaviour
                 {
                     BuildList[0]
                 },
-                Population = 24592
+                Population = 17945
             },
             //151
             new Region()
@@ -3074,7 +3074,7 @@ public class StartScriptsInitilazer : MonoBehaviour
                 {
                     BuildList[0]
                 },
-                Population = 24592
+                Population = 17945
             },
             //Swethariya
             //154
@@ -3099,7 +3099,7 @@ public class StartScriptsInitilazer : MonoBehaviour
                 {
                     BuildList[0]
                 },
-                Population = 24592
+                Population = 17945
             },
             //Italy
             //156
@@ -3124,7 +3124,7 @@ public class StartScriptsInitilazer : MonoBehaviour
                 {
                     BuildList[0]
                 },
-                Population = 24592
+                Population = 17945
             },
             //158
             new Region()
@@ -3148,7 +3148,7 @@ public class StartScriptsInitilazer : MonoBehaviour
                 {
                     BuildList[0]
                 },
-                Population = 24592
+                Population = 17945
             },
             //160
             new Region()
@@ -3172,7 +3172,7 @@ public class StartScriptsInitilazer : MonoBehaviour
                 {
                     BuildList[0]
                 },
-                Population = 24592
+                Population = 17945
             },
             //162
             new Region()
@@ -3196,7 +3196,7 @@ public class StartScriptsInitilazer : MonoBehaviour
                 {
                     BuildList[0]
                 },
-                Population = 24592
+                Population = 17945
             },
             //164
             new Region()
@@ -3220,12 +3220,12 @@ public class StartScriptsInitilazer : MonoBehaviour
                 {
                     BuildList[0]
                 },
-                Population = 24592
+                Population = 17945
             },
             //166
             new Region()
             {
-                Name = "Genua",
+                Name = "Genya",
                 town = towns[166],
                 divisions = new List<Division>(),
                 builds = new List<Build>()
@@ -3244,7 +3244,7 @@ public class StartScriptsInitilazer : MonoBehaviour
                 {
                     BuildList[0]
                 },
-                Population = 24592
+                Population = 17945
             },
             //France
             //168
@@ -3269,7 +3269,7 @@ public class StartScriptsInitilazer : MonoBehaviour
                 {
                     BuildList[0]
                 },
-                Population = 24592
+                Population = 17945
             },
             //170
             new Region()
@@ -3293,7 +3293,7 @@ public class StartScriptsInitilazer : MonoBehaviour
                 {
                     BuildList[0]
                 },
-                Population = 24592
+                Population = 17945
             },
             //172
             new Region()
@@ -3317,7 +3317,7 @@ public class StartScriptsInitilazer : MonoBehaviour
                 {
                     BuildList[0]
                 },
-                Population = 24592
+                Population = 17945
             },
             //174
             new Region()
@@ -3341,7 +3341,7 @@ public class StartScriptsInitilazer : MonoBehaviour
                 {
                     BuildList[0]
                 },
-                Population = 24592
+                Population = 17945
             },
             //176
             new Region()
@@ -3365,7 +3365,7 @@ public class StartScriptsInitilazer : MonoBehaviour
                 {
                     BuildList[0]
                 },
-                Population = 24592
+                Population = 17945
             },
             //178
             new Region()
@@ -3389,12 +3389,12 @@ public class StartScriptsInitilazer : MonoBehaviour
                 {
                     BuildList[0]
                 },
-                Population = 24592
+                Population = 17945
             },
             //180
             new Region()
             {
-                Name = "Klermon-Marmon",
+                Name = "Klermon-Farmon",
                 town = towns[180],
                 divisions = new List<Division>(),
                 builds = new List<Build>()
@@ -3414,7 +3414,7 @@ public class StartScriptsInitilazer : MonoBehaviour
                 {
                     BuildList[0]
                 },
-                Population = 24592
+                Population = 17945
             },
             //Dancig
             //182

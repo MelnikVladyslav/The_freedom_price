@@ -20,6 +20,10 @@ namespace Assets.Scripts.Navigatiion
 
         public void EnterTown(string name)
         {
+            kilkCivil = 0;
+            kilkBig = 0;
+            kilkDef = 0;
+
             if (start.CountryList[0].regions != null)
             {
                 for (int i = 0; i < start.CountryList.Count; i++)
