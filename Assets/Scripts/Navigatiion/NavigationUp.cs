@@ -22,7 +22,7 @@ namespace Assets.Scripts.Navigatiion
             if (true)
             {
                 Flag.texture = enterNation.countryPlayer.Flag;
-                TextStab.text = enterNation.countryPlayer.Stabilnisty.ToString();
+                TextStab.text = enterNation.countryPlayer.Stabilnisty.ToString() + "%";
                 TextRecriut.text = enterNation.countryPlayer.KilkistyRecruit.ToString();
                 TextMoney.text = enterNation.countryPlayer.Money.ToString();
                 TextBuilsRes.text = enterNation.countryPlayer.BuildResourse.ToString();

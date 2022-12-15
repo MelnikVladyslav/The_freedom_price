@@ -16,6 +16,7 @@ public class StartScriptsInitilazer : MonoBehaviour
     List<Region> RegionList;
     public List<GameObject> towns = new List<GameObject>();
     public List<Texture> flags = new List<Texture>();
+    public int kilkNayn = 0;
 
     public void Start()
     {
@@ -3703,7 +3704,6 @@ public class StartScriptsInitilazer : MonoBehaviour
 
     void InitilizerCountry()
     {
-        int kilkNayn = 0;
 
         //Initilize country
         if (CountryList[0].regions != null)
