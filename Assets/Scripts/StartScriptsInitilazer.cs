@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class StartScriptsInitilazer : MonoBehaviour
 {
     public List<Country> CountryList;
-    List<Technology> TechnologyList;
+    public List<Technology> TechnologyList;
     List<Polk> PolkList;
     List<Build> BuildList;
     List<Air> AirList;
@@ -251,6 +251,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Construction I",
+                typeTech = TypeTech.Civil,
                 Time = 2,
                 PlusCiv = 10 // silskGospod
             },
@@ -259,6 +260,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Basic machine tools",
+                typeTech = TypeTech.Viyskov,
                 Time = 2,
                 PlusArm = 2
             },
@@ -267,6 +269,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Electronic mechanical engineering",
+                typeTech = TypeTech.Country,
                 Time = 2,
                 PlusCount = 1 //stabilnisty
             },
@@ -275,6 +278,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Infantry Equipment I",
+                typeTech = TypeTech.Army,
                 Time = 2,
                 PlusArm = 5 // Add hit and damage Garrizon and Pihota polks
             },
@@ -282,6 +286,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Motorized",
+                typeTech = TypeTech.Army,
                 Time = 2
             },
             // Technika
@@ -289,6 +294,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Light Tank I",
+                typeTech = TypeTech.Technika,
                 Time = 2
             },
             //Air
@@ -296,6 +302,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Fighter I and Bomber I",
+                typeTech = TypeTech.Air,
                 Time = 2,
                 PlusArm = 10 // Add Hit and Damage
             },
@@ -304,6 +311,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Flot I",
+                typeTech = TypeTech.Flot,
                 Time = 2,
                 PlusArm = 10 // Add Hit and Damage
             },
@@ -312,12 +320,14 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Mobile Warfare",
+                typeTech = TypeTech.LandDoctrine,
                 Time = 2
             },
             //10
             new Technology
             {
                 Name = "Superior Firepower",
+                typeTech = TypeTech.LandDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add damage artillery
             },
@@ -325,12 +335,14 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Trench Warfare",
+                typeTech = TypeTech.LandDoctrine,
                 Time = 2
             },
             //12
             new Technology
             {
                 Name = "Mass Assault",
+                typeTech = TypeTech.LandDoctrine,
                 Time = 2,
                 PlusArm = 5 // Minus 5% to price pihota
             },
@@ -339,6 +351,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Air Superiority",
+                typeTech = TypeTech.AirDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add damage fighters
             },
@@ -346,6 +359,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Formation Flying",
+                typeTech = TypeTech.AirDoctrine,
                 Time = 2,
                 PlusArm = 7 // Add damage fighters
             },
@@ -353,6 +367,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Force Rotation",
+                typeTech = TypeTech.AirDoctrine,
                 Time = 2,
                 PlusArm = 8 // Add Hit fighters
             },
@@ -361,6 +376,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Fleet In Being",
+                typeTech = TypeTech.FlotDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add damage and hit esminec, kreyser and linkor
             },
@@ -368,6 +384,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Trade Interdiction",
+                typeTech = TypeTech.FlotDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add damage and hit esminec and submarine
             },
@@ -375,6 +392,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Base Strike",
+                typeTech = TypeTech.FlotDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add damage and hit airship and bombers
             },
@@ -384,6 +402,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Construction II",
+                typeTech = TypeTech.Civil,
                 Time = 2,
                 PlusCiv = 10 // civilPromka
             },
@@ -392,6 +411,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Improved machine tools",
+                typeTech = TypeTech.Viyskov,
                 Time = 2,
                 PlusArm = 2
             },
@@ -400,6 +420,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Radio",
+                typeTech = TypeTech.Country,
                 Time = 2,
                 PlusCount = 3 //stabilnisty
             },
@@ -408,6 +429,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Flot II",
+                typeTech = TypeTech.Flot,
                 Time = 2,
                 PlusArm = 10 // Add Hit and Damage
             },
@@ -416,6 +438,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Delay Mob War",
+                typeTech = TypeTech.LandDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add hit pihota and motorized/mehanized
             },
@@ -423,6 +446,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Delay",
+                typeTech = TypeTech.LandDoctrine,
                 Time = 2,
                 PlusArm = 3 // Add hit pihota
             },
@@ -430,6 +454,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Grand Battle Plan",
+                typeTech = TypeTech.LandDoctrine,
                 Time = 2,
                 PlusArm = 7 // Zmenchenya price for polks 
             },
@@ -437,6 +462,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Pocket Defense",
+                typeTech = TypeTech.LandDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add 5% to hit polks in kotels
             },
@@ -445,6 +471,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Infrastructure Destruction",
+                typeTech = TypeTech.AirDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add damage bombers
             },
@@ -452,6 +479,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Dive Bombing",
+                typeTech = TypeTech.AirDoctrine,
                 Time = 2,
                 PlusArm = 7 // Add damage airships
             },
@@ -459,6 +487,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Fighter Baiting",
+                typeTech = TypeTech.AirDoctrine,
                 Time = 2,
                 PlusArm = 8 // Add Hit fighters
             },
@@ -467,6 +496,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Submarine Operations",
+                typeTech = TypeTech.FlotDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add damage and hit submarines
             },
@@ -474,6 +504,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Carrier Operations",
+                typeTech = TypeTech.FlotDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add damage and hit airships
             },
@@ -481,6 +512,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Convoy Escorts",
+                typeTech = TypeTech.FlotDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add damage and hit esminecs
             },
@@ -490,6 +522,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Construction III",
+                typeTech = TypeTech.Civil,
                 Time = 2,
                 PlusCiv = 10 // civilPromka
             },
@@ -498,6 +531,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Advanced machine tools",
+                typeTech = TypeTech.Viyskov,
                 Time = 2,
                 PlusArm = 2
             },
@@ -506,6 +540,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Improved Infantry Equipment I",
+                typeTech = TypeTech.Army,
                 Time = 2,
                 PlusArm = 5 //Add damage garrizon, pihota and motorized/mechanized polks
             },
@@ -514,6 +549,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Decimetric radar",
+                typeTech = TypeTech.Country,
                 Time = 2,
                 PlusCount = 3 //stabilnisty
             },
@@ -522,6 +558,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Flot III",
+                typeTech = TypeTech.Flot,
                 Time = 2,
                 PlusArm = 10 // Add Hit and Damage
             },
@@ -530,6 +567,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Elastic Defense",
+                typeTech = TypeTech.LandDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add bronya tanks and btrs
             },
@@ -537,6 +575,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Mobile Defense",
+                typeTech = TypeTech.LandDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add bronya pihota, garrizons and motorized/mechanized
             },
@@ -544,6 +583,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Prepared Defense",
+                typeTech = TypeTech.LandDoctrine,
                 Time = 2,
                 PlusArm = 7 // Add bronya pihota, garrizons and motorized/mechanized
             },
@@ -551,6 +591,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Defense in Depth",
+                typeTech = TypeTech.LandDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add 5 to hit pihota polks
             },
@@ -559,6 +600,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Naval Strike Tactics",
+                typeTech = TypeTech.AirDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add damage airships
             },
@@ -566,6 +608,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Direct Ground Support",
+                typeTech = TypeTech.AirDoctrine,
                 Time = 2,
                 PlusArm = 7 // Add hit fighters
             },
@@ -573,6 +616,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Low Echelon Support",
+                typeTech = TypeTech.AirDoctrine,
                 Time = 2,
                 PlusArm = 8 // Add hit fighters
             },
@@ -581,6 +625,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Convoy Escorts in Being",
+                typeTech = TypeTech.FlotDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add damage and hit esminecs
             },
@@ -588,6 +633,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Capital Ship Raiders",
+                typeTech = TypeTech.FlotDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add damage and hit linkors
             },
@@ -595,6 +641,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Undersea Blockade",
+                typeTech = TypeTech.FlotDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add damage and hit submarinecs
             },
@@ -604,6 +651,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Construction IV",
+                typeTech = TypeTech.Civil,
                 Time = 2,
                 PlusCiv = 10 // civilPromka
             },
@@ -612,6 +660,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Infantry Equipment II",
+                typeTech = TypeTech.Army,
                 Time = 2,
                 PlusArm = 5 //Add damage garrizon, pihota polks
             },
@@ -620,6 +669,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Medium Tank I",
+                typeTech = TypeTech.Technika,
                 Time = 2
             },
             // Country bonus
@@ -627,6 +677,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Improved decimetric radar",
+                typeTech = TypeTech.Country,
                 Time = 2,
                 PlusCount = 5 //stabilnisty
             },
@@ -635,6 +686,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Flot IV",
+                typeTech = TypeTech.Flot,
                 Time = 2,
                 PlusArm = 10 // Add Hit and Damage
             },
@@ -643,6 +695,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Armored Spearhead",
+                typeTech = TypeTech.LandDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add damage tanks
             },
@@ -650,6 +703,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Dispersed Support",
+                typeTech = TypeTech.LandDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add hit artillery
             },
@@ -657,6 +711,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Grand Assault",
+                typeTech = TypeTech.LandDoctrine,
                 Time = 2,
                 PlusArm = 7 // Add hit polks
             },
@@ -664,6 +719,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "People's Army",
+                typeTech = TypeTech.LandDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add 5 to hit garrizon polks
             },
@@ -672,6 +728,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Dogfighting Experience",
+                typeTech = TypeTech.AirDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add damage fighters
             },
@@ -679,6 +736,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Fighter Ace Initiative",
+                typeTech = TypeTech.AirDoctrine,
                 Time = 2,
                 PlusArm = 7 // Add hit and damage airs
             },
@@ -686,6 +744,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Dispersed Fighting",
+                typeTech = TypeTech.AirDoctrine,
                 Time = 2,
                 PlusArm = 8 // Add hit fighters
             },
@@ -694,6 +753,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Convoy Interdiction",
+                typeTech = TypeTech.FlotDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add damage and hit submarines
             },
@@ -701,6 +761,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Subsidiary Carrier Role",
+                typeTech = TypeTech.FlotDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add damage and hit airships
             },
@@ -708,6 +769,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Floating Airfield",
+                typeTech = TypeTech.FlotDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add damage and hit airships
             },
@@ -717,6 +779,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Construction V",
+                typeTech = TypeTech.Civil,
                 Time = 2,
                 PlusCiv = 10 // civilPromka
             },
@@ -725,13 +788,15 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Improved Infantry Equipment II",
+                typeTech = TypeTech.Army,
                 Time = 2,
-                PlusArm = 5 ////Add damage garrizon, pihota and motorized/mechanized polks
+                PlusArm = 5 //Add damage garrizon, pihota and motorized/mechanized polks
             },
             //65
             new Technology
             {
                 Name = "Mechanized Equipment I",
+                typeTech = TypeTech.Army,
                 Time = 2
             },
             // Air
@@ -739,6 +804,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Fighter II and Bomber II",
+                typeTech = TypeTech.Air,
                 Time = 2,
                 PlusArm = 10 // Add Hit and Damage
             },
@@ -747,6 +813,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Centimetric radar",
+                typeTech = TypeTech.Country,
                 Time = 2,
                 PlusCount = 7 //stabilnisty
             },
@@ -755,6 +822,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Flot V",
+                typeTech = TypeTech.Flot,
                 Time = 2,
                 PlusArm = 10 // Add Hit and Damage
             },
@@ -763,6 +831,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Schwerpunkt",
+                typeTech = TypeTech.LandDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add hit and bronya tanks
             },
@@ -771,12 +840,14 @@ public class StartScriptsInitilazer : MonoBehaviour
             {
                 Name = "Overwhelming Firepower",
                 Time = 2,
+                typeTech = TypeTech.LandDoctrine,
                 PlusArm = 5 // Add damage artillery
             },
             //71
             new Technology
             {
                 Name = "Mechanized Offensive",
+                typeTech = TypeTech.LandDoctrine,
                 Time = 2,
                 PlusArm = 7 // Add hit garrizons, pihota, motorized/mechanized polks
             },
@@ -784,6 +855,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Infantry Offensive",
+                typeTech = TypeTech.LandDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add 5 to hit pihota polks
             },
@@ -792,6 +864,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Multi-Altitude Flying",
+                typeTech = TypeTech.AirDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add hit fighters
             },
@@ -799,6 +872,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Hunt and Destroy",
+                typeTech = TypeTech.AirDoctrine,
                 Time = 2,
                 PlusArm = 7 // Add damage airs
             },
@@ -806,6 +880,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Operational Destruction",
+                typeTech = TypeTech.AirDoctrine,
                 Time = 2,
                 PlusArm = 8 // Add damage bombers
             },
@@ -814,6 +889,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Integrated Convoy Defense",
+                typeTech = TypeTech.FlotDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add damage and hit kreysers
             },
@@ -821,6 +897,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Advanced Submarine Warfare",
+                typeTech = TypeTech.FlotDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add damage and hit submarine
             },
@@ -828,6 +905,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Submarine Offensive",
+                typeTech = TypeTech.FlotDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add damage and hit submarine
             },
@@ -837,6 +915,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Construction VI",
+                typeTech = TypeTech.Civil,
                 Time = 2,
                 PlusCiv = 10 // civilPromka
             },
@@ -845,6 +924,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Assembly line production",
+                typeTech = TypeTech.Viyskov,
                 Time = 2,
                 PlusArm = 2
             },
@@ -853,6 +933,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Light Tank II",
+                typeTech = TypeTech.Technika,
                 Time = 2,
                 PlusArm = 10 // Add Hit and Damage light tank
             },
@@ -860,6 +941,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Medium Tank II",
+                typeTech = TypeTech.Technika,
                 Time = 2,
                 PlusArm = 10 // Add Hit and Damage medium tank
             },
@@ -867,6 +949,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Heavy Tank II",
+                typeTech = TypeTech.Technika,
                 Time = 2,
                 PlusArm = 10 // Add Hit and Damage heavy tank
             },
@@ -875,6 +958,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Improved centimetric radar",
+                typeTech = TypeTech.Country,
                 Time = 2,
                 PlusCount = 9 //stabilnisty
             },
@@ -883,6 +967,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Blitzkrieg",
+                typeTech = TypeTech.LandDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add hit polks
             },
@@ -890,6 +975,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Mechanized Offensive",
+                typeTech = TypeTech.LandDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add bronya tanks
             },
@@ -897,6 +983,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Assault Concentration",
+                typeTech = TypeTech.LandDoctrine,
                 Time = 2,
                 PlusArm = 7 // Add hit polks
             },
@@ -904,6 +991,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Large Front Offensive",
+                typeTech = TypeTech.LandDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add hit pihota polks
             },
@@ -912,6 +1000,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Logistical Bombing",
+                typeTech = TypeTech.AirDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add damage bombers
             },
@@ -919,6 +1008,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Combat Unit Destruction",
+                typeTech = TypeTech.AirDoctrine,
                 Time = 2,
                 PlusArm = 7 // Add damage airs
             },
@@ -926,6 +1016,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Ground Attack Veteran Initiative",
+                typeTech = TypeTech.AirDoctrine,
                 Time = 2,
                 PlusArm = 8 // Add damage bombers
             },
@@ -934,6 +1025,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Floating Airfield",
+                typeTech = TypeTech.FlotDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add damage and hit airships
             },
@@ -941,6 +1033,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Combined Operations Raiding",
+                typeTech = TypeTech.FlotDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add damage and hit flots
             },
@@ -948,6 +1041,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Floating Fortress",
+                typeTech = TypeTech.FlotDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add damage and hit linkors
             },
@@ -957,6 +1051,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Construction VII",
+                typeTech = TypeTech.Civil,
                 Time = 2,
                 PlusCiv = 10 // civilPromka
             },
@@ -965,6 +1060,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Infantry Anti-Tank I",
+                typeTech = TypeTech.Army,
                 Time = 2,
                 PlusArm = 10 // Add Damage pihotas polks protu techniks
             },
@@ -972,6 +1068,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Mechanized Equipment II",
+                typeTech = TypeTech.Army,
                 Time = 2,
                 PlusArm = 10 // Add Hit and Damage mehanized polks
             },
@@ -980,6 +1077,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Advanced centimetric radar",
+                typeTech = TypeTech.Country,
                 Time = 2,
                 PlusCount = 11 //stabilnisty
             },
@@ -988,6 +1086,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Kampfgruppe",
+                typeTech = TypeTech.LandDoctrine,
                 Time = 2,
                 PlusArm = 10 // Add hit pohotas polks
             },
@@ -995,6 +1094,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Centralized Fire Control",
+                typeTech = TypeTech.LandDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add damage artillery and pihotas polks
             },
@@ -1002,6 +1102,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Branch Inter-Operation",
+                typeTech = TypeTech.LandDoctrine,
                 Time = 2,
                 PlusArm = 7 // Add damage pihotas and tanks polks
             },
@@ -1009,6 +1110,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Human Wave Offensive",
+                typeTech = TypeTech.LandDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add hit pihota polks
             },
@@ -1017,6 +1119,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Night Bombing",
+                typeTech = TypeTech.AirDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add damage bombers
             },
@@ -1024,6 +1127,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Battlefield Support",
+                typeTech = TypeTech.AirDoctrine,
                 Time = 2,
                 PlusArm = 7 // Add damage airs
             },
@@ -1031,6 +1135,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Carousel Bombing",
+                typeTech = TypeTech.AirDoctrine,
                 Time = 2,
                 PlusArm = 8 // Add damage bombers
             },
@@ -1039,6 +1144,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Grand Battlefleet",
+                typeTech = TypeTech.FlotDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add damage and hit linkors
             },
@@ -1046,6 +1152,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Carrier Battlegroups",
+                typeTech = TypeTech.FlotDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add damage and hit linkors and esminecs and kreysers
             },
@@ -1055,6 +1162,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Construction VIII",
+                typeTech = TypeTech.Civil,
                 Time = 2,
                 PlusCiv = 10 // civilPromka
             },
@@ -1063,6 +1171,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Flexible line",
+                typeTech = TypeTech.Viyskov,
                 Time = 2,
                 PlusArm = 10 // viyskovPromka
             },
@@ -1071,6 +1180,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Night Vision I",
+                typeTech = TypeTech.Army,
                 Time = 2,
                 PlusArm = 10 // Add Damage pihotas polks protu pihotas
             },
@@ -1079,6 +1189,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Volkssturm",
+                typeTech = TypeTech.LandDoctrine,
                 Time = 2,
                 PlusArm = 10 // Add % viyskova obovyazane
             },
@@ -1086,6 +1197,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Forward Observers",
+                typeTech = TypeTech.LandDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add hit artillery
             },
@@ -1093,6 +1205,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Central Planning",
+                typeTech = TypeTech.LandDoctrine,
                 Time = 2,
                 PlusArm = 7 // Add hit polks
             },
@@ -1100,6 +1213,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Guerrilla Warfare",
+                typeTech = TypeTech.LandDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add hit polks
             },
@@ -1108,6 +1222,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Massed Bomber Formations",
+                typeTech = TypeTech.AirDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add damage bombers
             },
@@ -1115,6 +1230,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Naval Strike Torpedo Tactics",
+                typeTech = TypeTech.AirDoctrine,
                 Time = 2,
                 PlusArm = 7 // Add damage airships
             },
@@ -1122,6 +1238,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Infiltration Bombing",
+                typeTech = TypeTech.AirDoctrine,
                 Time = 2,
                 PlusArm = 8 // Add hit bombers
             },
@@ -1131,6 +1248,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Construction IX",
+                typeTech = TypeTech.Civil,
                 Time = 2,
                 PlusCiv = 10 // civilPromka
             },
@@ -1139,13 +1257,15 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Infantry Equipment III",
+                typeTech = TypeTech.Army,
                 Time = 2,
                 PlusArm = 10 // Add Damage pihotas polks
             },
             //120
             new Technology
             {
-                Name = "Mechanized Equipment III	",
+                Name = "Mechanized Equipment III",
+                typeTech = TypeTech.Army,
                 Time = 2,
                 PlusArm = 10 // Add Damage mechanized polks
             },
@@ -1154,6 +1274,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Non-Discriminatory Conscription",
+                typeTech = TypeTech.LandDoctrine,
                 Time = 2,
                 PlusArm = 10 // Add % viyskova obovyazane
             },
@@ -1162,12 +1283,14 @@ public class StartScriptsInitilazer : MonoBehaviour
             {
                 Name = "Advanced Firebases",
                 Time = 2,
+                typeTech = TypeTech.LandDoctrine,
                 PlusArm = 5 // Add bronya artillery
             },
             //123
             new Technology
             {
                 Name = "C3I",
+                typeTech = TypeTech.LandDoctrine,
                 Time = 2,
                 PlusArm = 7 // Add hit polks
             },
@@ -1175,6 +1298,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Guerrilla Warfare",
+                typeTech = TypeTech.LandDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add hit polks
             },
@@ -1183,6 +1307,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Flying Fortress",
+                typeTech = TypeTech.AirDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add hit bombers
             },
@@ -1190,6 +1315,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Strategic Destruction",
+                typeTech = TypeTech.AirDoctrine,
                 Time = 2,
                 PlusArm = 7 // Add damage airs
             },
@@ -1197,6 +1323,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Air Skirmish",
+                typeTech = TypeTech.AirDoctrine,
                 Time = 2,
                 PlusArm = 8 // Add hit airs
             }

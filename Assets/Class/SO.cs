@@ -60,6 +60,20 @@ public enum Idelogies
     Monarchy
 }
 
+public enum TypeTech
+{
+    Civil,
+    Viyskov,
+    Army,
+    Technika,
+    Air,
+    Flot,
+    Country,
+    LandDoctrine,
+    AirDoctrine,
+    FlotDoctrine
+}
+
 [Serializable]
 public class Build
 {
@@ -158,6 +172,7 @@ public class Technology
     public int Time;
     public List<Build> builds = new List<Build>();
     public List<Polk> polks = new List<Polk>();
+    public TypeTech typeTech;
     public int PlusCiv;
     public int PlusArm;
     public int PlusCount;
