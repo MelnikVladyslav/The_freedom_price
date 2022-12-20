@@ -98,6 +98,7 @@ public class Polk
     public int Damage;
     public int Step;
     public int Bronya;
+    public Texture icon;
 
 }
 
@@ -145,8 +146,12 @@ public class Division
 
     public string Name;
     public List<Polk> polks = new List<Polk>();
-    public int ZagStep;
-    public int Price;
+    public int ZagHit = 0;
+    public int ZagBr = 0;
+    public int ZagDam = 0;
+    public int ZagStep = 0;
+    public int kilkRec = 0;
+    public int Price = 0;
 
 }
 
@@ -172,6 +177,7 @@ public class Technology
     public int Time;
     public List<Build> builds = new List<Build>();
     public List<Polk> polks = new List<Polk>();
+    public bool isOpen = false;
     public TypeTech typeTech;
     public int PlusCiv;
     public int PlusArm;
@@ -189,6 +195,7 @@ public class Country
     public string NameAlliens;
     public List<Region> regions = new List<Region>();
     public List<Technology> techs = new List<Technology>();
+    public List<Division> shablons = new List<Division>();
     public Idelogies idelogy;
     public int Stabilnisty;
     public int ProcentViyskovoZob;

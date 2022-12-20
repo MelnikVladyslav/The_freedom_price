@@ -42,7 +42,7 @@ namespace Assets.Scripts.Navigatiion
                 Techs.text += "Civil" + "\n";
             for (int i = 0; i < start.TechnologyList.Count; i++)
             {
-                if (idTech == -1 && start.TechnologyList[i].typeTech == TypeTech.Civil)
+                if (start.TechnologyList[i].isOpen == false && start.TechnologyList[i].typeTech == TypeTech.Civil)
                 {
                     Techs.text += start.TechnologyList[i].Name + "\n";
                 }
@@ -51,7 +51,7 @@ namespace Assets.Scripts.Navigatiion
                 Techs.text += "Viyskova promuslovisty" + "\n";
             for (int i = 0; i < start.TechnologyList.Count; i++)
             {
-                if (idTech == -1 && start.TechnologyList[i].typeTech == TypeTech.Viyskov)
+                if (start.TechnologyList[i].isOpen == false && start.TechnologyList[i].typeTech == TypeTech.Viyskov)
                 {
                     Techs.text += start.TechnologyList[i].Name + "\n";
                 }
@@ -60,7 +60,7 @@ namespace Assets.Scripts.Navigatiion
                 Techs.text += "Army" + "\n";
 			for (int i = 0; i < start.TechnologyList.Count; i++) 
 			{
-				if (idTech == -1 && start.TechnologyList [i].typeTech == TypeTech.Army) {
+				if (start.TechnologyList[i].isOpen == false && start.TechnologyList [i].typeTech == TypeTech.Army) {
 					Techs.text += start.TechnologyList [i].Name + "\n";
 				}
 			}
@@ -68,7 +68,7 @@ namespace Assets.Scripts.Navigatiion
                 Techs.text += "Technika" + "\n";
 			for (int i = 0; i < start.TechnologyList.Count; i++) 
 			{
-				if (idTech == -1 && start.TechnologyList [i].typeTech == TypeTech.Technika) {
+				if (start.TechnologyList[i].isOpen == false && start.TechnologyList [i].typeTech == TypeTech.Technika) {
 					Techs.text += start.TechnologyList [i].Name + "\n";
 				}
 			}
@@ -76,7 +76,7 @@ namespace Assets.Scripts.Navigatiion
                 Techs.text += "Air" + "\n";
 			for (int i = 0; i < start.TechnologyList.Count; i++) 
 			{
-				if (idTech == -1 && start.TechnologyList [i].typeTech == TypeTech.Air) {
+				if (start.TechnologyList[i].isOpen == false && start.TechnologyList [i].typeTech == TypeTech.Air) {
 					Techs.text += start.TechnologyList [i].Name + "\n";
 				}
 			}
@@ -84,7 +84,7 @@ namespace Assets.Scripts.Navigatiion
                 Techs.text += "Flot" + "\n";
 			for (int i = 0; i < start.TechnologyList.Count; i++)
 			{
-				if (idTech == -1 && start.TechnologyList [i].typeTech == TypeTech.Flot) {
+				if (start.TechnologyList[i].isOpen == false && start.TechnologyList [i].typeTech == TypeTech.Flot) {
 					Techs.text += start.TechnologyList [i].Name + "\n";
 				}
 			}
@@ -92,7 +92,7 @@ namespace Assets.Scripts.Navigatiion
                 Techs.text += "Country" + "\n";
 			for (int i = 0; i < start.TechnologyList.Count; i++) 
 			{
-				if (idTech == -1 && start.TechnologyList [i].typeTech == TypeTech.Country) {
+				if (start.TechnologyList[i].isOpen == false && start.TechnologyList [i].typeTech == TypeTech.Country) {
 					Techs.text += start.TechnologyList [i].Name + "\n";
 				}
 			}
@@ -100,7 +100,7 @@ namespace Assets.Scripts.Navigatiion
                 Techs.text += "Land doctrine" + "\n";
 			for (int i = 0; i < start.TechnologyList.Count; i++) 
 			{
-				if (idTech == -1 && start.TechnologyList [i].typeTech == TypeTech.LandDoctrine) {
+				if (start.TechnologyList[i].isOpen == false && start.TechnologyList [i].typeTech == TypeTech.LandDoctrine) {
 					Techs.text += start.TechnologyList [i].Name + "\n";
 				}
 			}
@@ -108,14 +108,14 @@ namespace Assets.Scripts.Navigatiion
                 Techs.text += "Air doctrine" + "\n";
 			for (int i = 0; i < start.TechnologyList.Count; i++) 
 			{
-				if (idTech == -1 && start.TechnologyList [i].typeTech == TypeTech.AirDoctrine) {
+				if (start.TechnologyList[i].isOpen == false && start.TechnologyList [i].typeTech == TypeTech.AirDoctrine) {
 					Techs.text += start.TechnologyList [i].Name + "\n";
 				}
 			}
 
 			Techs.text += "Naval doctrine" + "\n";
 			for (int i = 0; i < start.TechnologyList.Count; i++) {
-				if (idTech == -1 && start.TechnologyList [i].typeTech == TypeTech.FlotDoctrine) {
+				if (start.TechnologyList[i].isOpen == false && start.TechnologyList [i].typeTech == TypeTech.FlotDoctrine) {
 					Techs.text += start.TechnologyList [i].Name + "\n";
 				}
 			}

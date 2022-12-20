@@ -9,13 +9,14 @@ public class StartScriptsInitilazer : MonoBehaviour
 {
     public List<Country> CountryList;
     public List<Technology> TechnologyList;
-    List<Polk> PolkList;
+    public List<Polk> PolkList;
     List<Build> BuildList;
     List<Air> AirList;
     List<Flot> FlotList;
     List<Region> RegionList;
     public List<GameObject> towns = new List<GameObject>();
     public List<Texture> flags = new List<Texture>();
+    public List<Texture> icons = new List<Texture>();
     public int kilkNayn = 0;
 
     public void Start()
@@ -39,7 +40,8 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Hit = 50,
                 Damage = 20,
                 Bronya = 0,
-                Step = 1
+                Step = 1,
+                icon = icons[0]
             },
             new Polk
             {
@@ -49,7 +51,8 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Hit = 100,
                 Damage = 30,
                 Bronya = 0,
-                Step = 1
+                Step = 1,
+                icon = icons[1]
             },
             new Polk
             {
@@ -59,7 +62,8 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Hit = 100,
                 Damage = 40,
                 Bronya = 0,
-                Step = 1
+                Step = 1,
+                icon = icons[2]
             },
             new Polk
             {
@@ -69,7 +73,8 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Hit = 150,
                 Damage = 30,
                 Bronya = 10,
-                Step = 2
+                Step = 2,
+                icon = icons[3]
             },
             new Polk
             {
@@ -79,7 +84,8 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Hit = 150,
                 Damage = 30,
                 Bronya = 0,
-                Step = 3
+                Step = 3,
+                icon = icons[4]
             },
             new Polk
             {
@@ -89,7 +95,8 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Hit = 200,
                 Damage = 40,
                 Bronya = 20,
-                Step = 3
+                Step = 3,
+                icon = icons[5]
             },
             new Polk
             {
@@ -99,7 +106,8 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Hit = 250,
                 Damage = 50,
                 Bronya = 30,
-                Step = 2
+                Step = 2,
+                icon = icons[6]
             },
             new Polk
             {
@@ -109,7 +117,8 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Hit = 300,
                 Damage = 60,
                 Bronya = 40,
-                Step = 2
+                Step = 2,
+                icon = icons[7]
             },
             new Polk
             {
@@ -119,7 +128,8 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Hit = 350,
                 Damage = 70,
                 Bronya = 50,
-                Step = 2
+                Step = 2,
+                icon = icons[8]
             }
         };
         BuildList = new List<Build>()
@@ -141,6 +151,20 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Build
             {
                 Name = "Army factory",
+                Type = TypeBuild.Big,
+                Price = 500,
+                ZnArmy = 10
+            },
+            new Build
+            {
+                Name = "Aiport",
+                Type = TypeBuild.Big,
+                Price = 500,
+                ZnArmy = 10
+            },
+            new Build
+            {
+                Name = "Port",
                 Type = TypeBuild.Big,
                 Price = 500,
                 ZnArmy = 10
@@ -243,7 +267,8 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Technology
             {
                 Name = "Basic technology",
-                Time = 0
+                Time = 0,
+                isOpen = true
             },
             //1936
             // Civil
@@ -3811,6 +3836,8 @@ public class StartScriptsInitilazer : MonoBehaviour
             TechnologyList[0].builds.Add(BuildList[2]);
             TechnologyList[0].builds.Add(BuildList[3]);
             TechnologyList[0].builds.Add(BuildList[4]);
+            TechnologyList[0].builds.Add(BuildList[5]);
+            TechnologyList[0].builds.Add(BuildList[6]);
             TechnologyList[0].polks.Add(PolkList[0]);
             TechnologyList[0].polks.Add(PolkList[1]);
             TechnologyList[0].polks.Add(PolkList[2]);
