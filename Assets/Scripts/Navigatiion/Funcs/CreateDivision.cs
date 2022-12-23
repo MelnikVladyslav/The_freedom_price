@@ -1,5 +1,4 @@
-﻿using NUnit.Framework;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -23,25 +22,21 @@ namespace Assets.Scripts.Navigatiion.Funcs
         void Start()
         {
             currentShablon = new Division();
-            for (int j = 0; j < enterNation.countryPlayer.techs.Count; j++)
+            for (int j = 0; j < enterNation.countryPlayer.openPolks.Count; j++)
             {
-                if (enterNation.countryPlayer.techs[j].polks != null)
-                {
-                    for (int a = 0; a < enterNation.countryPlayer.techs[j].polks.Count; a++)
-                    {
-                        listsPolks.text += enterNation.countryPlayer.techs[j].polks[a].Name + "\n";
-                    }
-                }
-                else
-                {
-                    break;
-                }
+                listsPolks.text += enterNation.countryPlayer.openPolks[j].Name + "\n";
             }
             info.text = "Hit: " + "\n" + "Damage: " + "\n" + "Step: " + "\n" + "Bronya: " + "\n" + "Price: " + "\n" + "Kilkisty recriut: ";
         }
 
         public void EnterPolk()
         {
+            listsPolks.text = "";
+            for (int j = 0; j < enterNation.countryPlayer.openPolks.Count; j++)
+            {
+                listsPolks.text += enterNation.countryPlayer.openPolks[j].Name + "\n";
+            }
+
             for (int i = 0; i < start.PolkList.Count; i++)
             {
                 if (namePolk.text == start.PolkList[i].Name)
@@ -108,7 +103,7 @@ namespace Assets.Scripts.Navigatiion.Funcs
         // Update is called once per frame
         void Update()
         {
-
+            
         }
     }
 }

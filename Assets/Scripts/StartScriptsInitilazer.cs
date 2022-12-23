@@ -138,42 +138,49 @@ public class StartScriptsInitilazer : MonoBehaviour
             {
                 Name = "Silske gospodarstvo",
                 Type = TypeBuild.Lehka,
-                Price = 100,
+                Price = 1000,
                 Dohid = 100
             },
             new Build
             {
                 Name = "Civilian promuslovisty",
                 Type = TypeBuild.Lehka,
-                Price = 500,
+                Price = 5000,
+                Dohid = 250
+            },
+            new Build
+            {
+                Name = "Oil refinery",
+                Type = TypeBuild.Lehka,
+                Price = 5000,
                 Dohid = 250
             },
             new Build
             {
                 Name = "Army factory",
                 Type = TypeBuild.Big,
-                Price = 500,
+                Price = 5000,
                 ZnArmy = 10
             },
             new Build
             {
                 Name = "Aiport",
                 Type = TypeBuild.Big,
-                Price = 500,
+                Price = 5000,
                 ZnArmy = 10
             },
             new Build
             {
                 Name = "Port",
                 Type = TypeBuild.Big,
-                Price = 500,
+                Price = 5000,
                 ZnArmy = 10
             },
             new Build
             {
                 Name = "Bunker",
                 Type = TypeBuild.Defend,
-                Price = 250,
+                Price = 2500,
                 Hit = 100,
                 Damage = 50
             },
@@ -181,7 +188,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             {
                 Name = "PVO",
                 Type = TypeBuild.Defend,
-                Price = 200,
+                Price = 2000,
                 Hit = 100,
                 Damage = 50
             }
@@ -3838,6 +3845,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             TechnologyList[0].builds.Add(BuildList[4]);
             TechnologyList[0].builds.Add(BuildList[5]);
             TechnologyList[0].builds.Add(BuildList[6]);
+            TechnologyList[0].builds.Add(BuildList[7]);
             TechnologyList[0].polks.Add(PolkList[0]);
             TechnologyList[0].polks.Add(PolkList[1]);
             TechnologyList[0].polks.Add(PolkList[2]);

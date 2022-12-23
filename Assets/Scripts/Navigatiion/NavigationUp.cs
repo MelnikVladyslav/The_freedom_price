@@ -35,7 +35,17 @@ namespace Assets.Scripts.Navigatiion
         // Update is called once per frame
         void Update()
         {
-
+            if (true)
+            {
+                Flag.texture = enterNation.countryPlayer.Flag;
+                TextStab.text = enterNation.countryPlayer.Stabilnisty.ToString() + "%";
+                TextRecriut.text = enterNation.countryPlayer.KilkistyRecruit.ToString();
+                TextMoney.text = enterNation.countryPlayer.Money.ToString();
+                TextBuilsRes.text = enterNation.countryPlayer.BuildResourse.ToString();
+                TextStail.text = enterNation.countryPlayer.Stail.ToString();
+                TextTopluvo.text = enterNation.countryPlayer.Topluvo.ToString();
+                TextKauchuk.text = enterNation.countryPlayer.Kauchuk.ToString();
+            }
         }
     }
 }

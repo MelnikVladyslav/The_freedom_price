@@ -196,6 +196,8 @@ public class Country
     public List<Region> regions = new List<Region>();
     public List<Technology> techs = new List<Technology>();
     public List<Division> shablons = new List<Division>();
+    public List<Polk> openPolks = new List<Polk>();
+    public List<Build> openBuilds = new List<Build>();
     public Idelogies idelogy;
     public int Stabilnisty;
     public int ProcentViyskovoZob;
