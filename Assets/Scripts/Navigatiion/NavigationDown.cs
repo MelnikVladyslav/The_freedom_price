@@ -8,12 +8,16 @@ namespace Assets.Scripts.Navigatiion
     public class NavigationDown : MonoBehaviour
     {
         public StartScriptsInitilazer start;
+        public EnterNation enterNation;
         public RawImage Flag;
         public Text Builds;
         public Text Info;
         public Text NameReg;
+        public Button Build;
+        public Button CreateArmy;
+        public Button Move;
         int idCountry = 0;
-        int idRegion = 0;
+        public int idRegion = 0;
         int kilkCivil = 0;
         int kilkBig = 0;
         int kilkDef = 0;
@@ -34,6 +38,19 @@ namespace Assets.Scripts.Navigatiion
                         {
                             idCountry = i;
                             idRegion = j;
+
+                            if (enterNation.countryPlayer.Name == start.CountryList[i].Name)
+                            {
+                                Build.gameObject.SetActive(true);
+                                CreateArmy.gameObject.SetActive(true);
+                                Move.gameObject.SetActive(true);
+                            }
+                            else
+                            {
+                                Build.gameObject.SetActive(false);
+                                CreateArmy.gameObject.SetActive(false);
+                                Move.gameObject.SetActive(false);
+                            }
 
                             for (int a = 0; a < start.CountryList[i].regions[j].builds.Count; a++)
                             {

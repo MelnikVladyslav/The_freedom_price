@@ -12,8 +12,11 @@ namespace Assets.Scripts.Navigatiion.Funcs
         public CountryMechanics countryMechanics;
         public TechnologyMechanic technologyMechanic;
         public StartScriptsInitilazer start;
+        public MessagesMechanic messagesMechanic;
+        public Builds builds;
         public Text textTime;
         public DateTime Time;
+        public Text listsInfo;
         int day = 1;
         int mounth = 1;
         int year = 1936;
@@ -24,6 +27,8 @@ namespace Assets.Scripts.Navigatiion.Funcs
         int kilkHodRich = 5;
         public int idTech = 0;
         public Technology currentTech;
+        public List<Build> currentBuild;
+        public List<int> idsRegions = new List<int>();
 
         // Use this for initialization
         void Start()
@@ -39,7 +44,7 @@ namespace Assets.Scripts.Navigatiion.Funcs
                         enterNation.countryPlayer.openPolks.Add(enterNation.countryPlayer.techs[i].polks[j]);
                     }
                 }
-                else if (enterNation.countryPlayer.techs[i].builds != null)
+                if (enterNation.countryPlayer.techs[i].builds != null)
                 {
                     for (int j = 0; j < enterNation.countryPlayer.techs[i].builds.Count; j++)
                     {
@@ -107,6 +112,7 @@ namespace Assets.Scripts.Navigatiion.Funcs
                     {
                         start.TechnologyList[idTech].isOpen = true;
                         enterNation.countryPlayer.techs.Add(currentTech);
+                        messagesMechanic.Messages.text += "Technology named " + currentTech.Name + " open on " + Time.ToString() + "\n";
                         currentTech = null;
                         enterNation.countryPlayer.openPolks = new List<Polk>();
                         enterNation.countryPlayer.openBuilds = new List<Build>();
@@ -126,6 +132,29 @@ namespace Assets.Scripts.Navigatiion.Funcs
                                     enterNation.countryPlayer.openBuilds.Add(enterNation.countryPlayer.techs[i].builds[j]);
                                 }
                             }
+                        }
+                    }
+                }
+            }
+
+            //Builds
+            listsInfo.text = "";
+
+            if (currentBuild != null)
+            {
+                for (int i = 0; i < currentBuild.Count; i++)
+                {
+                    listsInfo.text += currentBuild[i].Name + "\n";
+
+                    if (currentBuild[i].kilkTurns != 0)
+                    {
+                        currentBuild[i].kilkTurns -= 1;
+                        if (currentBuild[i].kilkTurns == 0)
+                        {
+                            enterNation.countryPlayer.regions[idsRegions[i]].builds.Add(currentBuild[i]);
+                            messagesMechanic.Messages.text += "Build in region " + enterNation.countryPlayer.regions[idsRegions[i]].Name + " named " + currentBuild[i].Name + " on " + Time.ToString() + "\n";
+                            currentBuild.Remove(currentBuild[i]);
+                            idsRegions.Remove(idsRegions[i]);
                         }
                     }
                 }

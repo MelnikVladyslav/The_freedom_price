@@ -84,6 +84,7 @@ public class Build
     public int ZnArmy;
     public int Hit;
     public int Damage;
+    public int kilkTurns = 2;
 
 }
 
