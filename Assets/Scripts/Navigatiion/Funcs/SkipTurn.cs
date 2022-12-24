@@ -13,10 +13,9 @@ namespace Assets.Scripts.Navigatiion.Funcs
         public TechnologyMechanic technologyMechanic;
         public StartScriptsInitilazer start;
         public MessagesMechanic messagesMechanic;
-        public Builds builds;
+        public CreateArmy createArmy;
         public Text textTime;
         public DateTime Time;
-        public Text listsInfo;
         int day = 1;
         int mounth = 1;
         int year = 1936;
@@ -24,10 +23,10 @@ namespace Assets.Scripts.Navigatiion.Funcs
         int dohidStail = 0;
         int dohidOil = 0;
         int dohidPod = 0;
-        int kilkHodRich = 5;
         public int idTech = 0;
         public Technology currentTech;
         public List<Build> currentBuild;
+        public Division currentDiv = null;
         public List<int> idsRegions = new List<int>();
 
         // Use this for initialization
@@ -138,14 +137,10 @@ namespace Assets.Scripts.Navigatiion.Funcs
             }
 
             //Builds
-            listsInfo.text = "";
-
             if (currentBuild != null)
             {
                 for (int i = 0; i < currentBuild.Count; i++)
                 {
-                    listsInfo.text += currentBuild[i].Name + "\n";
-
                     if (currentBuild[i].kilkTurns != 0)
                     {
                         currentBuild[i].kilkTurns -= 1;
@@ -160,7 +155,21 @@ namespace Assets.Scripts.Navigatiion.Funcs
                 }
             }
 
-            
+            //Army
+            if (currentDiv != null)
+            {
+                if (currentDiv.kilkturns != 0)
+                {
+                    currentDiv.kilkturns -= 1;
+
+                    if (currentDiv.kilkturns == 0)
+                    {
+                        enterNation.countryPlayer.regions[createArmy.idRegion].divisions.Add(currentDiv);
+                        messagesMechanic.Messages.text += "Create division in region " + enterNation.countryPlayer.regions[createArmy.idRegion].Name + " named " + currentDiv.Name + " on " + Time.ToString() + "\n";
+                        currentDiv = null;
+                    }
+                }
+            }
         }
 
         // Update is called once per frame

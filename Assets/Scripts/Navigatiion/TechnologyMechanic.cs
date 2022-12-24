@@ -46,7 +46,42 @@ namespace Assets.Scripts.Navigatiion
             {
                 if (start.TechnologyList[i].isOpen == false && start.TechnologyList[i].typeTech == TypeTech.Civil)
                 {
-                    Techs.text += start.TechnologyList[i].Name + "\n";
+                    if (i >= 1 && i <= 18 && skipTurn.Time.Year == 1936)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 19 && i <= 32 && skipTurn.Time.Year == 1937)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 33 && i <= 47 && skipTurn.Time.Year == 1938)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 48 && i <= 62 && skipTurn.Time.Year == 1939)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 63 && i <= 78 && skipTurn.Time.Year == 1940)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 79 && i <= 94 && skipTurn.Time.Year == 1941)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 95 && i <= 107 && skipTurn.Time.Year == 1942)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 108 && i <= 117 && skipTurn.Time.Year == 1943)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 118 && i <= 127 && skipTurn.Time.Year == 1944)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
                 }
             }
 
@@ -55,7 +90,42 @@ namespace Assets.Scripts.Navigatiion
             {
                 if (start.TechnologyList[i].isOpen == false && start.TechnologyList[i].typeTech == TypeTech.Viyskov)
                 {
-                    Techs.text += start.TechnologyList[i].Name + "\n";
+                    if (i >= 1 && i <= 18 && skipTurn.Time.Year == 1936)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 19 && i <= 32 && skipTurn.Time.Year == 1937)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 33 && i <= 47 && skipTurn.Time.Year == 1938)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 48 && i <= 62 && skipTurn.Time.Year == 1939)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 63 && i <= 78 && skipTurn.Time.Year == 1940)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 79 && i <= 94 && skipTurn.Time.Year == 1941)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 95 && i <= 107 && skipTurn.Time.Year == 1942)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 108 && i <= 117 && skipTurn.Time.Year == 1943)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 118 && i <= 127 && skipTurn.Time.Year == 1944)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
                 }
             }
 
@@ -63,63 +133,343 @@ namespace Assets.Scripts.Navigatiion
 			for (int i = 0; i < start.TechnologyList.Count; i++) 
 			{
 				if (start.TechnologyList[i].isOpen == false && start.TechnologyList [i].typeTech == TypeTech.Army) {
-					Techs.text += start.TechnologyList [i].Name + "\n";
-				}
+                    if (i >= 1 && i <= 18 && skipTurn.Time.Year == 1936)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 19 && i <= 32 && skipTurn.Time.Year == 1937)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 33 && i <= 47 && skipTurn.Time.Year == 1938)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 48 && i <= 62 && skipTurn.Time.Year == 1939)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 63 && i <= 78 && skipTurn.Time.Year == 1940)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 79 && i <= 94 && skipTurn.Time.Year == 1941)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 95 && i <= 107 && skipTurn.Time.Year == 1942)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 108 && i <= 117 && skipTurn.Time.Year == 1943)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 118 && i <= 127 && skipTurn.Time.Year == 1944)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                }
 			}
 
                 Techs.text += "Technika" + "\n";
 			for (int i = 0; i < start.TechnologyList.Count; i++) 
 			{
 				if (start.TechnologyList[i].isOpen == false && start.TechnologyList [i].typeTech == TypeTech.Technika) {
-					Techs.text += start.TechnologyList [i].Name + "\n";
-				}
+                    if (i >= 1 && i <= 18 && skipTurn.Time.Year == 1936)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 19 && i <= 32 && skipTurn.Time.Year == 1937)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 33 && i <= 47 && skipTurn.Time.Year == 1938)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 48 && i <= 62 && skipTurn.Time.Year == 1939)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 63 && i <= 78 && skipTurn.Time.Year == 1940)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 79 && i <= 94 && skipTurn.Time.Year == 1941)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 95 && i <= 107 && skipTurn.Time.Year == 1942)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 108 && i <= 117 && skipTurn.Time.Year == 1943)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 118 && i <= 127 && skipTurn.Time.Year == 1944)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                }
 			}
 
                 Techs.text += "Air" + "\n";
 			for (int i = 0; i < start.TechnologyList.Count; i++) 
 			{
 				if (start.TechnologyList[i].isOpen == false && start.TechnologyList [i].typeTech == TypeTech.Air) {
-					Techs.text += start.TechnologyList [i].Name + "\n";
-				}
+                    if (i >= 1 && i <= 18 && skipTurn.Time.Year == 1936)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 19 && i <= 32 && skipTurn.Time.Year == 1937)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 33 && i <= 47 && skipTurn.Time.Year == 1938)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 48 && i <= 62 && skipTurn.Time.Year == 1939)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 63 && i <= 78 && skipTurn.Time.Year == 1940)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 79 && i <= 94 && skipTurn.Time.Year == 1941)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 95 && i <= 107 && skipTurn.Time.Year == 1942)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 108 && i <= 117 && skipTurn.Time.Year == 1943)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 118 && i <= 127 && skipTurn.Time.Year == 1944)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                }
 			}
 
                 Techs.text += "Flot" + "\n";
 			for (int i = 0; i < start.TechnologyList.Count; i++)
 			{
 				if (start.TechnologyList[i].isOpen == false && start.TechnologyList [i].typeTech == TypeTech.Flot) {
-					Techs.text += start.TechnologyList [i].Name + "\n";
-				}
+                    if (i >= 1 && i <= 18 && skipTurn.Time.Year == 1936)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 19 && i <= 32 && skipTurn.Time.Year == 1937)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 33 && i <= 47 && skipTurn.Time.Year == 1938)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 48 && i <= 62 && skipTurn.Time.Year == 1939)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 63 && i <= 78 && skipTurn.Time.Year == 1940)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 79 && i <= 94 && skipTurn.Time.Year == 1941)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 95 && i <= 107 && skipTurn.Time.Year == 1942)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 108 && i <= 117 && skipTurn.Time.Year == 1943)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 118 && i <= 127 && skipTurn.Time.Year == 1944)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                }
 			}
 
                 Techs.text += "Country" + "\n";
 			for (int i = 0; i < start.TechnologyList.Count; i++) 
 			{
 				if (start.TechnologyList[i].isOpen == false && start.TechnologyList [i].typeTech == TypeTech.Country) {
-					Techs.text += start.TechnologyList [i].Name + "\n";
-				}
+                    if (i >= 1 && i <= 18 && skipTurn.Time.Year == 1936)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 19 && i <= 32 && skipTurn.Time.Year == 1937)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 33 && i <= 47 && skipTurn.Time.Year == 1938)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 48 && i <= 62 && skipTurn.Time.Year == 1939)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 63 && i <= 78 && skipTurn.Time.Year == 1940)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 79 && i <= 94 && skipTurn.Time.Year == 1941)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 95 && i <= 107 && skipTurn.Time.Year == 1942)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 108 && i <= 117 && skipTurn.Time.Year == 1943)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 118 && i <= 127 && skipTurn.Time.Year == 1944)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                }
 			}
 
                 Techs.text += "Land doctrine" + "\n";
 			for (int i = 0; i < start.TechnologyList.Count; i++) 
 			{
 				if (start.TechnologyList[i].isOpen == false && start.TechnologyList [i].typeTech == TypeTech.LandDoctrine) {
-					Techs.text += start.TechnologyList [i].Name + "\n";
-				}
+                    if (i >= 1 && i <= 18 && skipTurn.Time.Year == 1936)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 19 && i <= 32 && skipTurn.Time.Year == 1937)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 33 && i <= 47 && skipTurn.Time.Year == 1938)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 48 && i <= 62 && skipTurn.Time.Year == 1939)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 63 && i <= 78 && skipTurn.Time.Year == 1940)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 79 && i <= 94 && skipTurn.Time.Year == 1941)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 95 && i <= 107 && skipTurn.Time.Year == 1942)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 108 && i <= 117 && skipTurn.Time.Year == 1943)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 118 && i <= 127 && skipTurn.Time.Year == 1944)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                }
 			}
 
                 Techs.text += "Air doctrine" + "\n";
 			for (int i = 0; i < start.TechnologyList.Count; i++) 
 			{
 				if (start.TechnologyList[i].isOpen == false && start.TechnologyList [i].typeTech == TypeTech.AirDoctrine) {
-					Techs.text += start.TechnologyList [i].Name + "\n";
-				}
+                    if (i >= 1 && i <= 18 && skipTurn.Time.Year == 1936)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 19 && i <= 32 && skipTurn.Time.Year == 1937)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 33 && i <= 47 && skipTurn.Time.Year == 1938)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 48 && i <= 62 && skipTurn.Time.Year == 1939)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 63 && i <= 78 && skipTurn.Time.Year == 1940)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 79 && i <= 94 && skipTurn.Time.Year == 1941)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 95 && i <= 107 && skipTurn.Time.Year == 1942)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 108 && i <= 117 && skipTurn.Time.Year == 1943)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 118 && i <= 127 && skipTurn.Time.Year == 1944)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                }
 			}
 
 			Techs.text += "Naval doctrine" + "\n";
 			for (int i = 0; i < start.TechnologyList.Count; i++) {
 				if (start.TechnologyList[i].isOpen == false && start.TechnologyList [i].typeTech == TypeTech.FlotDoctrine) {
-					Techs.text += start.TechnologyList [i].Name + "\n";
-				}
+                    if (i >= 1 && i <= 18 && skipTurn.Time.Year == 1936)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 19 && i <= 32 && skipTurn.Time.Year == 1937)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 33 && i <= 47 && skipTurn.Time.Year == 1938)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 48 && i <= 62 && skipTurn.Time.Year == 1939)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 63 && i <= 78 && skipTurn.Time.Year == 1940)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 79 && i <= 94 && skipTurn.Time.Year == 1941)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 95 && i <= 107 && skipTurn.Time.Year == 1942)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 108 && i <= 117 && skipTurn.Time.Year == 1943)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 118 && i <= 127 && skipTurn.Time.Year == 1944)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                }
 			}
             
         }
@@ -208,101 +558,467 @@ namespace Assets.Scripts.Navigatiion
         // Update is called once per frame
         void Update()
         {
-            if (start.TechnologyList[skipTurn.idTech].isOpen == true)
+            Techs.text = "";
+
+            for (int i = 0; i < start.TechnologyList.Count; i++)
             {
-                Techs.text = "";
-
-                Techs.text += "Civil" + "\n";
-                for (int i = 0; i < start.TechnologyList.Count; i++)
+                name = start.TechnologyList[i].Name;
+                for (int j = 0; j < enterNation.countryPlayer.techs.Count; j++)
                 {
-                    if (start.TechnologyList[i].isOpen == false && start.TechnologyList[i].typeTech == TypeTech.Civil)
+                    if (name == enterNation.countryPlayer.techs[j].Name)
                     {
-                        Techs.text += start.TechnologyList[i].Name + "\n";
+                        idTech = j;
                     }
-                }
-
-                Techs.text += "Viyskova promuslovisty" + "\n";
-                for (int i = 0; i < start.TechnologyList.Count; i++)
-                {
-                    if (start.TechnologyList[i].isOpen == false && start.TechnologyList[i].typeTech == TypeTech.Viyskov)
+                    if (idTech != -1)
                     {
-                        Techs.text += start.TechnologyList[i].Name + "\n";
-                    }
-                }
-
-                Techs.text += "Army" + "\n";
-                for (int i = 0; i < start.TechnologyList.Count; i++)
-                {
-                    if (start.TechnologyList[i].isOpen == false && start.TechnologyList[i].typeTech == TypeTech.Army)
-                    {
-                        Techs.text += start.TechnologyList[i].Name + "\n";
-                    }
-                }
-
-                Techs.text += "Technika" + "\n";
-                for (int i = 0; i < start.TechnologyList.Count; i++)
-                {
-                    if (start.TechnologyList[i].isOpen == false && start.TechnologyList[i].typeTech == TypeTech.Technika)
-                    {
-                        Techs.text += start.TechnologyList[i].Name + "\n";
-                    }
-                }
-
-                Techs.text += "Air" + "\n";
-                for (int i = 0; i < start.TechnologyList.Count; i++)
-                {
-                    if (start.TechnologyList[i].isOpen == false && start.TechnologyList[i].typeTech == TypeTech.Air)
-                    {
-                        Techs.text += start.TechnologyList[i].Name + "\n";
-                    }
-                }
-
-                Techs.text += "Flot" + "\n";
-                for (int i = 0; i < start.TechnologyList.Count; i++)
-                {
-                    if (start.TechnologyList[i].isOpen == false && start.TechnologyList[i].typeTech == TypeTech.Flot)
-                    {
-                        Techs.text += start.TechnologyList[i].Name + "\n";
-                    }
-                }
-
-                Techs.text += "Country" + "\n";
-                for (int i = 0; i < start.TechnologyList.Count; i++)
-                {
-                    if (start.TechnologyList[i].isOpen == false && start.TechnologyList[i].typeTech == TypeTech.Country)
-                    {
-                        Techs.text += start.TechnologyList[i].Name + "\n";
-                    }
-                }
-
-                Techs.text += "Land doctrine" + "\n";
-                for (int i = 0; i < start.TechnologyList.Count; i++)
-                {
-                    if (start.TechnologyList[i].isOpen == false && start.TechnologyList[i].typeTech == TypeTech.LandDoctrine)
-                    {
-                        Techs.text += start.TechnologyList[i].Name + "\n";
-                    }
-                }
-
-                Techs.text += "Air doctrine" + "\n";
-                for (int i = 0; i < start.TechnologyList.Count; i++)
-                {
-                    if (start.TechnologyList[i].isOpen == false && start.TechnologyList[i].typeTech == TypeTech.AirDoctrine)
-                    {
-                        Techs.text += start.TechnologyList[i].Name + "\n";
-                    }
-                }
-
-                Techs.text += "Naval doctrine" + "\n";
-                for (int i = 0; i < start.TechnologyList.Count; i++)
-                {
-                    if (start.TechnologyList[i].isOpen == false && start.TechnologyList[i].typeTech == TypeTech.FlotDoctrine)
-                    {
-                        Techs.text += start.TechnologyList[i].Name + "\n";
+                        i++;
+                        idTech = -1;
+                        break;
                     }
                 }
 
             }
+
+            Techs.text += "Civil" + "\n";
+            for (int i = 0; i < start.TechnologyList.Count; i++)
+            {
+                if (start.TechnologyList[i].isOpen == false && start.TechnologyList[i].typeTech == TypeTech.Civil)
+                {
+                    if (i >= 1 && i <= 18 && skipTurn.Time.Year == 1936)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 19 && i <= 32 && skipTurn.Time.Year == 1937)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 33 && i <= 47 && skipTurn.Time.Year == 1938)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 48 && i <= 62 && skipTurn.Time.Year == 1939)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 63 && i <= 78 && skipTurn.Time.Year == 1940)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 79 && i <= 94 && skipTurn.Time.Year == 1941)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 95 && i <= 107 && skipTurn.Time.Year == 1942)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 108 && i <= 117 && skipTurn.Time.Year == 1943)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 118 && i <= 127 && skipTurn.Time.Year == 1944)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                }
+            }
+
+            Techs.text += "Viyskova promuslovisty" + "\n";
+            for (int i = 0; i < start.TechnologyList.Count; i++)
+            {
+                if (start.TechnologyList[i].isOpen == false && start.TechnologyList[i].typeTech == TypeTech.Viyskov)
+                {
+                    if (i >= 1 && i <= 18 && skipTurn.Time.Year == 1936)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 19 && i <= 32 && skipTurn.Time.Year == 1937)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 33 && i <= 47 && skipTurn.Time.Year == 1938)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 48 && i <= 62 && skipTurn.Time.Year == 1939)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 63 && i <= 78 && skipTurn.Time.Year == 1940)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 79 && i <= 94 && skipTurn.Time.Year == 1941)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 95 && i <= 107 && skipTurn.Time.Year == 1942)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 108 && i <= 117 && skipTurn.Time.Year == 1943)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 118 && i <= 127 && skipTurn.Time.Year == 1944)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                }
+            }
+
+            Techs.text += "Army" + "\n";
+            for (int i = 0; i < start.TechnologyList.Count; i++)
+            {
+                if (start.TechnologyList[i].isOpen == false && start.TechnologyList[i].typeTech == TypeTech.Army)
+                {
+                    if (i >= 1 && i <= 18 && skipTurn.Time.Year == 1936)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 19 && i <= 32 && skipTurn.Time.Year == 1937)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 33 && i <= 47 && skipTurn.Time.Year == 1938)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 48 && i <= 62 && skipTurn.Time.Year == 1939)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 63 && i <= 78 && skipTurn.Time.Year == 1940)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 79 && i <= 94 && skipTurn.Time.Year == 1941)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 95 && i <= 107 && skipTurn.Time.Year == 1942)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 108 && i <= 117 && skipTurn.Time.Year == 1943)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 118 && i <= 127 && skipTurn.Time.Year == 1944)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                }
+            }
+
+            Techs.text += "Technika" + "\n";
+            for (int i = 0; i < start.TechnologyList.Count; i++)
+            {
+                if (start.TechnologyList[i].isOpen == false && start.TechnologyList[i].typeTech == TypeTech.Technika)
+                {
+                    if (i >= 1 && i <= 18 && skipTurn.Time.Year == 1936)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 19 && i <= 32 && skipTurn.Time.Year == 1937)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 33 && i <= 47 && skipTurn.Time.Year == 1938)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 48 && i <= 62 && skipTurn.Time.Year == 1939)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 63 && i <= 78 && skipTurn.Time.Year == 1940)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 79 && i <= 94 && skipTurn.Time.Year == 1941)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 95 && i <= 107 && skipTurn.Time.Year == 1942)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 108 && i <= 117 && skipTurn.Time.Year == 1943)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 118 && i <= 127 && skipTurn.Time.Year == 1944)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                }
+            }
+
+            Techs.text += "Air" + "\n";
+            for (int i = 0; i < start.TechnologyList.Count; i++)
+            {
+                if (start.TechnologyList[i].isOpen == false && start.TechnologyList[i].typeTech == TypeTech.Air)
+                {
+                    if (i >= 1 && i <= 18 && skipTurn.Time.Year == 1936)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 19 && i <= 32 && skipTurn.Time.Year == 1937)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 33 && i <= 47 && skipTurn.Time.Year == 1938)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 48 && i <= 62 && skipTurn.Time.Year == 1939)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 63 && i <= 78 && skipTurn.Time.Year == 1940)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 79 && i <= 94 && skipTurn.Time.Year == 1941)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 95 && i <= 107 && skipTurn.Time.Year == 1942)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 108 && i <= 117 && skipTurn.Time.Year == 1943)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 118 && i <= 127 && skipTurn.Time.Year == 1944)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                }
+            }
+
+            Techs.text += "Flot" + "\n";
+            for (int i = 0; i < start.TechnologyList.Count; i++)
+            {
+                if (start.TechnologyList[i].isOpen == false && start.TechnologyList[i].typeTech == TypeTech.Flot)
+                {
+                    if (i >= 1 && i <= 18 && skipTurn.Time.Year == 1936)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 19 && i <= 32 && skipTurn.Time.Year == 1937)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 33 && i <= 47 && skipTurn.Time.Year == 1938)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 48 && i <= 62 && skipTurn.Time.Year == 1939)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 63 && i <= 78 && skipTurn.Time.Year == 1940)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 79 && i <= 94 && skipTurn.Time.Year == 1941)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 95 && i <= 107 && skipTurn.Time.Year == 1942)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 108 && i <= 117 && skipTurn.Time.Year == 1943)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 118 && i <= 127 && skipTurn.Time.Year == 1944)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                }
+            }
+
+            Techs.text += "Country" + "\n";
+            for (int i = 0; i < start.TechnologyList.Count; i++)
+            {
+                if (start.TechnologyList[i].isOpen == false && start.TechnologyList[i].typeTech == TypeTech.Country)
+                {
+                    if (i >= 1 && i <= 18 && skipTurn.Time.Year == 1936)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 19 && i <= 32 && skipTurn.Time.Year == 1937)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 33 && i <= 47 && skipTurn.Time.Year == 1938)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 48 && i <= 62 && skipTurn.Time.Year == 1939)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 63 && i <= 78 && skipTurn.Time.Year == 1940)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 79 && i <= 94 && skipTurn.Time.Year == 1941)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 95 && i <= 107 && skipTurn.Time.Year == 1942)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 108 && i <= 117 && skipTurn.Time.Year == 1943)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 118 && i <= 127 && skipTurn.Time.Year == 1944)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                }
+            }
+
+            Techs.text += "Land doctrine" + "\n";
+            for (int i = 0; i < start.TechnologyList.Count; i++)
+            {
+                if (start.TechnologyList[i].isOpen == false && start.TechnologyList[i].typeTech == TypeTech.LandDoctrine)
+                {
+                    if (i >= 1 && i <= 18 && skipTurn.Time.Year == 1936)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 19 && i <= 32 && skipTurn.Time.Year == 1937)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 33 && i <= 47 && skipTurn.Time.Year == 1938)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 48 && i <= 62 && skipTurn.Time.Year == 1939)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 63 && i <= 78 && skipTurn.Time.Year == 1940)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 79 && i <= 94 && skipTurn.Time.Year == 1941)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 95 && i <= 107 && skipTurn.Time.Year == 1942)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 108 && i <= 117 && skipTurn.Time.Year == 1943)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 118 && i <= 127 && skipTurn.Time.Year == 1944)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                }
+            }
+
+            Techs.text += "Air doctrine" + "\n";
+            for (int i = 0; i < start.TechnologyList.Count; i++)
+            {
+                if (start.TechnologyList[i].isOpen == false && start.TechnologyList[i].typeTech == TypeTech.AirDoctrine)
+                {
+                    if (i >= 1 && i <= 18 && skipTurn.Time.Year == 1936)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 19 && i <= 32 && skipTurn.Time.Year == 1937)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 33 && i <= 47 && skipTurn.Time.Year == 1938)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 48 && i <= 62 && skipTurn.Time.Year == 1939)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 63 && i <= 78 && skipTurn.Time.Year == 1940)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 79 && i <= 94 && skipTurn.Time.Year == 1941)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 95 && i <= 107 && skipTurn.Time.Year == 1942)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 108 && i <= 117 && skipTurn.Time.Year == 1943)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 118 && i <= 127 && skipTurn.Time.Year == 1944)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                }
+            }
+
+            Techs.text += "Naval doctrine" + "\n";
+            for (int i = 0; i < start.TechnologyList.Count; i++)
+            {
+                if (start.TechnologyList[i].isOpen == false && start.TechnologyList[i].typeTech == TypeTech.FlotDoctrine)
+                {
+                    if (i >= 1 && i <= 18 && skipTurn.Time.Year == 1936)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 19 && i <= 32 && skipTurn.Time.Year == 1937)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 33 && i <= 47 && skipTurn.Time.Year == 1938)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 48 && i <= 62 && skipTurn.Time.Year == 1939)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 63 && i <= 78 && skipTurn.Time.Year == 1940)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 79 && i <= 94 && skipTurn.Time.Year == 1941)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 95 && i <= 107 && skipTurn.Time.Year == 1942)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 108 && i <= 117 && skipTurn.Time.Year == 1943)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                    if (i >= 118 && i <= 127 && skipTurn.Time.Year == 1944)
+                    {
+                        Techs.text += start.TechnologyList[i].Name + "\n";
+                    }
+                }
+            }
+
         }
     }
 }

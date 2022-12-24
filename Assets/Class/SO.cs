@@ -153,6 +153,7 @@ public class Division
     public int ZagStep = 0;
     public int kilkRec = 0;
     public int Price = 0;
+    public int kilkturns;
 
 }
 

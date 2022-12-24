@@ -48,11 +48,19 @@ namespace Assets.Scripts.Navigatiion.Funcs
 
         public void Build()
         {
-            enterNation.countryPlayer.Money -= enterNation.countryPlayer.openBuilds[idBuild].Price;
-            enterNation.countryPlayer.BuildResourse -= enterNation.countryPlayer.openBuilds[idBuild].Price / 2;
+            if (enterNation.countryPlayer.Money < enterNation.countryPlayer.openBuilds[idBuild].Price || enterNation.countryPlayer.BuildResourse < enterNation.countryPlayer.openBuilds[idBuild].Price / 2)
+            {
 
-            skipTurn.currentBuild.Add(enterNation.countryPlayer.openBuilds[idBuild]);
-            skipTurn.idsRegions.Add(navigationDown.idRegion);
+            }
+            else
+            {
+                enterNation.countryPlayer.Money -= enterNation.countryPlayer.openBuilds[idBuild].Price;
+                enterNation.countryPlayer.BuildResourse -= enterNation.countryPlayer.openBuilds[idBuild].Price / 2;
+
+                skipTurn.currentBuild.Add(enterNation.countryPlayer.openBuilds[idBuild]);
+                skipTurn.idsRegions.Add(navigationDown.idRegion);
+            }
+
         }
     }
 }
