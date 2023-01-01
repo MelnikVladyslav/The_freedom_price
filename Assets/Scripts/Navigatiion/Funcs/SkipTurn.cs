@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assets.Class.Army;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -28,6 +29,7 @@ namespace Assets.Scripts.Navigatiion.Funcs
         public List<Build> currentBuild;
         public Division currentDiv = null;
         public List<int> idsRegions = new List<int>();
+        public List<MoveDivisionClass> listMovedDiv = new List<MoveDivisionClass>();
 
         // Use this for initialization
         void Start()
@@ -51,6 +53,7 @@ namespace Assets.Scripts.Navigatiion.Funcs
                     }
                 }
             }
+        
         }
 
         public void NextTurn()
@@ -68,6 +71,8 @@ namespace Assets.Scripts.Navigatiion.Funcs
                 year++;
             }
 
+            
+            
             Time = new DateTime(year, mounth, day);
             textTime.text = Time.ToString();
 
@@ -92,6 +97,7 @@ namespace Assets.Scripts.Navigatiion.Funcs
                 }
             }
 
+            
             enterNation.countryPlayer.PopulationCount += enterNation.countryPlayer.PopulationCount / enterNation.countryPlayer.regions.Count / 100;
             enterNation.countryPlayer.KilkistyRecruit = enterNation.countryPlayer.PopulationCount / (100 / enterNation.countryPlayer.ProcentViyskovoZob) - start.kilkNayn;
             enterNation.countryPlayer.Money += dohid + dohidPod;
@@ -136,6 +142,8 @@ namespace Assets.Scripts.Navigatiion.Funcs
                 }
             }
 
+            
+            
             //Builds
             if (currentBuild != null)
             {
@@ -155,6 +163,8 @@ namespace Assets.Scripts.Navigatiion.Funcs
                 }
             }
 
+            
+            
             //Army
             if (currentDiv != null)
             {
@@ -167,6 +177,27 @@ namespace Assets.Scripts.Navigatiion.Funcs
                         enterNation.countryPlayer.regions[createArmy.idRegion].divisions.Add(currentDiv);
                         messagesMechanic.Messages.text += "Create division in region " + enterNation.countryPlayer.regions[createArmy.idRegion].Name + " named " + currentDiv.Name + " on " + Time.ToString() + "\n";
                         currentDiv = null;
+                    }
+                }
+            }
+
+            
+            
+            //Move
+            if (listMovedDiv != null)
+            {
+                for (int i = 0; i < listMovedDiv.Count; i++)
+                {
+                    if (listMovedDiv[i].kilkTurns != 0)
+                    {
+                        listMovedDiv[i].kilkTurns -= 1;
+
+                        if (listMovedDiv[i].kilkTurns == 0)
+                        {
+                            enterNation.countryPlayer.regions[listMovedDiv[i].idEndReg].divisions.Add(listMovedDiv[i].movedDiv);
+                            messagesMechanic.Messages.text += "Moved division for region " + enterNation.countryPlayer.regions[listMovedDiv[i].idStartReg].Name + " to " + enterNation.countryPlayer.regions[listMovedDiv[i].idEndReg].Name + " on " + Time.ToString() + "\n";
+                            listMovedDiv.Remove(listMovedDiv[i]);
+                        }
                     }
                 }
             }
