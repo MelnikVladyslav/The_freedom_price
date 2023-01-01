@@ -11,8 +11,8 @@ public class StartScriptsInitilazer : MonoBehaviour
     public List<Technology> TechnologyList;
     public List<Polk> PolkList;
     List<Build> BuildList;
-    List<Air> AirList;
-    List<Flot> FlotList;
+    public List<Air> AirList;
+    public List<Flot> FlotList;
     List<Region> RegionList;
     public List<GameObject> towns = new List<GameObject>();
     public List<Texture> flags = new List<Texture>();

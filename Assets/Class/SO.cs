@@ -113,6 +113,7 @@ public class Air
     public int Hit;
     public int Damage;
     public int Step;
+    public int kilkturns = 2;
 
 }
 
@@ -127,17 +128,7 @@ public class Flot
     public int Damage;
     public int Bronya;
     public int Step;
-
-}
-
-[Serializable]
-public class Flotiliya
-{
-
-    public string Name;
-    public List<Flot> flots = new List<Flot>();
-    public double ZagStep;
-    public int Price;
+    public int kilkturns = 2;
 
 }
 
@@ -165,7 +156,8 @@ public class Region
     public GameObject region;
     public GameObject town;
     public List<Division> divisions = new List<Division>();
-    public List<Flotiliya> flotiliya = new List<Flotiliya>();
+    public List<Flot> flotiliya = new List<Flot>();
+    public List<Air> airs = new List<Air>();
     public List<Build> builds;
     public int Population;
 

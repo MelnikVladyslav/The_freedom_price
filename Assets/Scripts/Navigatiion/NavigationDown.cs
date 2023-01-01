@@ -16,6 +16,10 @@ namespace Assets.Scripts.Navigatiion
         public Button Build;
         public Button CreateArmy;
         public Button Move;
+        public Button flotCre;
+        public Button airCre;
+        public Button MoveFlot;
+        public Button MoveAir;
         int idCountry = 0;
         public int idRegion = 0;
         int kilkCivil = 0;
@@ -44,12 +48,20 @@ namespace Assets.Scripts.Navigatiion
                                 Build.gameObject.SetActive(true);
                                 CreateArmy.gameObject.SetActive(true);
                                 Move.gameObject.SetActive(true);
+                                flotCre.gameObject.SetActive(true);
+                                airCre.gameObject.SetActive(true);
+                                MoveAir.gameObject.SetActive(true);
+                                MoveFlot.gameObject.SetActive(true);
                             }
                             else
                             {
                                 Build.gameObject.SetActive(false);
                                 CreateArmy.gameObject.SetActive(false);
                                 Move.gameObject.SetActive(false);
+                                flotCre.gameObject.SetActive(false);
+                                airCre.gameObject.SetActive(false);
+                                MoveAir.gameObject.SetActive(false);
+                                MoveFlot.gameObject.SetActive(false);
                             }
 
                             for (int a = 0; a < start.CountryList[i].regions[j].builds.Count; a++)

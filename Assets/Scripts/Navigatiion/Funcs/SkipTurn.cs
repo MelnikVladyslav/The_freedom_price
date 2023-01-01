@@ -15,6 +15,8 @@ namespace Assets.Scripts.Navigatiion.Funcs
         public StartScriptsInitilazer start;
         public MessagesMechanic messagesMechanic;
         public CreateArmy createArmy;
+        public CreateAir createAir;
+        //public CreateArmy createArmy;
         public Text textTime;
         public DateTime Time;
         int day = 1;
@@ -28,6 +30,8 @@ namespace Assets.Scripts.Navigatiion.Funcs
         public Technology currentTech;
         public List<Build> currentBuild;
         public Division currentDiv = null;
+        public Air currentAir = null;
+        //public Division currentDiv = null;
         public List<int> idsRegions = new List<int>();
         public List<MoveDivisionClass> listMovedDiv = new List<MoveDivisionClass>();
 
@@ -165,7 +169,7 @@ namespace Assets.Scripts.Navigatiion.Funcs
 
             
             
-            //Army
+            //Create div
             if (currentDiv != null)
             {
                 if (currentDiv.kilkturns != 0)
@@ -181,9 +185,23 @@ namespace Assets.Scripts.Navigatiion.Funcs
                 }
             }
 
-            
-            
-            //Move
+            //Create air
+            if (currentAir != null)
+            {
+                if (currentAir.kilkturns != 0)
+                {
+                    currentAir.kilkturns -= 1;
+
+                    if (currentAir.kilkturns == 0)
+                    {
+                        enterNation.countryPlayer.regions[createAir.idRegion].airs.Add(currentAir);
+                        messagesMechanic.Messages.text += "Create air in region " + enterNation.countryPlayer.regions[createAir.idRegion].Name + " named " + currentAir.Name + " on " + Time.ToString() + "\n";
+                        currentAir = null;
+                    }
+                }
+            }
+
+            //Move div
             if (listMovedDiv != null)
             {
                 for (int i = 0; i < listMovedDiv.Count; i++)
