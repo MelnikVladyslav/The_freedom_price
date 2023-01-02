@@ -16,7 +16,7 @@ namespace Assets.Scripts.Navigatiion.Funcs
         public MessagesMechanic messagesMechanic;
         public CreateArmy createArmy;
         public CreateAir createAir;
-        //public CreateArmy createArmy;
+        public CreateFlot createFlot;
         public Text textTime;
         public DateTime Time;
         int day = 1;
@@ -29,9 +29,9 @@ namespace Assets.Scripts.Navigatiion.Funcs
         public int idTech = 0;
         public Technology currentTech;
         public List<Build> currentBuild;
-        public Division currentDiv = null;
-        public Air currentAir = null;
-        //public Division currentDiv = null;
+        public Division currentDiv;
+        public Air currentAir;
+        public Flot currentFlot;
         public List<int> idsRegions = new List<int>();
         public List<MoveDivisionClass> listMovedDiv = new List<MoveDivisionClass>();
 
@@ -146,8 +146,6 @@ namespace Assets.Scripts.Navigatiion.Funcs
                 }
             }
 
-            
-            
             //Builds
             if (currentBuild != null)
             {
@@ -167,8 +165,6 @@ namespace Assets.Scripts.Navigatiion.Funcs
                 }
             }
 
-            
-            
             //Create div
             if (currentDiv != null)
             {
@@ -197,6 +193,22 @@ namespace Assets.Scripts.Navigatiion.Funcs
                         enterNation.countryPlayer.regions[createAir.idRegion].airs.Add(currentAir);
                         messagesMechanic.Messages.text += "Create air in region " + enterNation.countryPlayer.regions[createAir.idRegion].Name + " named " + currentAir.Name + " on " + Time.ToString() + "\n";
                         currentAir = null;
+                    }
+                }
+            }
+
+            //Create flot
+            if (currentFlot != null)
+            {
+                if (currentFlot.kilkturns != 0)
+                {
+                    currentFlot.kilkturns -= 1;
+
+                    if (currentFlot.kilkturns == 0)
+                    {
+                        enterNation.countryPlayer.regions[createFlot.idRegion].flotiliya.Add(currentFlot);
+                        messagesMechanic.Messages.text += "Create flot in region " + enterNation.countryPlayer.regions[createFlot.idRegion].Name + " named " + currentFlot.Name + " on " + Time.ToString() + "\n";
+                        currentFlot = null;
                     }
                 }
             }
