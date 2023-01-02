@@ -113,6 +113,7 @@ namespace Assets.Scripts.Navigatiion.Funcs
                 enterNation.countryPlayer.Stail -= priceStail;
                 enterNation.countryPlayer.Topluvo -= priceTopluvo;
                 enterNation.countryPlayer.Kauchuk -= priceKauchuk;
+                enterNation.countryPlayer.KilkistyRecruit -= enterNation.countryPlayer.shablons[idDiv].kilkRec;
             }
         }
     }

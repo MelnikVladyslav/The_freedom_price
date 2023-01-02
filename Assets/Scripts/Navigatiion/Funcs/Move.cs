@@ -86,15 +86,16 @@ namespace Assets.Scripts.Navigatiion.Funcs
                 vidstany /= enterNation.countryPlayer.regions[idReg].divisions[idDiv].ZagStep;
             }
 
-            skipTurn.listMovedDiv.Add(
+            MoveDivisionClass moved =
                 new MoveDivisionClass()
                 {
                     movedDiv = enterNation.countryPlayer.regions[idReg].divisions[idDiv],
                     idStartReg = idReg,
                     idEndReg = idEndRegion,
                     kilkTurns = vidstany
-                }
-            );
+                };
+
+            skipTurn.listMovedDiv.Add(moved);
 
             enterNation.countryPlayer.regions[idReg].divisions.Remove(enterNation.countryPlayer.regions[idReg].divisions[idDiv]);
 

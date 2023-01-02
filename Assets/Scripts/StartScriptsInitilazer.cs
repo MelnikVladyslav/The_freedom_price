@@ -220,7 +220,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             {
                 Name = "Submarine",
                 Type = TypeFlot.Submarine,
-                Price = 100,
+                Price = 1000,
                 Hit = 100,
                 Damage = 20,
                 Bronya = 10,
@@ -230,7 +230,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             {
                 Name = "Esminec",
                 Type = TypeFlot.Esminec,
-                Price = 150,
+                Price = 1500,
                 Hit = 150,
                 Damage = 30,
                 Bronya = 20,
@@ -240,7 +240,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             {
                 Name = "Kreyser",
                 Type = TypeFlot.Kreyser,
-                Price = 200,
+                Price = 2000,
                 Hit = 200,
                 Damage = 40,
                 Bronya = 30,
@@ -250,7 +250,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             {
                 Name = "Linkor",
                 Type = TypeFlot.Linkor,
-                Price = 250,
+                Price = 2500,
                 Hit = 250,
                 Damage = 50,
                 Bronya = 40,
@@ -260,7 +260,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             {
                 Name = "Airship",
                 Type = TypeFlot.Airship,
-                Price = 300,
+                Price = 3000,
                 Hit = 300,
                 Damage = 60,
                 Bronya = 50,

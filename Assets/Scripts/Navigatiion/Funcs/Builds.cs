@@ -25,6 +25,12 @@ namespace Assets.Scripts.Navigatiion.Funcs
 
         public void FindBuild()
         {
+            listBuilds.text = "";
+            for (int j = 0; j < enterNation.countryPlayer.openBuilds.Count; j++)
+            {
+                listBuilds.text += enterNation.countryPlayer.openBuilds[j].Name + "     Price: " + enterNation.countryPlayer.openBuilds[j].Price + "\n";
+            }
+
             for (int i = 0; i < enterNation.countryPlayer.openBuilds.Count; i++)
             {
 

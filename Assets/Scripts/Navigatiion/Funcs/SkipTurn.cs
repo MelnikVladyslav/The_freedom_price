@@ -122,7 +122,7 @@ namespace Assets.Scripts.Navigatiion.Funcs
                         start.TechnologyList[idTech].isOpen = true;
                         enterNation.countryPlayer.techs.Add(currentTech);
                         messagesMechanic.Messages.text += "Technology named " + currentTech.Name + " open on " + Time.ToString() + "\n";
-                        currentTech = null;
+                        currentTech = new Technology();
                         enterNation.countryPlayer.openPolks = new List<Polk>();
                         enterNation.countryPlayer.openBuilds = new List<Build>();
                         for (int i = 0; i < enterNation.countryPlayer.techs.Count; i++)
@@ -176,7 +176,7 @@ namespace Assets.Scripts.Navigatiion.Funcs
                     {
                         enterNation.countryPlayer.regions[createArmy.idRegion].divisions.Add(currentDiv);
                         messagesMechanic.Messages.text += "Create division in region " + enterNation.countryPlayer.regions[createArmy.idRegion].Name + " named " + currentDiv.Name + " on " + Time.ToString() + "\n";
-                        currentDiv = null;
+                        currentDiv = new Division();
                     }
                 }
             }
@@ -192,7 +192,7 @@ namespace Assets.Scripts.Navigatiion.Funcs
                     {
                         enterNation.countryPlayer.regions[createAir.idRegion].airs.Add(currentAir);
                         messagesMechanic.Messages.text += "Create air in region " + enterNation.countryPlayer.regions[createAir.idRegion].Name + " named " + currentAir.Name + " on " + Time.ToString() + "\n";
-                        currentAir = null;
+                        currentAir = new Air();
                     }
                 }
             }
@@ -208,7 +208,7 @@ namespace Assets.Scripts.Navigatiion.Funcs
                     {
                         enterNation.countryPlayer.regions[createFlot.idRegion].flotiliya.Add(currentFlot);
                         messagesMechanic.Messages.text += "Create flot in region " + enterNation.countryPlayer.regions[createFlot.idRegion].Name + " named " + currentFlot.Name + " on " + Time.ToString() + "\n";
-                        currentFlot = null;
+                        currentFlot = new Flot();
                     }
                 }
             }
