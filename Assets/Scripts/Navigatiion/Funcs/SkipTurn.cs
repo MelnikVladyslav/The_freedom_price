@@ -34,6 +34,8 @@ namespace Assets.Scripts.Navigatiion.Funcs
         public Flot currentFlot;
         public List<int> idsRegions = new List<int>();
         public List<MoveDivisionClass> listMovedDiv = new List<MoveDivisionClass>();
+        public List<MoveAirClass> listMovedAir = new List<MoveAirClass>();
+        public List<MoveFlotClass> listMovedFlot = new List<MoveFlotClass>();
 
         // Use this for initialization
         void Start()
@@ -166,7 +168,7 @@ namespace Assets.Scripts.Navigatiion.Funcs
             }
 
             //Create div
-            if (currentDiv != null)
+            if (currentDiv.Name != " ")
             {
                 if (currentDiv.kilkturns != 0)
                 {
@@ -227,6 +229,44 @@ namespace Assets.Scripts.Navigatiion.Funcs
                             enterNation.countryPlayer.regions[listMovedDiv[i].idEndReg].divisions.Add(listMovedDiv[i].movedDiv);
                             messagesMechanic.Messages.text += "Moved division for region " + enterNation.countryPlayer.regions[listMovedDiv[i].idStartReg].Name + " to " + enterNation.countryPlayer.regions[listMovedDiv[i].idEndReg].Name + " on " + Time.ToString() + "\n";
                             listMovedDiv.Remove(listMovedDiv[i]);
+                        }
+                    }
+                }
+            }
+
+            //Move air
+            if (listMovedAir != null)
+            {
+                for (int i = 0; i < listMovedAir.Count; i++)
+                {
+                    if (listMovedAir[i].kilkTurns != 0)
+                    {
+                        listMovedAir[i].kilkTurns -= 1;
+
+                        if (listMovedAir[i].kilkTurns == 0)
+                        {
+                            enterNation.countryPlayer.regions[listMovedAir[i].idEndReg].airs.Add(listMovedAir[i].movedAir);
+                            messagesMechanic.Messages.text += "Moved air for region " + enterNation.countryPlayer.regions[listMovedDiv[i].idStartReg].Name + " to " + enterNation.countryPlayer.regions[listMovedAir[i].idEndReg].Name + " on " + Time.ToString() + "\n";
+                            listMovedAir.Remove(listMovedAir[i]);
+                        }
+                    }
+                }
+            }
+
+            //Move flot
+            if (listMovedFlot != null)
+            {
+                for (int i = 0; i < listMovedFlot.Count; i++)
+                {
+                    if (listMovedFlot[i].kilkTurns != 0)
+                    {
+                        listMovedFlot[i].kilkTurns -= 1;
+
+                        if (listMovedFlot[i].kilkTurns == 0)
+                        {
+                            enterNation.countryPlayer.regions[listMovedFlot[i].idEndReg].flotiliya.Add(listMovedFlot[i].movedFlot);
+                            messagesMechanic.Messages.text += "Moved flot for region " + enterNation.countryPlayer.regions[listMovedFlot[i].idStartReg].Name + " to " + enterNation.countryPlayer.regions[listMovedFlot[i].idEndReg].Name + " on " + Time.ToString() + "\n";
+                            listMovedFlot.Remove(listMovedFlot[i]);
                         }
                     }
                 }

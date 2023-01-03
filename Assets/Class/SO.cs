@@ -57,7 +57,8 @@ public enum Idelogies
     Fascism,
     Nationalism,
     Democraty,
-    Monarchy
+    Monarchy,
+    Anarchy
 }
 
 public enum TypeTech
