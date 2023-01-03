@@ -15,11 +15,16 @@ namespace Assets.Scripts.Navigatiion
         public Text NameIdeol;
         public Text ProcPP;
         public Text ProcOP;
+        public RawImage fotoLider;
+        public Text nameLider;
         public int procPod = 50;
 
         // Use this for initialization
         void Start()
         {
+            fotoLider.texture = enterNation.countryPlayer.currentLider.foto;
+            nameLider.text = enterNation.countryPlayer.currentLider.Name;
+
             CountryName.text = enterNation.countryPlayer.Name;
             if (Podatku != null)
             {
@@ -111,7 +116,22 @@ namespace Assets.Scripts.Navigatiion
         // Update is called once per frame
         void Update()
         {
+            for (int i = 0; i < start.liderList.Count; i++)
+            {
+                for (int j = 0; j < start.CountryList.Count; j++)
+                {
+                    if (start.liderList[i].country.Name == start.CountryList[j].Name)
+                    {
+                        if (start.liderList[i].idelogies == start.CountryList[j].idelogy)
+                        {
+                            start.CountryList[j].currentLider = start.liderList[i];
+                        }
+                    }
+                }
+            }
 
+            fotoLider.texture = enterNation.countryPlayer.currentLider.foto;
+            nameLider.text = enterNation.countryPlayer.currentLider.Name;
         }
     }
 }

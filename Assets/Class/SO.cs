@@ -54,6 +54,7 @@ public enum Idelogies
 {
     Neutrall,
     Communism,
+    ViyskovuyCummunism,
     Fascism,
     Nationalism,
     Democraty,
@@ -204,5 +205,14 @@ public class Country
     public int Kauchuk;
     public int Popularity;
     public Texture Flag;
+    public Lider currentLider;
+}
 
+[Serializable]
+public class Lider
+{
+    public string Name;
+    public Texture foto;
+    public Idelogies idelogies;
+    public Country country;
 }

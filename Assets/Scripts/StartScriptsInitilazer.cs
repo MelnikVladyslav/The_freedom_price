@@ -14,9 +14,11 @@ public class StartScriptsInitilazer : MonoBehaviour
     public List<Air> AirList;
     public List<Flot> FlotList;
     List<Region> RegionList;
+    public List<Lider> liderList = new List<Lider>();
     public List<GameObject> towns = new List<GameObject>();
     public List<Texture> flags = new List<Texture>();
     public List<Texture> icons = new List<Texture>();
+    public List<Texture> fotos = new List<Texture>();
     public int kilkNayn = 0;
 
     public void Start()
@@ -3652,7 +3654,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             new Country()
             {
                 Name = "Rumina",
-                idelogy = Idelogies.Monarchy,
+                idelogy = Idelogies.Democraty,
                 Popularity = 60,
                 Flag = flags[7]
             },
@@ -3833,6 +3835,198 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Flag = flags[29]
             }
         };
+        liderList = new List<Lider>()
+        {
+            //Ukraine
+            //0
+            new Lider()
+            {
+                Name = "Stepan Bandera",
+                idelogies = Idelogies.Nationalism,
+                country = CountryList[1],
+                foto = fotos[0]
+            },
+            //1
+            new Lider()
+            {
+                Name = "Andriy Melnik",
+                idelogies = Idelogies.Fascism,
+                country = CountryList[1],
+                foto = fotos[1]
+            },
+            //2
+            new Lider()
+            {
+                Name = "Simon Petlura",
+                idelogies = Idelogies.Democraty,
+                country = CountryList[1],
+                foto = fotos[2]
+            },
+            //3
+            new Lider()
+            {
+                Name = "Volodymur Vynychenko",
+                idelogies = Idelogies.Communism,
+                country = CountryList[1],
+                foto = fotos[3]
+            },
+            //4
+            new Lider()
+            {
+                Name = "Pavlo Skoropadskiy",
+                idelogies = Idelogies.Monarchy,
+                country = CountryList[1],
+                foto = fotos[4]
+            },
+            //5
+            new Lider()
+            {
+                Name = "Nestor Mahno",
+                idelogies = Idelogies.Anarchy,
+                country = CountryList[1],
+                foto = fotos[5]
+            },
+            //Poland
+            //6
+            new Lider()
+            {
+                Name = "Yozef Pilsudskiy",
+                idelogies = Idelogies.Neutrall,
+                country = CountryList[9],
+                foto = fotos[6]
+            },
+            //7
+            new Lider()
+            {
+                Name = "Vincentiy Vitoc",
+                idelogies = Idelogies.Democraty,
+                country = CountryList[9],
+                foto = fotos[7]
+            },
+            //8
+            new Lider()
+            {
+                Name = "Vladyslav Gomulka",
+                idelogies = Idelogies.Communism,
+                country = CountryList[9],
+                foto = fotos[8]
+            },
+            //9
+            new Lider()
+            {
+                Name = "Karl Albreht I",
+                idelogies = Idelogies.Monarchy,
+                country = CountryList[9],
+                foto = fotos[9]
+            },
+            //10
+            new Lider()
+            {
+                Name = "Boleslav Pyaseckiy",
+                idelogies = Idelogies.Fascism,
+                country = CountryList[9],
+                foto = fotos[10]
+            },
+            //Rumunia
+            //11
+            new Lider()
+            {
+                Name = "George Tataresku",
+                idelogies = Idelogies.Democraty,
+                country = CountryList[7],
+                foto = fotos[11]
+            },
+            //12
+            new Lider()
+            {
+                Name = "Konstyantun Ion Parhon",
+                idelogies = Idelogies.Communism,
+                country = CountryList[7],
+                foto = fotos[12]
+            },
+            //13
+            new Lider()
+            {
+                Name = "Karl II",
+                idelogies = Idelogies.Monarchy,
+                country = CountryList[7],
+                foto = fotos[13]
+            },
+            //14
+            new Lider()
+            {
+                Name = "Oktavia Goga",
+                idelogies = Idelogies.Fascism,
+                country = CountryList[7],
+                foto = fotos[14]
+            },
+            //sssr
+            //15
+            new Lider()
+            {
+                Name = "yosef stalin",
+                idelogies = Idelogies.Communism,
+                country = CountryList[8],
+                foto = fotos[15]
+            },
+            //16
+            new Lider()
+            {
+                Name = "lev trockiy",
+                idelogies = Idelogies.ViyskovuyCummunism,
+                country = CountryList[8],
+                foto = fotos[16]
+            },
+            //17
+            new Lider()
+            {
+                Name = "romanov V",
+                idelogies = Idelogies.Monarchy,
+                country = CountryList[8],
+                foto = fotos[17]
+            },
+            //18
+            new Lider()
+            {
+                Name = "konstyantun rodsayevskiy",
+                idelogies = Idelogies.Fascism,
+                country = CountryList[8],
+                foto = fotos[18]
+            },
+            // Germany
+            //19
+            new Lider()
+            {
+                Name = "Adolf Hitler",
+                idelogies = Idelogies.Fascism,
+                country = CountryList[0],
+                foto = fotos[19]
+            },
+            //20
+            new Lider()
+            {
+                Name = "Konrad Adenaur",
+                idelogies = Idelogies.Democraty,
+                country = CountryList[0],
+                foto = fotos[20]
+            },
+            //21
+            new Lider()
+            {
+                Name = "Vilgelm Pik",
+                idelogies = Idelogies.Communism,
+                country = CountryList[0],
+                foto = fotos[21]
+            },
+            //22
+            new Lider()
+            {
+                Name = "Vilgelm II",
+                idelogies = Idelogies.Monarchy,
+                country = CountryList[0],
+                foto = fotos[22]
+            }
+        };
 
         InitilizerCountry();
 
@@ -3861,6 +4055,21 @@ public class StartScriptsInitilazer : MonoBehaviour
 
             // Initilization technology 1940
             TechnologyList[65].polks.Add(PolkList[5]);
+        }
+
+        //Initilize lider
+        for (int i = 0; i < liderList.Count; i++)
+        {
+            for (int j = 0; j < CountryList.Count; j++)
+            {
+                if (liderList[i].country.Name == CountryList[j].Name)
+                {
+                    if (liderList[i].idelogies == CountryList[j].idelogy)
+                    {
+                        CountryList[j].currentLider = liderList[i];
+                    }
+                }
+            }
         }
     }
 

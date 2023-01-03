@@ -143,6 +143,110 @@ namespace Assets.Scripts.Navigatiion.Funcs
                                     enterNation.countryPlayer.openBuilds.Add(enterNation.countryPlayer.techs[i].builds[j]);
                                 }
                             }
+                            //1936
+                            else if (enterNation.countryPlayer.techs[i].Name == "Construction I")
+                            {
+                                for (int j = 0; j < enterNation.countryPlayer.openBuilds.Count; j++)
+                                {
+                                    enterNation.countryPlayer.openBuilds[j].Dohid += enterNation.countryPlayer.techs[i].PlusCiv;
+                                }
+                            }
+                            else if (enterNation.countryPlayer.techs[i].Name == "Electronic mechanical engineering")
+                            {
+                                enterNation.countryPlayer.Stabilnisty += enterNation.countryPlayer.techs[i].PlusCount;
+                            }
+                            else if (enterNation.countryPlayer.techs[i].Name == "Infantry Equipment I")
+                            {
+                                for (int j  = 0; j < enterNation.countryPlayer.openPolks.Count; j++)
+                                {
+                                    if (enterNation.countryPlayer.openPolks[j].Name == "Garrizon" || enterNation.countryPlayer.openPolks[j].Name == "Pihota")
+                                    {
+                                        enterNation.countryPlayer.openPolks[j].Hit += enterNation.countryPlayer.techs[i].PlusArm;
+                                        enterNation.countryPlayer.openPolks[j].Damage += enterNation.countryPlayer.techs[i].PlusArm;
+                                    }
+                                }
+                            }
+                            else if (enterNation.countryPlayer.techs[i].Name == "Fighter I and Bomber I")
+                            {
+                                for (int j = 0; j < start.AirList.Count; j++)
+                                {
+                                    start.AirList[j].Hit += enterNation.countryPlayer.techs[i].PlusArm;
+                                    start.AirList[j].Damage += enterNation.countryPlayer.techs[i].PlusArm;
+                                    
+                                }
+                            }
+                            else if (enterNation.countryPlayer.techs[i].Name == "Flot I")
+                            {
+                                for (int j = 0; j < start.FlotList.Count; j++)
+                                {
+                                    start.FlotList[j].Hit += enterNation.countryPlayer.techs[i].PlusArm;
+                                    start.FlotList[j].Damage += enterNation.countryPlayer.techs[i].PlusArm;
+
+                                }
+                            }
+                            else if (enterNation.countryPlayer.techs[i].Name == "Superior Firepower")
+                            {
+                                for (int j = 0; j < enterNation.countryPlayer.openPolks.Count; j++)
+                                {
+                                    if (enterNation.countryPlayer.openPolks[j].Name == "Artillery")
+                                    {
+                                        enterNation.countryPlayer.openPolks[j].Damage += enterNation.countryPlayer.techs[i].PlusArm;
+                                    }
+                                }
+                            }
+                            else if (enterNation.countryPlayer.techs[i].Name == "Mass Assault")
+                            {
+                                for (int j = 0; j < enterNation.countryPlayer.openPolks.Count; j++)
+                                {
+                                    if (enterNation.countryPlayer.openPolks[j].Name == "Pihota")
+                                    {
+                                        enterNation.countryPlayer.openPolks[j].Price -= (enterNation.countryPlayer.openPolks[j].Price / 100 ) * enterNation.countryPlayer.techs[i].PlusArm;
+                                    }
+                                }
+                            }
+                            else if (enterNation.countryPlayer.techs[i].Name == "Air Superiority")
+                            {
+                                for (int j = 0; j < start.AirList.Count; j++)
+                                {
+                                    start.AirList[j].Damage += enterNation.countryPlayer.techs[i].PlusArm;
+                                }
+                            }
+                            else if (enterNation.countryPlayer.techs[i].Name == "Formation Flying")
+                            {
+                                for (int j = 0; j < start.AirList.Count; j++)
+                                {
+                                    start.AirList[j].Damage += enterNation.countryPlayer.techs[i].PlusArm;
+                                }
+                            }
+                            else if (enterNation.countryPlayer.techs[i].Name == "Force Rotation")
+                            {
+                                for (int j = 0; j < start.AirList.Count; j++)
+                                {
+                                    start.AirList[j].Hit += enterNation.countryPlayer.techs[i].PlusArm;
+                                }
+                            }
+                            else if (enterNation.countryPlayer.techs[i].Name == "Fleet In Being")
+                            {
+                                for (int j = 0; j < start.FlotList.Count; j++)
+                                {
+                                    start.FlotList[j].Hit += enterNation.countryPlayer.techs[i].PlusArm;
+                                }
+                            }
+                            else if (enterNation.countryPlayer.techs[i].Name == "Trade Interdiction")
+                            {
+                                for (int j = 0; j < start.FlotList.Count; j++)
+                                {
+                                    start.FlotList[j].Hit += enterNation.countryPlayer.techs[i].PlusArm;
+                                }
+                            }
+                            else if (enterNation.countryPlayer.techs[i].Name == "Base Strike")
+                            {
+                                for (int j = 0; j < start.FlotList.Count; j++)
+                                {
+                                    start.FlotList[j].Hit += enterNation.countryPlayer.techs[i].PlusArm;
+                                }
+                            }
+                            //1937
                         }
                     }
                 }

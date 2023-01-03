@@ -37,12 +37,12 @@ namespace Assets.Scripts.Navigatiion.Funcs
                 listsPolks.text += enterNation.countryPlayer.openPolks[j].Name + "\n";
             }
 
-            for (int i = 0; i < start.PolkList.Count; i++)
+            for (int i = 0; i < enterNation.countryPlayer.openPolks.Count; i++)
             {
-                if (namePolk.text == start.PolkList[i].Name)
+                if (namePolk.text == enterNation.countryPlayer.openPolks[i].Name)
                 {
-                    currentPolk = start.PolkList[i];
-                    icons[currentId].texture = start.PolkList[i].icon;
+                    currentPolk = enterNation.countryPlayer.openPolks[i];
+                    icons[currentId].texture = enterNation.countryPlayer.openPolks[i].icon;
                 }
             }
 
