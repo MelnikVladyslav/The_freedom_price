@@ -161,7 +161,7 @@ namespace Assets.Scripts.Navigatiion.Funcs
                                     enterNation.countryPlayer.openBuilds[j].Dohid += enterNation.countryPlayer.techs[i].PlusCiv;
                                 }
                             }
-                            if (enterNation.countryPlayer.techs[i].Name == "Electronic mechanical engineering" || enterNation.countryPlayer.techs[i].Name == "Radio" || enterNation.countryPlayer.techs[i].Name == "Decimetric radar" || enterNation.countryPlayer.techs[i].Name == "Improved decimetric radar" || enterNation.countryPlayer.techs[i].Name == "Centimetric radar" || enterNation.countryPlayer.techs[i].Name == "Improved centimetric radar")
+                            if (enterNation.countryPlayer.techs[i].Name == "Electronic mechanical engineering" || enterNation.countryPlayer.techs[i].Name == "Radio" || enterNation.countryPlayer.techs[i].Name == "Decimetric radar" || enterNation.countryPlayer.techs[i].Name == "Improved decimetric radar" || enterNation.countryPlayer.techs[i].Name == "Centimetric radar" || enterNation.countryPlayer.techs[i].Name == "Improved centimetric radar" || enterNation.countryPlayer.techs[i].Name == "Advanced centimetric radar")
                             {
                                 Debug.Log(enterNation.countryPlayer.techs[i].PlusCount);
                                 enterNation.countryPlayer.Stabilnisty += enterNation.countryPlayer.techs[i].PlusCount;
@@ -731,7 +731,94 @@ namespace Assets.Scripts.Navigatiion.Funcs
                                 }
                             }
                             //1942
-
+                            if (enterNation.countryPlayer.techs[i].Name == "Mechanized Equipment II")
+                            {
+                                for (int j = 0; j < enterNation.countryPlayer.openPolks.Count; j++)
+                                {
+                                    if (enterNation.countryPlayer.openPolks[j].Name == "Mechanized")
+                                    {
+                                        enterNation.countryPlayer.openPolks[j].Hit += enterNation.countryPlayer.techs[i].PlusArm;
+                                        enterNation.countryPlayer.openPolks[j].Bronya += enterNation.countryPlayer.techs[i].PlusArm;
+                                    }
+                                }
+                            }
+                            if (enterNation.countryPlayer.techs[i].Name == "Kampfgruppe")
+                            {
+                                for (int j = 0; j < enterNation.countryPlayer.openPolks.Count; j++)
+                                {
+                                    if (enterNation.countryPlayer.openPolks[j].Name == "Pihota")
+                                    {
+                                        enterNation.countryPlayer.openPolks[j].Hit += enterNation.countryPlayer.techs[i].PlusArm;
+                                        enterNation.countryPlayer.openPolks[j].Bronya += enterNation.countryPlayer.techs[i].PlusArm;
+                                    }
+                                }
+                            }
+                            if (enterNation.countryPlayer.techs[i].Name == "Centralized Fire Control")
+                            {
+                                for (int j = 0; j < enterNation.countryPlayer.openPolks.Count; j++)
+                                {
+                                    if (enterNation.countryPlayer.openPolks[j].Name == "Pihota" || enterNation.countryPlayer.openPolks[j].Name == "Artillery")
+                                    {
+                                        enterNation.countryPlayer.openPolks[j].Damage += enterNation.countryPlayer.techs[i].PlusArm;
+                                    }
+                                }
+                            }
+                            if (enterNation.countryPlayer.techs[i].Name == "Branch Inter-Operation")
+                            {
+                                for (int j = 0; j < enterNation.countryPlayer.openPolks.Count; j++)
+                                {
+                                    if (enterNation.countryPlayer.openPolks[j].Name == "Pihota")
+                                    {
+                                        enterNation.countryPlayer.openPolks[j].Hit += enterNation.countryPlayer.techs[i].PlusArm;
+                                    }
+                                }
+                            }
+                            if (enterNation.countryPlayer.techs[i].Name == "Human Wave Offensive")
+                            {
+                                for (int j = 0; j < enterNation.countryPlayer.openPolks.Count; j++)
+                                {
+                                    if (enterNation.countryPlayer.openPolks[j].Name == "Pihota")
+                                    {
+                                        enterNation.countryPlayer.openPolks[j].Hit += enterNation.countryPlayer.techs[i].PlusArm;
+                                    }
+                                }
+                            }
+                            if (enterNation.countryPlayer.techs[i].Name == "Night Bombing")
+                            {
+                                for (int j = 0; j < start.AirList.Count; j++)
+                                {
+                                    start.AirList[j].Damage += enterNation.countryPlayer.techs[i].PlusArm;
+                                }
+                            }
+                            if (enterNation.countryPlayer.techs[i].Name == "Battlefield Support")
+                            {
+                                for (int j = 0; j < start.AirList.Count; j++)
+                                {
+                                    start.AirList[j].Damage += enterNation.countryPlayer.techs[i].PlusArm;
+                                }
+                            }
+                            if (enterNation.countryPlayer.techs[i].Name == "Carousel Bombing")
+                            {
+                                for (int j = 0; j < start.AirList.Count; j++)
+                                {
+                                    start.AirList[j].Damage += enterNation.countryPlayer.techs[i].PlusArm;
+                                }
+                            }
+                            if (enterNation.countryPlayer.techs[i].Name == "Grand Battlefleet")
+                            {
+                                for (int j = 0; j < start.FlotList.Count; j++)
+                                {
+                                    start.FlotList[j].Damage += enterNation.countryPlayer.techs[i].PlusArm;
+                                }
+                            }
+                            if (enterNation.countryPlayer.techs[i].Name == "Carrier Battlegroups")
+                            {
+                                for (int j = 0; j < start.FlotList.Count; j++)
+                                {
+                                    start.FlotList[j].Damage += enterNation.countryPlayer.techs[i].PlusArm;
+                                }
+                            }
+                            //1943
                         }
                     }
                 }
