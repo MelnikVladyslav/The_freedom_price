@@ -1008,7 +1008,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             //86
             new Technology
             {
-                Name = "Mechanized Offensive",
+                Name = "Mechanized Offensive I",
                 typeTech = TypeTech.LandDoctrine,
                 Time = 2,
                 PlusArm = 5 // Add bronya tanks
