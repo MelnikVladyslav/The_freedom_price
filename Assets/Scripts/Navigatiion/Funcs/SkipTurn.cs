@@ -154,7 +154,7 @@ namespace Assets.Scripts.Navigatiion.Funcs
                                 }
                             }
                             //1936
-                            if (enterNation.countryPlayer.techs[i].Name == "Construction I" || enterNation.countryPlayer.techs[i].Name == "Construction II" || enterNation.countryPlayer.techs[i].Name == "Construction III" || enterNation.countryPlayer.techs[i].Name == "Construction IV")
+                            if (enterNation.countryPlayer.techs[i].Name == "Construction I" || enterNation.countryPlayer.techs[i].Name == "Construction II" || enterNation.countryPlayer.techs[i].Name == "Construction III" || enterNation.countryPlayer.techs[i].Name == "Construction IV" || enterNation.countryPlayer.techs[i].Name == "Construction V" || enterNation.countryPlayer.techs[i].Name == "Construction VI" || enterNation.countryPlayer.techs[i].Name == "Construction VII" || enterNation.countryPlayer.techs[i].Name == "Construction VIII")
                             {
                                 for (int j = 0; j < enterNation.countryPlayer.openBuilds.Count; j++)
                                 {
@@ -819,6 +819,49 @@ namespace Assets.Scripts.Navigatiion.Funcs
                                 }
                             }
                             //1943
+                            if (enterNation.countryPlayer.techs[i].Name == "Volkssturm")
+                            {
+                                enterNation.countryPlayer.ProcentViyskovoZob += enterNation.countryPlayer.techs[i].PlusArm;
+                            }
+                            if (enterNation.countryPlayer.techs[i].Name == "Forward Observers")
+                            {
+                                for (int j = 0; j < enterNation.countryPlayer.openPolks.Count; j++)
+                                {
+                                    if (enterNation.countryPlayer.openPolks[j].Name == "Artillery")
+                                    {
+                                        enterNation.countryPlayer.openPolks[j].Hit += enterNation.countryPlayer.techs[i].PlusArm;
+                                    }
+                                }
+                            }
+                            if (enterNation.countryPlayer.techs[i].Name == "Guerrilla Warfare")
+                            {
+                                for (int j = 0; j < enterNation.countryPlayer.openPolks.Count; j++)
+                                {
+                                    enterNation.countryPlayer.openPolks[j].Hit += enterNation.countryPlayer.techs[i].PlusArm;
+                                }
+                            }
+                            if (enterNation.countryPlayer.techs[i].Name == "Massed Bomber Formations")
+                            {
+                                for (int j = 0; j < start.AirList.Count; j++)
+                                {
+                                    start.AirList[j].Damage += enterNation.countryPlayer.techs[i].PlusArm;
+                                }
+                            }
+                            if (enterNation.countryPlayer.techs[i].Name == "Naval Strike Torpedo Tactics")
+                            {
+                                for (int j = 0; j < start.AirList.Count; j++)
+                                {
+                                    start.AirList[j].Damage += enterNation.countryPlayer.techs[i].PlusArm;
+                                }
+                            }
+                            if (enterNation.countryPlayer.techs[i].Name == "Infiltration Bombing")
+                            {
+                                for (int j = 0; j < start.AirList.Count; j++)
+                                {
+                                    start.AirList[j].Hit += enterNation.countryPlayer.techs[i].PlusArm;
+                                }
+                            }
+
                         }
                     }
                 }
