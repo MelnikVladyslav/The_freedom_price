@@ -132,6 +132,14 @@ namespace Assets.Scripts.Navigatiion
 
             fotoLider.texture = enterNation.countryPlayer.currentLider.foto;
             nameLider.text = enterNation.countryPlayer.currentLider.Name;
+
+            ProcPP.text = enterNation.countryPlayer.Popularity.ToString() + "%";
+            ProcOP.text = (100 - enterNation.countryPlayer.Popularity).ToString() + "%";
+
+            if (NameIdeol != null)
+            {
+                NameIdeol.text = enterNation.countryPlayer.idelogy.ToString();
+            }
         }
     }
 }

@@ -951,7 +951,7 @@ namespace Assets.Scripts.Navigatiion.Funcs
             }
 
             //Create div
-            if (currentDiv.Name != " ")
+            if (currentDiv != null)
             {
                 if (currentDiv.kilkturns != 0)
                 {
@@ -960,7 +960,7 @@ namespace Assets.Scripts.Navigatiion.Funcs
                     if (currentDiv.kilkturns == 0)
                     {
                         enterNation.countryPlayer.regions[createArmy.idRegion].divisions.Add(currentDiv);
-                        messagesMechanic.Messages.text += "Create division in region " + enterNation.countryPlayer.regions[createArmy.idRegion].Name + " named " + currentDiv.Name + " on " + Time.ToString() + "\n";
+                        //messagesMechanic.Messages.text += "Create division in region " + enterNation.countryPlayer.regions[createArmy.idRegion].Name + " named " + currentDiv.Name + " on " + Time.ToString() + "\n";
                         currentDiv = new Division();
                     }
                 }
@@ -976,7 +976,7 @@ namespace Assets.Scripts.Navigatiion.Funcs
                     if (currentAir.kilkturns == 0)
                     {
                         enterNation.countryPlayer.regions[createAir.idRegion].airs.Add(currentAir);
-                        messagesMechanic.Messages.text += "Create air in region " + enterNation.countryPlayer.regions[createAir.idRegion].Name + " named " + currentAir.Name + " on " + Time.ToString() + "\n";
+                        //messagesMechanic.Messages.text += "Create air in region " + enterNation.countryPlayer.regions[createAir.idRegion].Name + " named " + currentAir.Name + " on " + Time.ToString() + "\n";
                         currentAir = new Air();
                     }
                 }
@@ -992,7 +992,7 @@ namespace Assets.Scripts.Navigatiion.Funcs
                     if (currentFlot.kilkturns == 0)
                     {
                         enterNation.countryPlayer.regions[createFlot.idRegion].flotiliya.Add(currentFlot);
-                        messagesMechanic.Messages.text += "Create flot in region " + enterNation.countryPlayer.regions[createFlot.idRegion].Name + " named " + currentFlot.Name + " on " + Time.ToString() + "\n";
+                        //messagesMechanic.Messages.text += "Create flot in region " + enterNation.countryPlayer.regions[createFlot.idRegion].Name + " named " + currentFlot.Name + " on " + Time.ToString() + "\n";
                         currentFlot = new Flot();
                     }
                 }
