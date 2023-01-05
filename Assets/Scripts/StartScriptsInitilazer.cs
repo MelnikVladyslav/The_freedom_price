@@ -3597,7 +3597,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             //0
             new Country()
             {
-                Name = "Germany",
+                Name = "Third Reich",
                 idelogy = Idelogies.Fascism,
                 Popularity = 60,
                 Flag = flags[0]
@@ -3653,7 +3653,7 @@ public class StartScriptsInitilazer : MonoBehaviour
             //7
             new Country()
             {
-                Name = "Rumina",
+                Name = "Rumunia",
                 idelogy = Idelogies.Democraty,
                 Popularity = 60,
                 Flag = flags[7]
