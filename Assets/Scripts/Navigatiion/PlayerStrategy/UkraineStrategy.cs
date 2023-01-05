@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.Navigatiion.Funcs;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,6 +16,7 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
         public GameObject Golosuvanya;
         public GameObject EnterOP;
         public GameObject ResultVub;
+        public GameObject ViyskovuyStan;
         public Text infoText;
         public RawImage fotoIventResVub;
         public List<Texture> listFlagsForIdeol;
@@ -25,6 +27,7 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
         int kilkBalNat = 0;
         int kilkBalMon = 0;
         int kilkBalAna = 0;
+        bool isViysStan = false;
         Idelogies PP = Idelogies.Nationalism;
         int currentYear = 1936;
 
@@ -93,6 +96,16 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
             EnterOP.gameObject.SetActive(false);
         }
 
+        //ViyskovuyStan
+        public void EnterViyskovStan()
+        {
+            isViysStan = true;
+
+            enterNation.countryPlayer.ProcentViyskovoZob += 20;
+
+            enterNation.countryPlayer.Stabilnisty += 10;
+        }
+
         // Update is called once per frame
         void Update()
         {
@@ -138,6 +151,9 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
                                         }
                                     }
                                     enterNation.countryPlayer.Flag = listFlagsForIdeol[0];
+                                    kilkBalFac = 0;
+
+                                    enterNation.countryPlayer.Popularity = (100 - enterNation.countryPlayer.Popularity);
                                 }
                             }
                             if (maxL > maxR && maxL > maxN)
@@ -155,6 +171,9 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
                                         }
                                     }
                                     enterNation.countryPlayer.Flag = listFlagsForIdeol[1];
+                                    kilkBalAna = 0;
+
+                                    enterNation.countryPlayer.Popularity = (100 - enterNation.countryPlayer.Popularity);
                                 }
                                 if (kilkBalCom > kilkBalAna)
                                 {
@@ -169,6 +188,10 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
                                         }
                                     }
                                     enterNation.countryPlayer.Flag = listFlagsForIdeol[2];
+
+                                    kilkBalCom = 0;
+
+                                    enterNation.countryPlayer.Popularity = (100 - enterNation.countryPlayer.Popularity);
                                 }
                             }
                             if (maxN > maxL && maxN > maxR)
@@ -186,6 +209,10 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
                                         }
                                     }
                                     enterNation.countryPlayer.Flag = listFlagsForIdeol[3];
+
+                                    kilkBalMon = 0;
+
+                                    enterNation.countryPlayer.Popularity = (100 - enterNation.countryPlayer.Popularity);
                                 }
                                 if (kilkBalDem > kilkBalMon)
                                 {
@@ -200,18 +227,10 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
                                         }
                                     }
                                     enterNation.countryPlayer.Flag = listFlagsForIdeol[4];
-                                }
-                            }
-                            else
-                            {
-                                infoText.text = "In this vubor win to PP.";
 
-                                for (int i = 0; i < start.liderList.Count; i++)
-                                {
-                                    if (start.liderList[i].country.Name == "Soborna Ukraine" && start.liderList[i].idelogies == Idelogies.Nationalism)
-                                    {
-                                        fotoIventResVub.texture = start.liderList[i].foto;
-                                    }
+                                    kilkBalDem = 0;
+
+                                    enterNation.countryPlayer.Popularity = (100 - enterNation.countryPlayer.Popularity);
                                 }
                             }
                         }
@@ -220,6 +239,33 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
                     }
                 }
 
+                //Viyskovuy stan
+                if (skipTurn.Time.Year > currentYear)
+                {
+                    currentYear = skipTurn.Time.Year;
+                    bool isWar = false;
+
+                    for (int i = 0; i < start.CountryList.Count; i++)
+                    {
+                        if (start.CountryList[i].Types == TypeCountry.Enemy)
+                        {
+                            isWar = true;
+                            break;
+                        }
+                    }
+
+                    if (isWar)
+                    {
+                        if (isViysStan)
+                        {
+                            ViyskovuyStan.gameObject.SetActive(true);
+                        }
+                    }
+                    else
+                    {
+                        isViysStan = false;
+                    }
+                }
 
             }
             else
