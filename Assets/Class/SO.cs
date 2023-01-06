@@ -188,7 +188,7 @@ public class Country
     public string Name;
     public TypeCountry Types;
     public int PopulationCount;
-    public string NameAlliens;
+    public string NameAlliens = "";
     public List<Region> regions = new List<Region>();
     public List<Technology> techs = new List<Technology>();
     public List<Division> shablons = new List<Division>();

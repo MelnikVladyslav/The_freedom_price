@@ -17,6 +17,8 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
         public GameObject EnterOP;
         public GameObject ResultVub;
         public GameObject ViyskovuyStan;
+        public GameObject SystemBVsM;
+        public GameObject EnterAlianceWithGer;
         public Text infoText;
         public RawImage fotoIventResVub;
         public List<Texture> listFlagsForIdeol;
@@ -30,6 +32,7 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
         bool isViysStan = false;
         Idelogies PP = Idelogies.Nationalism;
         int currentYear = 1936;
+        bool isOkAlGer = false;
 
         // Use this for initialization
         void Start()
@@ -106,16 +109,39 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
             enterNation.countryPlayer.Stabilnisty += 10;
         }
 
+        //System BanderaVsMelnik
+        public void EnterBandera()
+        {
+            kilkBalNat++;
+
+            SystemBVsM.gameObject.SetActive(false);
+        }
+
+        public void EnterMelnik()
+        {
+            kilkBalFac++;
+
+            SystemBVsM.gameObject.SetActive(false);
+        }
+
+        public void Ok()
+        {
+            isOkAlGer = true;
+
+            EnterAlianceWithGer.gameObject.SetActive(false);
+        }
+
         // Update is called once per frame
         void Update()
         {
             isPlayer = Perevirka();
+            bool isWar = false;
 
             if (isPlayer == true)
             {
-                // Vuboru
                 if (skipTurn.Time.Year > currentYear)
                 {
+                    // Vuboru
                     currentYear = skipTurn.Time.Year;
 
                     if (kilkYear <= 5 && kilkYear != 0)
@@ -152,6 +178,23 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
                                     }
                                     enterNation.countryPlayer.Flag = listFlagsForIdeol[0];
                                     kilkBalFac = 0;
+
+                                    enterNation.countryPlayer.Popularity = (100 - enterNation.countryPlayer.Popularity);
+                                }
+                                if (kilkBalNat > kilkBalFac)
+                                {
+                                    enterNation.countryPlayer.idelogy = Idelogies.Nationalism;
+
+                                    infoText.text = "In this vubor win to " + Idelogies.Nationalism.ToString() + " party.";
+                                    for (int i = 0; i < start.liderList.Count; i++)
+                                    {
+                                        if (start.liderList[i].country.Name == "Soborna Ukraine" && start.liderList[i].idelogies == Idelogies.Nationalism)
+                                        {
+                                            fotoIventResVub.texture = start.liderList[i].foto;
+                                        }
+                                    }
+                                    enterNation.countryPlayer.Flag = listFlagsForIdeol[0];
+                                    kilkBalNat = 0;
 
                                     enterNation.countryPlayer.Popularity = (100 - enterNation.countryPlayer.Popularity);
                                 }
@@ -233,44 +276,69 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
                                     enterNation.countryPlayer.Popularity = (100 - enterNation.countryPlayer.Popularity);
                                 }
                             }
+
+                            ResultVub.gameObject.SetActive(true);
+                        }
+                    }
+
+                    //Viyskovuy stan
+                    if (isWar != true)
+                    {
+                        currentYear = skipTurn.Time.Year;
+
+                        for (int i = 0; i < start.CountryList.Count; i++)
+                        {
+                            if (start.CountryList[i].Types == TypeCountry.Enemy)
+                            {
+                                isWar = true;
+                                break;
+                            }
                         }
 
-                        ResultVub.gameObject.SetActive(true);
+                        if (isWar)
+                        {
+                            if (isViysStan)
+                            {
+                                ViyskovuyStan.gameObject.SetActive(true);
+                            }
+                        }
+                        else
+                        {
+                            isViysStan = false;
+                        }
+                    }
+
+                    //System BanderaVsMelnik
+                    if (enterNation.countryPlayer.idelogy == Idelogies.Nationalism)
+                    {
+                        currentYear = skipTurn.Time.Year;
+
+                        if (kilkBalNat < 4)
+                        {
+                            SystemBVsM.gameObject.SetActive(true);
+                        }
+
+                        if (kilkBalFac >= 4)
+                        {
+                            if (start.CountryList[1].NameAlliens == "" && !isOkAlGer)
+                            {
+                                EnterAlianceWithGer.gameObject.SetActive(true);
+                            }
+                            if (start.CountryList[0].NameAlliens == "" && isOkAlGer == true)
+                            {
+                                start.CountryList[0].NameAlliens = "Axis";
+                                start.CountryList[1].NameAlliens = "Axis";
+                                start.CountryList[0].Types = TypeCountry.Alliens;
+                            }
+                        }
+
+
                     }
                 }
-
-                //Viyskovuy stan
-                if (skipTurn.Time.Year > currentYear)
-                {
-                    currentYear = skipTurn.Time.Year;
-                    bool isWar = false;
-
-                    for (int i = 0; i < start.CountryList.Count; i++)
-                    {
-                        if (start.CountryList[i].Types == TypeCountry.Enemy)
-                        {
-                            isWar = true;
-                            break;
-                        }
-                    }
-
-                    if (isWar)
-                    {
-                        if (isViysStan)
-                        {
-                            ViyskovuyStan.gameObject.SetActive(true);
-                        }
-                    }
-                    else
-                    {
-                        isViysStan = false;
-                    }
-                }
-
             }
             else
             {
-                Debug.Log("Is ai");
+
             }
         }
     }

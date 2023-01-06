@@ -234,7 +234,7 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
             }
             else
             {
-                Debug.Log("Is ai");
+
             }
         }
     }

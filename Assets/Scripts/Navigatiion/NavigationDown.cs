@@ -13,6 +13,7 @@ namespace Assets.Scripts.Navigatiion
         public Text Builds;
         public Text Info;
         public Text NameReg;
+        public Text Type;
         public Button Build;
         public Button CreateArmy;
         public Button Move;
@@ -87,6 +88,7 @@ namespace Assets.Scripts.Navigatiion
                 Builds.text = "Civil promuslovisty: " + kilkCivil + "\nArmy promuslovisty: " + kilkBig + "\nDefend builds: " + kilkDef;
                 Info.text = "Population: " + start.CountryList[idCountry].regions[idRegion].Population + "\nKilkisty Divisions: " + start.CountryList[idCountry].regions[idRegion].divisions.Count;
                 NameReg.text = start.CountryList[idCountry].regions[idRegion].Name;
+                Type.text = start.CountryList[idCountry].Types.ToString();
 
             }
 
