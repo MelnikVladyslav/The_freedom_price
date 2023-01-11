@@ -160,6 +160,7 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
             ResultVub.gameObject.SetActive(true);
 
             SystemDem.gameObject.SetActive(false);
+
         }
 
         public void EnterRevDem()
@@ -483,6 +484,27 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
 
                         }
                     }
+
+                    if (enterNation.countryPlayer.idelogy == Idelogies.Democraty)
+                    {
+                        if (enterNation.countryPlayer.NameAlliens == "" && !isOkAlBr)
+                        {
+                            EnterAlianceWithBr.gameObject.SetActive(true);
+                        }
+                        if (start.CountryList[20].NameAlliens == "" && isOkAlBr == true)
+                        {
+                            start.CountryList[20].NameAlliens = "Aliance";
+                            enterNation.countryPlayer.NameAlliens = "Aliance";
+                            start.CountryList[20].Types = TypeCountry.Alliens;
+                        }
+                        if (start.CountryList[20].NameAlliens == "Aliance" && isOkAlBr == true)
+                        {
+                            enterNation.countryPlayer.NameAlliens = "Aliance";
+                            start.CountryList[20].Types = TypeCountry.Alliens;
+                        }
+                    }
+
+
                 }
             }
             else
