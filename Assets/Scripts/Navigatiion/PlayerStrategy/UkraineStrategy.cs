@@ -49,7 +49,7 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
 
         public bool Perevirka()
         {
-            if (enterNation.countryPlayer.Name == "Soborna Ukraine" || enterNation.countryPlayer.Name == "Ukraine") 
+            if (enterNation.countryPlayer.Name == "Soborna Ukraine" || enterNation.countryPlayer.Name == "Ukraine" || enterNation.countryPlayer.Name == "ursr") 
             {
                 return true;
             }
@@ -481,6 +481,7 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
 
                             mainCamera.transform.position = new Vector3(positionCapital.x, positionCapital.y);
 
+                            start.InitilizerCountry();
 
                         }
                     }
@@ -502,6 +503,82 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
                             enterNation.countryPlayer.NameAlliens = "Aliance";
                             start.CountryList[20].Types = TypeCountry.Alliens;
                         }
+                    }
+
+                    //System cummunism
+                    if (kilkBalCom >= 3)
+                    {
+                        enterNation.countryPlayer.Stabilnisty -= 10;
+
+                        if (enterNation.countryPlayer.Stabilnisty <= 30)
+                        {
+                            int idNewCoun = 0;
+                            start.CountryList.Add(new Country()
+                            {
+                                Name = "ursr",
+                                idelogy = Idelogies.Communism,
+                                Popularity = 60,
+                                Flag = listFlagsForIdeol[2]
+                            });
+
+                            //Initilize lider
+                            for (int i = 0; i < start.liderList.Count; i++)
+                            {
+                                for (int j = 0; j < start.CountryList.Count; j++)
+                                {
+                                    if (start.liderList[i].country.Name == start.CountryList[j].Name)
+                                    {
+                                        if (start.liderList[i].idelogies == start.CountryList[j].idelogy)
+                                        {
+                                            start.CountryList[j].currentLider = start.liderList[i];
+                                        }
+                                    }
+                                }
+                            }
+
+                            for (int i = 0; i < start.CountryList.Count; i++)
+                            {
+                                if (start.CountryList[i].Name == "ursr")
+                                {
+                                    idNewCoun = i;
+                                }
+                            }
+
+                            start.CountryList[idNewCoun].regions.Add(start.RegionList[33]);
+                            start.CountryList[idNewCoun].regions.Add(start.RegionList[34]);
+                            start.CountryList[idNewCoun].regions.Add(start.RegionList[35]);
+                            start.CountryList[idNewCoun].regions.Add(start.RegionList[36]);
+                            start.CountryList[idNewCoun].regions.Add(start.RegionList[37]);
+                            start.CountryList[idNewCoun].regions.Add(start.RegionList[38]);
+
+                            start.CountryList[1].regions.Remove(start.RegionList[33]);
+                            start.CountryList[1].regions.Remove(start.RegionList[34]);
+                            start.CountryList[1].regions.Remove(start.RegionList[35]);
+                            start.CountryList[1].regions.Remove(start.RegionList[36]);
+                            start.CountryList[1].regions.Remove(start.RegionList[37]);
+
+                            enterNation.countryPlayer = start.CountryList[idNewCoun];
+                            start.CountryList[idNewCoun].Types = TypeCountry.Player;
+                            start.CountryList[1].Types = TypeCountry.Enemy;
+
+                            for (int i = 0; i < start.liderList.Count; i++)
+                            {
+                                if (i <= 5)
+                                {
+                                    start.liderList[i].country = start.CountryList[idNewCoun];
+                                }
+                            }
+
+                            capital = start.CountryList[1].regions[0].town;
+
+                            positionCapital = new Vector3(capital.transform.position.x, capital.transform.position.y);
+
+                            mainCamera.transform.position = new Vector3(positionCapital.x, positionCapital.y);
+
+                            start.CountryList[8].Types = TypeCountry.Alliens;
+                        }
+
+                        start.InitilizerCountry();
                     }
 
 

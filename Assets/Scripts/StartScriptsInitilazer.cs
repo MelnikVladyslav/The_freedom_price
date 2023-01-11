@@ -4073,7 +4073,7 @@ public class StartScriptsInitilazer : MonoBehaviour
         }
     }
 
-    void InitilizerCountry()
+    public void InitilizerCountry()
     {
 
         //Initilize country
