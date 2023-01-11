@@ -13,7 +13,7 @@ public class StartScriptsInitilazer : MonoBehaviour
     List<Build> BuildList;
     public List<Air> AirList;
     public List<Flot> FlotList;
-    List<Region> RegionList;
+    public List<Region> RegionList;
     public List<Lider> liderList = new List<Lider>();
     public List<GameObject> towns = new List<GameObject>();
     public List<Texture> flags = new List<Texture>();

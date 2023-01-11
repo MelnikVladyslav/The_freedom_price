@@ -62,7 +62,13 @@ namespace Assets.Scripts.Navigatiion
 
                 enterVasal.gameObject.SetActive(isVasal);
             }
-            if (start.CountryList[idCountry].Types != TypeCountry.Alliens)
+            if (start.CountryList[idCountry].Types == TypeCountry.Alliens)
+            {
+                isAliance = false;
+
+                enterAliance.gameObject.SetActive(isAliance);
+            }
+            else
             {
                 isAliance = true;
 

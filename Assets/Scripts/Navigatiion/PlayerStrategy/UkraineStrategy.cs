@@ -19,9 +19,12 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
         public GameObject ViyskovuyStan;
         public GameObject SystemBVsM;
         public GameObject EnterAlianceWithGer;
+        public GameObject SystemDem;
+        public GameObject EnterAlianceWithBr;
         public Text infoText;
         public RawImage fotoIventResVub;
         public List<Texture> listFlagsForIdeol;
+        public Camera mainCamera;
         int kilkYear = 5;
         int kilkBalCom = 0;
         int kilkBalDem = 0;
@@ -33,6 +36,10 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
         Idelogies PP = Idelogies.Nationalism;
         int currentYear = 1936;
         bool isOkAlGer = false;
+        bool isOkAlBr = false;
+        bool isRevDem = false;
+        Vector3 positionCapital;
+        GameObject capital;
 
         // Use this for initialization
         void Start()
@@ -42,7 +49,7 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
 
         public bool Perevirka()
         {
-            if (enterNation.countryPlayer.Name == "Soborna Ukraine")
+            if (enterNation.countryPlayer.Name == "Soborna Ukraine" || enterNation.countryPlayer.Name == "Ukraine") 
             {
                 return true;
             }
@@ -131,6 +138,44 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
             EnterAlianceWithGer.gameObject.SetActive(false);
         }
 
+        //System democrate
+        public void EnterDemToPower()
+        {
+            enterNation.countryPlayer.idelogy = Idelogies.Democraty;
+
+            infoText.text = "In this vubor win to " + Idelogies.Democraty.ToString() + " party.";
+            for (int i = 0; i < start.liderList.Count; i++)
+            {
+                if (start.liderList[i].country.Name == "Soborna Ukraine" && start.liderList[i].idelogies == Idelogies.Democraty)
+                {
+                    fotoIventResVub.texture = start.liderList[i].foto;
+                }
+            }
+            enterNation.countryPlayer.Flag = listFlagsForIdeol[4];
+
+            kilkBalDem = 0;
+
+            enterNation.countryPlayer.Popularity = (100 - enterNation.countryPlayer.Popularity);
+
+            ResultVub.gameObject.SetActive(true);
+
+            SystemDem.gameObject.SetActive(false);
+        }
+
+        public void EnterRevDem()
+        {
+            isRevDem = true;
+
+            SystemDem.gameObject.SetActive(false);
+        }
+
+        public void OkBrit()
+        {
+            isOkAlBr = true;
+
+            EnterAlianceWithBr.gameObject.SetActive(false);
+        }
+
         // Update is called once per frame
         void Update()
         {
@@ -148,10 +193,7 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
                     {
                         kilkYear--;
                     }
-                    if (kilkYear == 1)
-                    {
-                        Golosuvanya.gameObject.SetActive(true);
-                    }
+                    Golosuvanya.gameObject.SetActive(true);
                     if (kilkYear == 0)
                     {
                         kilkYear = 5;
@@ -311,8 +353,6 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
                     //System BanderaVsMelnik
                     if (enterNation.countryPlayer.idelogy == Idelogies.Nationalism)
                     {
-                        currentYear = skipTurn.Time.Year;
-
                         if (kilkBalNat < 4)
                         {
                             SystemBVsM.gameObject.SetActive(true);
@@ -330,9 +370,118 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
                                 start.CountryList[1].NameAlliens = "Axis";
                                 start.CountryList[0].Types = TypeCountry.Alliens;
                             }
+                            if (start.CountryList[0].NameAlliens == "Axis")
+                            {
+                                start.CountryList[1].NameAlliens = "Axis";
+                                start.CountryList[0].Types = TypeCountry.Alliens;
+                            }
                         }
 
+                        if (kilkBalFac >= 6)
+                        {
+                            enterNation.countryPlayer.idelogy = Idelogies.Fascism;
 
+                            infoText.text = "In this vubor win to " + Idelogies.Fascism.ToString() + " party.";
+                            for (int i = 0; i < start.liderList.Count; i++)
+                            {
+                                if (start.liderList[i].country.Name == "Soborna Ukraine" && start.liderList[i].idelogies == Idelogies.Fascism)
+                                {
+                                    fotoIventResVub.texture = start.liderList[i].foto;
+                                }
+                            }
+                            enterNation.countryPlayer.Flag = listFlagsForIdeol[0];
+                            kilkBalFac = 0;
+
+                            enterNation.countryPlayer.Popularity = (100 - enterNation.countryPlayer.Popularity);
+
+                            ResultVub.gameObject.SetActive(true);
+                        }
+                    }
+
+                    //System democrate
+                    if (kilkBalDem >= 3)
+                    {
+                        if (!isRevDem)
+                        {
+                            SystemDem.gameObject.SetActive(true);
+                        }
+
+                        if (isRevDem)
+                        {
+                            int idNewCoun = 0;
+                            start.CountryList.Add(new Country()
+                            {
+                                Name = "Ukraine",
+                                idelogy = Idelogies.Democraty,
+                                Popularity = 60,
+                                Flag = listFlagsForIdeol[4]
+                            });
+
+                            //Initilize lider
+                            for (int i = 0; i < start.liderList.Count; i++)
+                            {
+                                for (int j = 0; j < start.CountryList.Count; j++)
+                                {
+                                    if (start.liderList[i].country.Name == start.CountryList[j].Name)
+                                    {
+                                        if (start.liderList[i].idelogies == start.CountryList[j].idelogy)
+                                        {
+                                            start.CountryList[j].currentLider = start.liderList[i];
+                                        }
+                                    }
+                                }
+                            }
+
+                            for (int i = 0; i < start.CountryList.Count; i++)
+                            {
+                                if (start.CountryList[i].Name == "Ukraine")
+                                {
+                                    idNewCoun = i;
+                                }
+                            }
+
+                            start.CountryList[idNewCoun].regions.Add(start.RegionList[18]);
+                            start.CountryList[idNewCoun].regions.Add(start.RegionList[19]);
+                            start.CountryList[idNewCoun].regions.Add(start.RegionList[20]);
+                            start.CountryList[idNewCoun].regions.Add(start.RegionList[22]);
+                            start.CountryList[idNewCoun].regions.Add(start.RegionList[23]);
+                            start.CountryList[idNewCoun].regions.Add(start.RegionList[24]);
+                            start.CountryList[idNewCoun].regions.Add(start.RegionList[25]);
+                            start.CountryList[idNewCoun].regions.Add(start.RegionList[26]);
+                            start.CountryList[idNewCoun].regions.Add(start.RegionList[27]);
+                            start.CountryList[idNewCoun].regions.Add(start.RegionList[28]);
+
+                            start.CountryList[1].regions.Remove(start.RegionList[18]);
+                            start.CountryList[1].regions.Remove(start.RegionList[19]);
+                            start.CountryList[1].regions.Remove(start.RegionList[20]);
+                            start.CountryList[1].regions.Remove(start.RegionList[22]);
+                            start.CountryList[1].regions.Remove(start.RegionList[23]);
+                            start.CountryList[1].regions.Remove(start.RegionList[24]);
+                            start.CountryList[1].regions.Remove(start.RegionList[25]);
+                            start.CountryList[1].regions.Remove(start.RegionList[26]);
+                            start.CountryList[1].regions.Remove(start.RegionList[27]);
+                            start.CountryList[1].regions.Remove(start.RegionList[28]);
+
+                            enterNation.countryPlayer = start.CountryList[idNewCoun];
+                            start.CountryList[idNewCoun].Types = TypeCountry.Player;
+                            start.CountryList[1].Types = TypeCountry.Enemy;
+
+                            for (int i = 0; i < start.liderList.Count; i++)
+                            {
+                                if (i <= 5)
+                                {
+                                    start.liderList[i].country = start.CountryList[idNewCoun];
+                                }
+                            }
+
+                            capital = start.CountryList[1].regions[0].town;
+
+                            positionCapital = new Vector3(capital.transform.position.x, capital.transform.position.y);
+
+                            mainCamera.transform.position = new Vector3(positionCapital.x, positionCapital.y);
+
+
+                        }
                     }
                 }
             }
