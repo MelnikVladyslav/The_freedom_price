@@ -25,6 +25,7 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
         public RawImage fotoIventResVub;
         public List<Texture> listFlagsForIdeol;
         public Camera mainCamera;
+        public GameObject WarMonVssssr;
         int kilkYear = 5;
         int kilkBalCom = 0;
         int kilkBalDem = 0;
@@ -175,6 +176,12 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
             isOkAlBr = true;
 
             EnterAlianceWithBr.gameObject.SetActive(false);
+        }
+
+        //System Monarchy
+        public void Warsssr()
+        {
+            start.CountryList[8].Types = TypeCountry.Enemy;
         }
 
         // Update is called once per frame
@@ -581,7 +588,107 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
                         start.InitilizerCountry();
                     }
 
+                    //System monarchy
+                    if (kilkBalMon >= 3)
+                    {
+                        if (enterNation.countryPlayer.idelogy != Idelogies.Monarchy)
+                        {
+                            enterNation.countryPlayer.Popularity -= 5;
+                        }
 
+                        kilkBalNat = 0;
+                    }
+
+                    if (enterNation.countryPlayer.idelogy == Idelogies.Monarchy && skipTurn.Time.Year == 1942)
+                    {
+                        WarMonVssssr.gameObject.SetActive(true);
+                    }
+
+                    //System anarchy
+                    if (kilkBalAna >= 3)
+                    {
+                        int idNewCoun = 0;
+                        start.CountryList.Add(new Country()
+                        {
+                            Name = "Ukraine",
+                            idelogy = Idelogies.Anarchy,
+                            Popularity = 60,
+                            Flag = listFlagsForIdeol[1]
+                        });
+
+                        //Initilize lider
+                        for (int i = 0; i < start.liderList.Count; i++)
+                        {
+                            for (int j = 0; j < start.CountryList.Count; j++)
+                            {
+                                if (start.liderList[i].country.Name == start.CountryList[j].Name)
+                                {
+                                    if (start.liderList[i].idelogies == start.CountryList[j].idelogy)
+                                    {
+                                        start.CountryList[j].currentLider = start.liderList[i];
+                                    }
+                                }
+                            }
+                        }
+
+                        for (int i = 0; i < start.CountryList.Count; i++)
+                        {
+                            if (start.CountryList[i].Name == "Ukraine")
+                            {
+                                idNewCoun = i;
+                            }
+                        }
+
+                        start.CountryList[idNewCoun].regions.Add(start.RegionList[16]);
+                        start.CountryList[idNewCoun].regions.Add(start.RegionList[17]);
+                        start.CountryList[idNewCoun].regions.Add(start.RegionList[18]);
+                        start.CountryList[idNewCoun].regions.Add(start.RegionList[19]);
+                        start.CountryList[idNewCoun].regions.Add(start.RegionList[20]);
+                        start.CountryList[idNewCoun].regions.Add(start.RegionList[21]);
+                        start.CountryList[idNewCoun].regions.Add(start.RegionList[22]);
+                        start.CountryList[idNewCoun].regions.Add(start.RegionList[23]);
+                        start.CountryList[idNewCoun].regions.Add(start.RegionList[35]);
+                        start.CountryList[idNewCoun].regions.Add(start.RegionList[36]);
+                        start.CountryList[idNewCoun].regions.Add(start.RegionList[37]);
+                        start.CountryList[idNewCoun].regions.Add(start.RegionList[38]);
+
+                        start.CountryList[1].regions.Remove(start.RegionList[16]);
+                        start.CountryList[1].regions.Remove(start.RegionList[17]);
+                        start.CountryList[1].regions.Remove(start.RegionList[18]);
+                        start.CountryList[1].regions.Remove(start.RegionList[19]);
+                        start.CountryList[1].regions.Remove(start.RegionList[20]);
+                        start.CountryList[1].regions.Remove(start.RegionList[21]);
+                        start.CountryList[1].regions.Remove(start.RegionList[22]);
+                        start.CountryList[1].regions.Remove(start.RegionList[23]);
+                        start.CountryList[1].regions.Remove(start.RegionList[35]);
+                        start.CountryList[1].regions.Remove(start.RegionList[36]);
+                        start.CountryList[1].regions.Remove(start.RegionList[37]);
+                        start.CountryList[1].regions.Remove(start.RegionList[38]);
+
+                        start.CountryList[1].regions.Remove(start.RegionList[34]);
+
+                        start.CountryList[8].regions.Add(start.RegionList[34]);
+
+                        enterNation.countryPlayer = start.CountryList[idNewCoun];
+                        start.CountryList[idNewCoun].Types = TypeCountry.Player;
+                        start.CountryList[1].Types = TypeCountry.Enemy;
+
+                        for (int i = 0; i < start.liderList.Count; i++)
+                        {
+                            if (i <= 5)
+                            {
+                                start.liderList[i].country = start.CountryList[idNewCoun];
+                            }
+                        }
+
+                        capital = start.CountryList[1].regions[0].town;
+
+                        positionCapital = new Vector3(capital.transform.position.x, capital.transform.position.y);
+
+                        mainCamera.transform.position = new Vector3(positionCapital.x, positionCapital.y);
+
+                        start.InitilizerCountry();
+                    }
                 }
             }
             else

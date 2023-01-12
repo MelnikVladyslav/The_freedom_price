@@ -56,7 +56,19 @@ namespace Assets.Scripts.Navigatiion
 
                 enterWar.gameObject.SetActive(isWar);
             }
+            else
+            {
+                isWar = true;
+
+                enterWar.gameObject.SetActive(isWar);
+            }
             if (start.CountryList[idCountry].Types != TypeCountry.Marionetka)
+            {
+                isVasal = true;
+
+                enterVasal.gameObject.SetActive(isVasal);
+            }
+            else
             {
                 isVasal = true;
 
