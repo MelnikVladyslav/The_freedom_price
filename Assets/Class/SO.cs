@@ -155,7 +155,7 @@ public class Region
 {
 
     public string Name;
-    public GameObject region;
+    public RawImage region;
     public GameObject town;
     public List<Division> divisions = new List<Division>();
     public List<Flot> flotiliya = new List<Flot>();
@@ -184,7 +184,6 @@ public class Technology
 [Serializable]
 public class Country 
 {
-
     public string Name;
     public TypeCountry Types;
     public int PopulationCount;
@@ -206,6 +205,7 @@ public class Country
     public int Popularity;
     public Texture Flag;
     public Lider currentLider;
+    public Color color;
 }
 
 [Serializable]

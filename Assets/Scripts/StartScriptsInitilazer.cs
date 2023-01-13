@@ -19,6 +19,7 @@ public class StartScriptsInitilazer : MonoBehaviour
     public List<Texture> flags = new List<Texture>();
     public List<Texture> icons = new List<Texture>();
     public List<Texture> fotos = new List<Texture>();
+    public List<RawImage> regions = new List<RawImage>();
     public int kilkNayn = 0;
 
     public void Start()
@@ -3600,7 +3601,8 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Name = "Third Reich",
                 idelogy = Idelogies.Fascism,
                 Popularity = 60,
-                Flag = flags[0]
+                Flag = flags[0],
+                color = Color.black
             },
             //1
             new Country()
@@ -3608,7 +3610,8 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Name = "Soborna Ukraine",
                 idelogy = Idelogies.Nationalism,
                 Popularity = 60,
-                Flag = flags[1]
+                Flag = flags[1],
+                color = Color.yellow
             },
             //2
             new Country()
@@ -3616,7 +3619,8 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Name = "Albania",
                 idelogy = Idelogies.Neutrall,
                 Popularity = 60,
-                Flag = flags[2]
+                Flag = flags[2],
+                color = Color.red
             },
             //3
             new Country()
@@ -3624,7 +3628,8 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Name = "Grecia",
                 idelogy = Idelogies.Democraty,
                 Popularity = 60,
-                Flag = flags[3]
+                Flag = flags[3],
+                color = Color.cyan
             },
             //4
             new Country()
@@ -3632,7 +3637,8 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Name = "Turcia",
                 idelogy = Idelogies.Neutrall,
                 Popularity = 60,
-                Flag = flags[4]
+                Flag = flags[4],
+                color = Color.grey
             },
             //5
             new Country()
@@ -3640,7 +3646,8 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Name = "Bolgaria",
                 idelogy = Idelogies.Monarchy,
                 Popularity = 60,
-                Flag = flags[5]
+                Flag = flags[5],
+                color = Color.green
             },
             //6
             new Country()
@@ -3648,7 +3655,8 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Name = "Yugoslavia",
                 idelogy = Idelogies.Monarchy,
                 Popularity = 60,
-                Flag = flags[6]
+                Flag = flags[6],
+                color = Color.blue
             },
             //7
             new Country()
@@ -3656,7 +3664,8 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Name = "Rumunia",
                 idelogy = Idelogies.Democraty,
                 Popularity = 60,
-                Flag = flags[7]
+                Flag = flags[7],
+                color = Color.magenta
             },
             //8
             new Country()
@@ -3664,7 +3673,8 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Name = "sssr",
                 idelogy = Idelogies.Communism,
                 Popularity = 60,
-                Flag = flags[8]
+                Flag = flags[8],
+                color = Color.red
             },
             //9
             new Country()
@@ -3672,7 +3682,8 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Name = "Poland",
                 idelogy = Idelogies.Neutrall,
                 Popularity = 60,
-                Flag = flags[9]
+                Flag = flags[9],
+                color = new Color(241, 222, 141)
             },
             //10
             new Country()
@@ -3680,7 +3691,8 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Name = "Hungary",
                 idelogy = Idelogies.Neutrall,
                 Popularity = 60,
-                Flag = flags[10]
+                Flag = flags[10],
+                color = Color.green
             },
             //11
             new Country()
@@ -3688,7 +3700,8 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Name = "Lutva",
                 idelogy = Idelogies.Neutrall,
                 Popularity = 60,
-                Flag = flags[11]
+                Flag = flags[11],
+                color = new Color(141, 241, 180)
             },
             //12
             new Country()
@@ -3696,7 +3709,8 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Name = "Latvia",
                 idelogy = Idelogies.Neutrall,
                 Popularity = 60,
-                Flag = flags[12]
+                Flag = flags[12],
+                color = new Color(213, 106, 45)
             },
             //13
             new Country()
@@ -3704,7 +3718,8 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Name = "Estonia",
                 idelogy = Idelogies.Neutrall,
                 Popularity = 60,
-                Flag = flags[13]
+                Flag = flags[13],
+                color = new Color(52, 235, 232)
             },
             //14
             new Country()
@@ -3712,7 +3727,8 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Name = "Norway",
                 idelogy = Idelogies.Neutrall,
                 Popularity = 60,
-                Flag = flags[14]
+                Flag = flags[14],
+                color = new Color(209, 65, 111)
             },
             //15
             new Country()
@@ -3720,7 +3736,8 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Name = "Sweden",
                 idelogy = Idelogies.Neutrall,
                 Popularity = 60,
-                Flag = flags[15]
+                Flag = flags[15],
+                color = new Color(90, 87, 179)
             },
             //16
             new Country()
@@ -3728,7 +3745,8 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Name = "Daniya",
                 idelogy = Idelogies.Neutrall,
                 Popularity = 60,
-                Flag = flags[16]
+                Flag = flags[16],
+                color = new Color(209, 96, 82)
             },
             //17
             new Country()
@@ -3736,7 +3754,8 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Name = "Portugal",
                 idelogy = Idelogies.Neutrall,
                 Popularity = 60,
-                Flag = flags[17]
+                Flag = flags[17],
+                color = new Color(97, 204, 73)
             },
             //18
             new Country()
@@ -3744,7 +3763,8 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Name = "Spain",
                 idelogy = Idelogies.Democraty,
                 Popularity = 60,
-                Flag = flags[18]
+                Flag = flags[18],
+                color = new Color(194, 156, 50)
             },
             //19
             new Country()
@@ -3752,7 +3772,8 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Name = "Irland",
                 idelogy = Idelogies.Democraty,
                 Popularity = 60,
-                Flag = flags[19]
+                Flag = flags[19],
+                color = new Color(67, 240, 29)
             },
             //20
             new Country()
@@ -3760,7 +3781,8 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Name = "Britain",
                 idelogy = Idelogies.Democraty,
                 Popularity = 60,
-                Flag = flags[20]
+                Flag = flags[20],
+                color = new Color(214, 90, 98)
             },
             //21
             new Country()
@@ -3768,7 +3790,8 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Name = "Netharland",
                 idelogy = Idelogies.Democraty,
                 Popularity = 60,
-                Flag = flags[21]
+                Flag = flags[21],
+                color = new Color(181, 131, 24)
             },
             //22
             new Country()
@@ -3776,7 +3799,8 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Name = "Belgue",
                 idelogy = Idelogies.Democraty,
                 Popularity = 60,
-                Flag = flags[22]
+                Flag = flags[22],
+                color = Color.yellow
             },
             //23
             new Country()
@@ -3784,7 +3808,8 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Name = "Chehoslovakia",
                 idelogy = Idelogies.Democraty,
                 Popularity = 60,
-                Flag = flags[23]
+                Flag = flags[23],
+                color = new Color(26, 201, 149)
             },
             //24
             new Country()
@@ -3792,7 +3817,8 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Name = "Austria",
                 idelogy = Idelogies.Neutrall,
                 Popularity = 60,
-                Flag = flags[24]
+                Flag = flags[24],
+                color = Color.white
             },
             //25
             new Country()
@@ -3800,7 +3826,8 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Name = "Swithland",
                 idelogy = Idelogies.Neutrall,
                 Popularity = 60,
-                Flag = flags[25]
+                Flag = flags[25],
+                color = new Color(122, 35, 59)
             },
             //26
             new Country()
@@ -3808,7 +3835,8 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Name = "Italy",
                 idelogy = Idelogies.Fascism,
                 Popularity = 60,
-                Flag = flags[26]
+                Flag = flags[26],
+                color = new Color(13, 122, 62)
             },
             //27
             new Country()
@@ -3816,7 +3844,8 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Name = "France",
                 idelogy = Idelogies.Democraty,
                 Popularity = 60,
-                Flag = flags[27]
+                Flag = flags[27],
+                color = new Color(123, 199, 198)
             },
             //28
             new Country()
@@ -3824,7 +3853,8 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Name = "Luxemburg",
                 idelogy = Idelogies.Democraty,
                 Popularity = 60,
-                Flag = flags[28]
+                Flag = flags[28],
+                color = new Color(166, 224, 224)
             },
             //29
             new Country()
@@ -3832,7 +3862,8 @@ public class StartScriptsInitilazer : MonoBehaviour
                 Name = "Dancig",
                 idelogy = Idelogies.Neutrall,
                 Popularity = 60,
-                Flag = flags[29]
+                Flag = flags[29],
+                color = new Color(196, 134, 159)
             }
         };
         liderList = new List<Lider>()
@@ -4332,6 +4363,15 @@ public class StartScriptsInitilazer : MonoBehaviour
             else
             {
                 Debug.Log("Not tech");
+            }
+        }
+
+        //Fill regions
+        for (int i = 0; i < CountryList.Count; i++)
+        {
+            for (int j = 0; j < CountryList[i].regions.Count; j++)
+            {
+                CountryList[i].regions[j].region.color = CountryList[i].color;
             }
         }
 
