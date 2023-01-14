@@ -19,6 +19,7 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
         public GameObject ViyskovuyStan;
         public GameObject PidtrumkaBalk;
         public GameObject Ancluss;
+        public GameObject MunichZrada;
         public Text infoText;
         public RawImage fotoIventResVub;
         public List<Texture> listFlagsForIdeol;
@@ -115,6 +116,12 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
             start.CountryList[24].regions.Remove(start.RegionList[153]);
 
             Ancluss.gameObject.SetActive(false);
+        }
+
+        //Munich
+        public void MunichZrad()
+        {
+            MunichZrada.gameObject.SetActive(false);
         }
 
         // Update is called once per frame
@@ -416,6 +423,12 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
                     if (enterNation.countryPlayer.idelogy == Idelogies.Fascism && skipTurn.Time.Year == 1937)
                     {
                         Ancluss.gameObject.SetActive(true);
+                    }
+
+                    //Anclus
+                    if (enterNation.countryPlayer.idelogy == Idelogies.Fascism && skipTurn.Time.Year == 1937 && skipTurn.Time.Month == 11)
+                    {
+                        MunichZrada.gameObject.SetActive(true);
                     }
 
 
