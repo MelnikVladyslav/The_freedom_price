@@ -2,7 +2,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Build;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,6 +18,7 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
         public GameObject ResultVub;
         public GameObject ViyskovuyStan;
         public GameObject PidtrumkaBalk;
+        public GameObject Ancluss;
         public Text infoText;
         public RawImage fotoIventResVub;
         public List<Texture> listFlagsForIdeol;
@@ -102,6 +102,19 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
             kilkBalPidtr++;
 
             PidtrumkaBalk.gameObject.SetActive(false);
+        }
+
+        //Nazi
+        //Ancluss
+        public void Anclus()
+        {
+            start.CountryList[0].regions.Add(start.RegionList[152]);
+            start.CountryList[0].regions.Add(start.RegionList[153]);
+
+            start.CountryList[24].regions.Remove(start.RegionList[152]);
+            start.CountryList[24].regions.Remove(start.RegionList[153]);
+
+            Ancluss.gameObject.SetActive(false);
         }
 
         // Update is called once per frame
@@ -396,6 +409,13 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
                             }
 
                         }
+                    }
+
+                    //Nazi
+                    //Anclus
+                    if (enterNation.countryPlayer.idelogy == Idelogies.Fascism && skipTurn.Time.Year == 1937)
+                    {
+                        Ancluss.gameObject.SetActive(true);
                     }
 
 
