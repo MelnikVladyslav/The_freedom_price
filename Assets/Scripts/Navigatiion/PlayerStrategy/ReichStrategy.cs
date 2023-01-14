@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Build;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -250,6 +251,150 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
                             start.CountryList[5].Types = TypeCountry.Alliens;
                             start.CountryList[7].Types = TypeCountry.Alliens;
                             start.CountryList[10].Types = TypeCountry.Alliens;
+                        }
+                    }
+
+                    //SS
+                    bool isDiv = false;
+                    int currDiv = 0;
+                    for (int i = 0; i < enterNation.countryPlayer.regions.Count; i++)
+                    {
+                        if (enterNation.countryPlayer.regions[i].Name == "Riga")
+                        {
+                            for (int j = 0; j < enterNation.countryPlayer.regions[i].divisions.Count; j++)
+                            {
+                                if (enterNation.countryPlayer.regions[i].divisions[j].Name == "VI Corps SS")
+                                {
+                                    isDiv = true;
+                                }
+                                else
+                                {
+                                    isDiv = false;
+                                }
+                            }
+                            if (!isDiv)
+                            {
+                                enterNation.countryPlayer.regions[i].divisions.Add(new Division()
+                                {
+                                    Name = "VI Corps SS",
+                                    polks = new List<Polk>()
+                                    {
+                                        new Polk
+                                        {
+                                            Name = "Artillery",
+                                            Type = TypePolk.Artilery,
+                                            Price = 150,
+                                            Hit = 100,
+                                            Damage = 40,
+                                            Bronya = 0,
+                                            Step = 1,
+                                            icon = start.icons[2]
+                                        },
+                                        new Polk
+                                        {
+                                            Name = "Artillery",
+                                            Type = TypePolk.Artilery,
+                                            Price = 150,
+                                            Hit = 100,
+                                            Damage = 40,
+                                            Bronya = 0,
+                                            Step = 1,
+                                            icon = start.icons[2]
+                                        },
+                                        new Polk
+                                        {
+                                            Name = "Motorized",
+                                            Type = TypePolk.Motorized,
+                                            Price = 150,
+                                            Hit = 150,
+                                            Damage = 30,
+                                            Bronya = 0,
+                                            Step = 3,
+                                            icon = start.icons[4]
+                                        },
+                                        new Polk
+                                        {
+                                            Name = "Pihota",
+                                            Type = TypePolk.Pihota,
+                                            Price = 100,
+                                            Hit = 100,
+                                            Damage = 30,
+                                            Bronya = 0,
+                                            Step = 1,
+                                            icon = start.icons[1]
+                                        },
+                                        new Polk
+                                        {
+                                            Name = "Pihota",
+                                            Type = TypePolk.Pihota,
+                                            Price = 100,
+                                            Hit = 100,
+                                            Damage = 30,
+                                            Bronya = 0,
+                                            Step = 1,
+                                            icon = start.icons[1]
+                                        },
+                                        new Polk
+                                        {
+                                            Name = "Pihota",
+                                            Type = TypePolk.Pihota,
+                                            Price = 100,
+                                            Hit = 100,
+                                            Damage = 30,
+                                            Bronya = 0,
+                                            Step = 1,
+                                            icon = start.icons[1]
+                                        },
+                                        new Polk
+                                        {
+                                            Name = "Pihota",
+                                            Type = TypePolk.Pihota,
+                                            Price = 100,
+                                            Hit = 100,
+                                            Damage = 30,
+                                            Bronya = 0,
+                                            Step = 1,
+                                            icon = start.icons[1]
+                                        },
+                                        new Polk
+                                        {
+                                            Name = "Pihota",
+                                            Type = TypePolk.Pihota,
+                                            Price = 100,
+                                            Hit = 100,
+                                            Damage = 30,
+                                            Bronya = 0,
+                                            Step = 1,
+                                            icon = start.icons[1]
+                                        }
+                                    }
+                                });
+
+                                for (int j = 0; j < enterNation.countryPlayer.regions[i].divisions.Count; j++)
+                                {
+                                    if (enterNation.countryPlayer.regions[i].divisions[j].Name == "VI Corps SS")
+                                    {
+                                        currDiv = j;
+                                    }
+                                }
+
+                                for (int j = 0; j < enterNation.countryPlayer.regions[i].divisions[currDiv].polks.Count; j++)
+                                {
+                                    enterNation.countryPlayer.regions[i].divisions[currDiv].ZagDam += enterNation.countryPlayer.regions[i].divisions[currDiv].polks[j].Damage;
+                                    enterNation.countryPlayer.regions[i].divisions[currDiv].ZagStep += enterNation.countryPlayer.regions[i].divisions[currDiv].polks[j].Step;
+                                    enterNation.countryPlayer.regions[i].divisions[currDiv].ZagBr += enterNation.countryPlayer.regions[i].divisions[currDiv].polks[j].Bronya;
+                                    enterNation.countryPlayer.regions[i].divisions[currDiv].ZagHit += enterNation.countryPlayer.regions[i].divisions[currDiv].polks[j].Hit;
+                                    enterNation.countryPlayer.regions[i].divisions[currDiv].Price += enterNation.countryPlayer.regions[i].divisions[currDiv].polks[j].Price;
+                                    enterNation.countryPlayer.regions[i].divisions[currDiv].kilkRec += 1000;
+                                }
+
+
+                                enterNation.countryPlayer.regions[i].divisions[currDiv].ZagDam /= enterNation.countryPlayer.regions[i].divisions[currDiv].polks.Count;
+                                enterNation.countryPlayer.regions[i].divisions[currDiv].ZagStep /= enterNation.countryPlayer.regions[i].divisions[currDiv].polks.Count;
+                                enterNation.countryPlayer.regions[i].divisions[currDiv].ZagBr /= enterNation.countryPlayer.regions[i].divisions[currDiv].polks.Count;
+                                enterNation.countryPlayer.regions[i].divisions[currDiv].ZagHit /= enterNation.countryPlayer.regions[i].divisions[currDiv].polks.Count;
+                            }
+
                         }
                     }
 
