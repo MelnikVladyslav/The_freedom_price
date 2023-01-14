@@ -50,7 +50,7 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
 
         public bool Perevirka()
         {
-            if (enterNation.countryPlayer.Name == "Soborna Ukraine" || enterNation.countryPlayer.Name == "Ukraine" || enterNation.countryPlayer.Name == "ursr") 
+            if (enterNation.countryPlayer.Name == "Soborna Ukraine" || enterNation.countryPlayer.Name == "Ukraine" || enterNation.countryPlayer.Name == "ursr" || enterNation.countryPlayer.Name == "Kievan Rus") 
             {
                 return true;
             }
@@ -602,6 +602,11 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
                     if (enterNation.countryPlayer.idelogy == Idelogies.Monarchy && skipTurn.Time.Year == 1942)
                     {
                         WarMonVssssr.gameObject.SetActive(true);
+                    }
+
+                    if (start.CountryList[8].regions.Count == 0)
+                    {
+                        enterNation.countryPlayer.Name = "Kievan Rus";
                     }
 
                     //System anarchy

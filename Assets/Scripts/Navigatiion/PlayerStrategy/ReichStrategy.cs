@@ -17,6 +17,7 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
         public GameObject EnterOP;
         public GameObject ResultVub;
         public GameObject ViyskovuyStan;
+        public GameObject PidtrumkaBalk;
         public Text infoText;
         public RawImage fotoIventResVub;
         public List<Texture> listFlagsForIdeol;
@@ -25,9 +26,11 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
         int kilkBalDem = 0;
         int kilkBalFac = 0;
         int kilkBalMon = 0;
+        int kilkBalPidtr = 0;
         bool isViysStan = false;
         Idelogies PP = Idelogies.Fascism;
         int currentYear = 1936;
+        bool isWar = false;
 
         // Use this for initialization
         void Start()
@@ -92,6 +95,14 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
             enterNation.countryPlayer.Stabilnisty += 10;
         }
 
+        //Pidtrumka balkan
+        public void Pidtr()
+        {
+            kilkBalPidtr++;
+
+            PidtrumkaBalk.gameObject.SetActive(false);
+        }
+
         // Update is called once per frame
         void Update()
         {
@@ -99,19 +110,16 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
 
             if (isPlayer == true)
             {
-                // Vuboru
                 if (skipTurn.Time.Year > currentYear)
                 {
+                    //Vuboru
                     currentYear = skipTurn.Time.Year;
 
                     if (kilkYear <= 5 && kilkYear != 0)
                     {
                         kilkYear--;
                     }
-                    if (kilkYear == 1)
-                    {
-                        Golosuvanya.gameObject.SetActive(true);
-                    }
+                    Golosuvanya.gameObject.SetActive(true);
                     if (kilkYear == 0)
                     {
                         kilkYear = 5;
@@ -197,38 +205,55 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
                                     enterNation.countryPlayer.Popularity = (100 - enterNation.countryPlayer.Popularity);
                                 }
                             }
+                            ResultVub.gameObject.SetActive(true);
                         }
 
-                        ResultVub.gameObject.SetActive(true);
                     }
-                }
 
-                //Viyskovuy stan
-                if (skipTurn.Time.Year > currentYear)
-                {
-                    currentYear = skipTurn.Time.Year;
-                    bool isWar = false;
-
-                    for (int i = 0; i < start.CountryList.Count; i++)
+                    //Viyskovuy stan
+                    if (isWar != true)
                     {
-                        if (start.CountryList[i].Types == TypeCountry.Enemy)
+                        currentYear = skipTurn.Time.Year;
+
+                        for (int i = 0; i < start.CountryList.Count; i++)
                         {
-                            isWar = true;
-                            break;
+                            if (start.CountryList[i].Types == TypeCountry.Enemy)
+                            {
+                                isWar = true;
+                                break;
+                            }
+                        }
+
+                        if (isWar)
+                        {
+                            if (isViysStan)
+                            {
+                                ViyskovuyStan.gameObject.SetActive(true);
+                            }
+                        }
+                        else
+                        {
+                            isViysStan = false;
                         }
                     }
 
-                    if (isWar)
+                    //Pidtrumka Balkans
+                    if (enterNation.countryPlayer.idelogy == Idelogies.Fascism)
                     {
-                        if (isViysStan)
+                        if (kilkBalPidtr <= 3)
                         {
-                            ViyskovuyStan.gameObject.SetActive(true);
+                            PidtrumkaBalk.gameObject.SetActive(true);
+                        }
+
+                        if (kilkBalPidtr >= 3)
+                        {
+                            start.CountryList[5].Types = TypeCountry.Alliens;
+                            start.CountryList[7].Types = TypeCountry.Alliens;
+                            start.CountryList[10].Types = TypeCountry.Alliens;
                         }
                     }
-                    else
-                    {
-                        isViysStan = false;
-                    }
+
+
                 }
 
             }
