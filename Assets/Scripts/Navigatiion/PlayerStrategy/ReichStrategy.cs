@@ -144,6 +144,12 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
         public void PolandWar()
         {
             start.CountryList[8].Types = TypeCountry.Enemy;
+            start.CountryList[20].Types = TypeCountry.Enemy;
+            start.CountryList[27].Types = TypeCountry.Enemy;
+
+            start.CountryList[8].NameAlliens = "Aliance";
+            start.CountryList[20].NameAlliens = "Aliance";
+            start.CountryList[27].NameAlliens = "Aliance";
 
             PolandW.gameObject.SetActive(false);
         }
