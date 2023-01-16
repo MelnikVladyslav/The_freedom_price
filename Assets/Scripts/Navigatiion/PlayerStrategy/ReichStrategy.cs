@@ -20,6 +20,8 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
         public GameObject PidtrumkaBalk;
         public GameObject Ancluss;
         public GameObject MunichZrada;
+        public GameObject SudbaChech;
+        public GameObject PolandW;
         public Text infoText;
         public RawImage fotoIventResVub;
         public List<Texture> listFlagsForIdeol;
@@ -122,6 +124,28 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
         public void MunichZrad()
         {
             MunichZrada.gameObject.SetActive(false);
+        }
+
+        //SudbaChech
+        public void SudbaChec()
+        {
+            start.CountryList[0].regions.Add(start.RegionList[149]);
+            start.CountryList[0].regions.Add(start.RegionList[150]);
+            start.CountryList[0].regions.Add(start.RegionList[151]);
+
+            start.CountryList[23].regions.Remove(start.RegionList[149]);
+            start.CountryList[23].regions.Remove(start.RegionList[150]);
+            start.CountryList[23].regions.Remove(start.RegionList[151]);
+
+            SudbaChech.gameObject.SetActive(false);
+        }
+
+        //Poland
+        public void PolandWar()
+        {
+            start.CountryList[8].Types = TypeCountry.Enemy;
+
+            PolandW.gameObject.SetActive(false);
         }
 
         // Update is called once per frame
@@ -425,13 +449,23 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
                         Ancluss.gameObject.SetActive(true);
                     }
 
-                    //Anclus
+                    //MunichZrada
                     if (enterNation.countryPlayer.idelogy == Idelogies.Fascism && skipTurn.Time.Year == 1937 && skipTurn.Time.Month == 11)
                     {
                         MunichZrada.gameObject.SetActive(true);
                     }
 
+                    //SudbaChech
+                    if (enterNation.countryPlayer.idelogy == Idelogies.Fascism && skipTurn.Time.Year == 1938)
+                    {
+                        SudbaChech.gameObject.SetActive(true);
+                    }
 
+                    //Poland
+                    if (enterNation.countryPlayer.idelogy == Idelogies.Fascism && skipTurn.Time.Year == 1939)
+                    {
+                        PolandW.gameObject.SetActive(true);
+                    }
                 }
 
             }
