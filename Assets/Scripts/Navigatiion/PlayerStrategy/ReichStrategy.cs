@@ -22,6 +22,7 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
         public GameObject MunichZrada;
         public GameObject SudbaChech;
         public GameObject PolandW;
+        public GameObject OperVuz;
         public Text infoText;
         public RawImage fotoIventResVub;
         public List<Texture> listFlagsForIdeol;
@@ -152,6 +153,18 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
             start.CountryList[27].NameAlliens = "Aliance";
 
             PolandW.gameObject.SetActive(false);
+        }
+
+        //OperVuz
+        public void OperVuzer()
+        {
+            start.CountryList[14].Types = TypeCountry.Enemy;
+            start.CountryList[16].Types = TypeCountry.Enemy;
+
+            start.CountryList[14].NameAlliens = "Aliance";
+            start.CountryList[16].NameAlliens = "Aliance";
+
+            OperVuz.gameObject.SetActive(false);
         }
 
         // Update is called once per frame
@@ -471,6 +484,12 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
                     if (enterNation.countryPlayer.idelogy == Idelogies.Fascism && skipTurn.Time.Year == 1939)
                     {
                         PolandW.gameObject.SetActive(true);
+                    }
+
+                    //OperVuz
+                    if (enterNation.countryPlayer.idelogy == Idelogies.Fascism && skipTurn.Time.Year == 1940)
+                    {
+                        OperVuz.gameObject.SetActive(true);
                     }
                 }
 
