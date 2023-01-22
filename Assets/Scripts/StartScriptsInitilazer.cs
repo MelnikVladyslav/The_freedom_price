@@ -4367,13 +4367,13 @@ public class StartScriptsInitilazer : MonoBehaviour
         }
 
         //Fill regions
-        for (int i = 0; i < CountryList.Count; i++)
-        {
-            for (int j = 0; j < CountryList[i].regions.Count; j++)
-            {
-                CountryList[i].regions[j].region.color = CountryList[i].color;
-            }
-        }
+        //for (int i = 0; i < CountryList.Count; i++)
+        //{
+        //    for (int j = 0; j < CountryList[i].regions.Count; j++)
+        //    {
+        //        CountryList[i].regions[j].region.color = CountryList[i].color;
+        //    }
+        //}
 
     }
 

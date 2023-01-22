@@ -23,6 +23,8 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
         public GameObject SudbaChech;
         public GameObject PolandW;
         public GameObject OperVuz;
+        public GameObject OperBarb;
+        public GameObject Rev;
         public Text infoText;
         public RawImage fotoIventResVub;
         public List<Texture> listFlagsForIdeol;
@@ -36,6 +38,7 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
         Idelogies PP = Idelogies.Fascism;
         int currentYear = 1936;
         bool isWar = false;
+        bool isRev = false;
 
         // Use this for initialization
         void Start()
@@ -45,7 +48,7 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
 
         public bool Perevirka()
         {
-            if (enterNation.countryPlayer.Name == "Third Reich")
+            if (enterNation.countryPlayer.Name == "Third Reich" || enterNation.countryPlayer.Name == "Germany")
             {
                 return true;
             }
@@ -144,11 +147,11 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
         //Poland
         public void PolandWar()
         {
-            start.CountryList[8].Types = TypeCountry.Enemy;
+            start.CountryList[9].Types = TypeCountry.Enemy;
             start.CountryList[20].Types = TypeCountry.Enemy;
             start.CountryList[27].Types = TypeCountry.Enemy;
 
-            start.CountryList[8].NameAlliens = "Aliance";
+            start.CountryList[9].NameAlliens = "Aliance";
             start.CountryList[20].NameAlliens = "Aliance";
             start.CountryList[27].NameAlliens = "Aliance";
 
@@ -165,6 +168,82 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
             start.CountryList[16].NameAlliens = "Aliance";
 
             OperVuz.gameObject.SetActive(false);
+        }
+
+        //OperBarb
+        public void OperBarbarossa()
+        {
+            start.CountryList[8].Types = TypeCountry.Enemy;
+
+            OperBarb.gameObject.SetActive(false);
+        }
+
+        //Rev
+        public void Revolution()
+        {
+            int idNewCoun = 0;
+            start.CountryList.Add(new Country()
+            {
+                Name = "Germany",
+                idelogy = Idelogies.Neutrall,
+                Popularity = 60,
+                Flag = listFlagsForIdeol[2]
+            });
+
+            for (int i = 0; i < start.CountryList.Count; i++)
+            {
+                if (start.CountryList[i].Name == "Germany")
+                {
+                    idNewCoun = i;
+                }
+            }
+
+            start.CountryList[idNewCoun].regions.Add(start.RegionList[0]);
+            start.CountryList[idNewCoun].regions.Add(start.RegionList[1]);
+            start.CountryList[idNewCoun].regions.Add(start.RegionList[2]);
+            start.CountryList[idNewCoun].regions.Add(start.RegionList[3]);
+            start.CountryList[idNewCoun].regions.Add(start.RegionList[4]);
+            start.CountryList[idNewCoun].regions.Add(start.RegionList[5]);
+            start.CountryList[idNewCoun].regions.Add(start.RegionList[6]);
+            start.CountryList[idNewCoun].regions.Add(start.RegionList[7]);
+            start.CountryList[idNewCoun].regions.Add(start.RegionList[8]);
+            start.CountryList[idNewCoun].regions.Add(start.RegionList[9]);
+            start.CountryList[idNewCoun].regions.Add(start.RegionList[10]);
+
+            start.CountryList[0].regions.Remove(start.RegionList[0]);
+            start.CountryList[0].regions.Remove(start.RegionList[1]);
+            start.CountryList[0].regions.Remove(start.RegionList[2]);
+            start.CountryList[0].regions.Remove(start.RegionList[3]);
+            start.CountryList[0].regions.Remove(start.RegionList[4]);
+            start.CountryList[0].regions.Remove(start.RegionList[5]);
+            start.CountryList[0].regions.Remove(start.RegionList[6]);
+            start.CountryList[0].regions.Remove(start.RegionList[7]);
+            start.CountryList[0].regions.Remove(start.RegionList[8]);
+            start.CountryList[0].regions.Remove(start.RegionList[9]);
+            start.CountryList[0].regions.Remove(start.RegionList[10]);
+
+            start.CountryList[idNewCoun].Types = TypeCountry.Player;
+            start.CountryList[0].Types = TypeCountry.Enemy;
+
+            enterNation.countryPlayer = start.CountryList[idNewCoun];
+
+            for (int i = 0; i < start.liderList.Count; i++)
+            {
+                for (int j = 0; j < start.CountryList.Count; j++)
+                {
+                    if (start.liderList[i].country.Name == "Third Reich")
+                    {
+                        if (start.liderList[i].idelogies == start.CountryList[j].idelogy)
+                        {
+                           enterNation.countryPlayer.currentLider = start.liderList[i];
+                        }
+                    }
+                }
+            }
+
+            start.InitilizerCountry();
+
+            isRev = true;
         }
 
         // Update is called once per frame
@@ -299,6 +378,12 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
                         {
                             isViysStan = false;
                         }
+                    }
+
+                    //Rev
+                    if (enterNation.countryPlayer.Popularity <= 50 && skipTurn.Time.Year == 1937 && isRev == false)
+                    {
+                        Rev.gameObject.SetActive(true);
                     }
 
                     //Pidtrumka Balkans
@@ -491,8 +576,53 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
                     {
                         OperVuz.gameObject.SetActive(true);
                     }
+
+                    //OperBarb
+                    if (enterNation.countryPlayer.idelogy == Idelogies.Fascism && skipTurn.Time.Year == 1940)
+                    {
+                        OperBarb.gameObject.SetActive(true);
+                    }
+
+                    //100Reich
+                    if (enterNation.countryPlayer.idelogy == Idelogies.Fascism && skipTurn.Time.Year == 1950)
+                    {
+                        enterNation.countryPlayer.Name = "Thunhred Reich";
+                    }
+
+                    //Monarchy
+                    //Poland
+                    if (enterNation.countryPlayer.idelogy == Idelogies.Monarchy && skipTurn.Time.Year == 1939)
+                    {
+                        PolandW.gameObject.SetActive(true);
+                    }
+
+                    //Empire
+                    if (enterNation.countryPlayer.idelogy == Idelogies.Monarchy)
+                    {
+                        for (int i = 0; i < enterNation.countryPlayer.regions.Count; i++)
+                        {
+                            if (enterNation.countryPlayer.regions[i].Name == "Warshava")
+                            {
+                                enterNation.countryPlayer.Name = "Germany empire";
+                            }
+                        }
+                    }
                 }
 
+                //ledars
+                for (int i = 0; i < start.liderList.Count; i++)
+                {
+                    for (int j = 0; j < start.CountryList.Count; j++)
+                    {
+                        if (start.liderList[i].country.Name == "Third Reich")
+                        {
+                            if (start.liderList[i].idelogies == start.CountryList[j].idelogy)
+                            {
+                                enterNation.countryPlayer.currentLider = start.liderList[i];
+                            }
+                        }
+                    }
+                }
             }
             else
             {

@@ -7,10 +7,10 @@ namespace Assets.Scripts
 {
     public class EnterNation : MonoBehaviour
     {
-        Vector3 positionCapital;
+        public Vector3 positionCapital;
         public Camera mainCamera;
         public StartScriptsInitilazer startScripts;
-        GameObject capital;
+        public GameObject capital;
         public Country countryPlayer;
         public Text countryParametrs;
         public int plusStab = 0;
