@@ -607,6 +607,21 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
                             }
                         }
                     }
+
+                    //Democraty
+                    //EC
+                    if (enterNation.countryPlayer.idelogy == Idelogies.Democraty)
+                    {
+                        enterNation.countryPlayer.NameAlliens = "EC";
+                        for (int i = 0; i < start.CountryList.Count; i++)
+                        {
+                            if (start.CountryList[i].idelogy == Idelogies.Democraty)
+                            {
+                                start.CountryList[i].NameAlliens = "EC";
+                                start.CountryList[i].Types = TypeCountry.Alliens;
+                            }
+                        }
+                    }
                 }
 
                 //ledars
