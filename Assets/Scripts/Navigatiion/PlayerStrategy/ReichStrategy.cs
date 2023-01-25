@@ -241,6 +241,24 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
                 }
             }
 
+            for (int i = 0; i < enterNation.countryPlayer.techs.Count; i++)
+            {
+                if (enterNation.countryPlayer.techs[i].polks != null)
+                {
+                    for (int j = 0; j < enterNation.countryPlayer.techs[i].polks.Count; j++)
+                    {
+                        enterNation.countryPlayer.openPolks.Add(enterNation.countryPlayer.techs[i].polks[j]);
+                    }
+                }
+                if (enterNation.countryPlayer.techs[i].builds != null)
+                {
+                    for (int j = 0; j < enterNation.countryPlayer.techs[i].builds.Count; j++)
+                    {
+                        enterNation.countryPlayer.openBuilds.Add(enterNation.countryPlayer.techs[i].builds[j]);
+                    }
+                }
+            }
+
             start.InitilizerCountry();
 
             isRev = true;

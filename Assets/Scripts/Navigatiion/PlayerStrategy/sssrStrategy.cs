@@ -17,6 +17,7 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
         public GameObject EnterOP;
         public GameObject ResultVub;
         public GameObject ViyskovuyStan;
+        public GameObject Reforms;
         public Text infoText;
         public RawImage fotoIventResVub;
         public List<Texture> listFlagsForIdeol;
@@ -28,6 +29,8 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
         bool isViysStan = false;
         Idelogies PP = Idelogies.Communism;
         int currentYear = 1936;
+        int kilkRefArmy = 0;
+        bool isRev = false;
 
         // Use this for initialization
         void Start()
@@ -37,7 +40,7 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
 
         public bool Perevirka()
         {
-            if (enterNation.countryPlayer.Name == "sssr")
+            if (enterNation.countryPlayer.Name == "sssr" || enterNation.countryPlayer.Name == "ussr")
             {
                 return true;
             }
@@ -92,6 +95,12 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
             enterNation.countryPlayer.Stabilnisty += 10;
         }
 
+        //Reforms
+        public void Reform()
+        {
+            kilkRefArmy++;
+        }
+
         // Update is called once per frame
         void Update()
         {
@@ -99,19 +108,16 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
 
             if (isPlayer == true)
             {
-                // Vuboru
                 if (skipTurn.Time.Year > currentYear)
                 {
                     currentYear = skipTurn.Time.Year;
 
+                    // Vuboru
                     if (kilkYear <= 5 && kilkYear != 0)
                     {
                         kilkYear--;
                     }
-                    if (kilkYear == 1)
-                    {
-                        Golosuvanya.gameObject.SetActive(true);
-                    }
+                    Golosuvanya.gameObject.SetActive(true);
                     if (kilkYear == 0)
                     {
                         kilkYear = 5;
@@ -179,12 +185,8 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
 
                         ResultVub.gameObject.SetActive(true);
                     }
-                }
 
-                //Viyskovuy stan
-                if (skipTurn.Time.Year > currentYear)
-                {
-                    currentYear = skipTurn.Time.Year;
+                    //Viyskovuy stan
                     bool isWar = false;
 
                     for (int i = 0; i < start.CountryList.Count; i++)
@@ -207,6 +209,91 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
                     {
                         isViysStan = false;
                     }
+
+                    //Reforms
+                    if (enterNation.countryPlayer.idelogy == Idelogies.Communism)
+                    {
+                        Reforms.gameObject.SetActive(true);
+                    }
+                    if (kilkRefArmy == 1)
+                    {
+                        enterNation.countryParametrs.text = "";
+                        enterNation.atack = 0;
+                        enterNation.def = 0;
+                    }
+
+                    //trockiy
+                    if (kilkBalViyskCom >= 3)
+                    {
+                        int idNewCoun = 0;
+                        start.CountryList.Add(new Country()
+                        {
+                            Name = "ussr",
+                            idelogy = Idelogies.ViyskovuyCummunism,
+                            Popularity = 60,
+                            Flag = listFlagsForIdeol[2]
+                        });
+
+                        for (int i = 0; i < start.CountryList.Count; i++)
+                        {
+                            if (start.CountryList[i].Name == "ussr")
+                            {
+                                idNewCoun = i;
+                            }
+                        }
+
+                        start.CountryList[idNewCoun].regions.Add(start.RegionList[0]);
+                        start.CountryList[idNewCoun].regions.Add(start.RegionList[1]);
+                        start.CountryList[idNewCoun].regions.Add(start.RegionList[2]);
+
+                        start.CountryList[0].regions.Remove(start.RegionList[0]);
+                        start.CountryList[0].regions.Remove(start.RegionList[1]);
+                        start.CountryList[0].regions.Remove(start.RegionList[2]);
+
+                        start.CountryList[idNewCoun].Types = TypeCountry.Player;
+                        start.CountryList[0].Types = TypeCountry.Enemy;
+
+                        enterNation.countryPlayer = start.CountryList[idNewCoun];
+
+                        for (int i = 0; i < start.liderList.Count; i++)
+                        {
+                            for (int j = 0; j < start.CountryList.Count; j++)
+                            {
+                                if (start.liderList[i].country.Name == "sssr")
+                                {
+                                    if (start.liderList[i].idelogies == start.CountryList[j].idelogy)
+                                    {
+                                        enterNation.countryPlayer.currentLider = start.liderList[i];
+                                    }
+                                }
+                            }
+                        }
+
+                        for (int i = 0; i < enterNation.countryPlayer.techs.Count; i++)
+                        {
+                            if (enterNation.countryPlayer.techs[i].polks != null)
+                            {
+                                for (int j = 0; j < enterNation.countryPlayer.techs[i].polks.Count; j++)
+                                {
+                                    enterNation.countryPlayer.openPolks.Add(enterNation.countryPlayer.techs[i].polks[j]);
+                                }
+                            }
+                            if (enterNation.countryPlayer.techs[i].builds != null)
+                            {
+                                for (int j = 0; j < enterNation.countryPlayer.techs[i].builds.Count; j++)
+                                {
+                                    enterNation.countryPlayer.openBuilds.Add(enterNation.countryPlayer.techs[i].builds[j]);
+                                }
+                            }
+                        }
+
+                        start.InitilizerCountry();
+
+                        isRev = true;
+                    }
+
+
+
                 }
 
             }
