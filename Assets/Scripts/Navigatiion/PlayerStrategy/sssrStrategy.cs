@@ -40,7 +40,7 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
 
         public bool Perevirka()
         {
-            if (enterNation.countryPlayer.Name == "sssr" || enterNation.countryPlayer.Name == "ussr")
+            if (enterNation.countryPlayer.Name == "sssr" || enterNation.countryPlayer.Name == "ussr" || enterNation.countryPlayer.Name == "bila russia")
             {
                 return true;
             }
@@ -222,78 +222,10 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
                         enterNation.def = 0;
                     }
 
-                    //trockiy
-                    if (kilkBalViyskCom >= 3)
+                    if (skipTurn.Time.Year == 1941)
                     {
-                        int idNewCoun = 0;
-                        start.CountryList.Add(new Country()
-                        {
-                            Name = "ussr",
-                            idelogy = Idelogies.ViyskovuyCummunism,
-                            Popularity = 60,
-                            Flag = listFlagsForIdeol[2]
-                        });
-
-                        for (int i = 0; i < start.CountryList.Count; i++)
-                        {
-                            if (start.CountryList[i].Name == "ussr")
-                            {
-                                idNewCoun = i;
-                            }
-                        }
-
-                        start.CountryList[idNewCoun].regions.Add(start.RegionList[0]);
-                        start.CountryList[idNewCoun].regions.Add(start.RegionList[1]);
-                        start.CountryList[idNewCoun].regions.Add(start.RegionList[2]);
-
-                        start.CountryList[0].regions.Remove(start.RegionList[0]);
-                        start.CountryList[0].regions.Remove(start.RegionList[1]);
-                        start.CountryList[0].regions.Remove(start.RegionList[2]);
-
-                        start.CountryList[idNewCoun].Types = TypeCountry.Player;
-                        start.CountryList[0].Types = TypeCountry.Enemy;
-
-                        enterNation.countryPlayer = start.CountryList[idNewCoun];
-
-                        for (int i = 0; i < start.liderList.Count; i++)
-                        {
-                            for (int j = 0; j < start.CountryList.Count; j++)
-                            {
-                                if (start.liderList[i].country.Name == "sssr")
-                                {
-                                    if (start.liderList[i].idelogies == start.CountryList[j].idelogy)
-                                    {
-                                        enterNation.countryPlayer.currentLider = start.liderList[i];
-                                    }
-                                }
-                            }
-                        }
-
-                        for (int i = 0; i < enterNation.countryPlayer.techs.Count; i++)
-                        {
-                            if (enterNation.countryPlayer.techs[i].polks != null)
-                            {
-                                for (int j = 0; j < enterNation.countryPlayer.techs[i].polks.Count; j++)
-                                {
-                                    enterNation.countryPlayer.openPolks.Add(enterNation.countryPlayer.techs[i].polks[j]);
-                                }
-                            }
-                            if (enterNation.countryPlayer.techs[i].builds != null)
-                            {
-                                for (int j = 0; j < enterNation.countryPlayer.techs[i].builds.Count; j++)
-                                {
-                                    enterNation.countryPlayer.openBuilds.Add(enterNation.countryPlayer.techs[i].builds[j]);
-                                }
-                            }
-                        }
-
-                        start.InitilizerCountry();
-
-                        isRev = true;
+                        start.CountryList[1].Types = TypeCountry.Enemy;
                     }
-
-
-
                 }
 
             }
