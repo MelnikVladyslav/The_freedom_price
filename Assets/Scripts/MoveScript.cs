@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Assets.Scripts
 {
-    public class MoveCamera : MonoBehaviour
+    public class MoveScript : MonoBehaviour
     {
         public Camera mainCamera;
 
@@ -16,7 +16,7 @@ namespace Assets.Scripts
         // Update is called once per frame
         void Update()
         {
-            if(Input.GetKeyDown(KeyCode.W))
+            if (Input.GetKeyDown(KeyCode.W))
             {
                 mainCamera.transform.position = new Vector3(mainCamera.transform.position.x, mainCamera.transform.position.y + 0.5f);
             }

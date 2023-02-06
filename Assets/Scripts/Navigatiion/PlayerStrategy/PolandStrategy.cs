@@ -103,6 +103,7 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
         void Update()
         {
             isPlayer = Perevirka();
+            bool isWar = false;
 
             if (isPlayer == true)
             {
@@ -207,14 +208,8 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
 
                         ResultVub.gameObject.SetActive(true);
                     }
-                }
 
-                //Viyskovuy stan
-                if (skipTurn.Time.Year > currentYear)
-                {
-                    currentYear = skipTurn.Time.Year;
-                    bool isWar = false;
-
+                    //Viyskovuy stan 
                     for (int i = 0; i < start.CountryList.Count; i++)
                     {
                         if (start.CountryList[i].Types == TypeCountry.Enemy)
@@ -235,6 +230,26 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
                     {
                         isViysStan = false;
                     }
+
+                    //Facism
+                    if (enterNation.countryPlayer.idelogy == Idelogies.Fascism || skipTurn.Time.Year == 1941)
+                    {
+                        start.CountryList[0].regions.Add(start.RegionList[182]);
+                        start.CountryList[29].regions.Remove(start.RegionList[182]);
+
+                        if (start.CountryList[0].NameAlliens == "" )
+                        {
+                            start.CountryList[0].NameAlliens = "Axis";
+                            start.CountryList[9].NameAlliens = "Axis";
+                            start.CountryList[0].Types = TypeCountry.Alliens;
+                        }
+                        if (start.CountryList[0].NameAlliens == "Axis")
+                        {
+                            start.CountryList[9].NameAlliens = "Axis";
+                            start.CountryList[0].Types = TypeCountry.Alliens;
+                        }
+                    }
+
                 }
 
             }

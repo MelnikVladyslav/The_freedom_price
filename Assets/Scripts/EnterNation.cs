@@ -10,7 +10,7 @@ namespace Assets.Scripts
         public Vector3 positionCapital;
         public Camera mainCamera;
         public StartScriptsInitilazer startScripts;
-        public GameObject capital;
+        GameObject capital;
         public Country countryPlayer;
         public Text countryParametrs;
         public int plusStab = 0;
