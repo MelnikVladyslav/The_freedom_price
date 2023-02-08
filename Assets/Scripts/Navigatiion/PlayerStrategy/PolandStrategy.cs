@@ -116,10 +116,7 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
                     {
                         kilkYear--;
                     }
-                    if (kilkYear == 1)
-                    {
-                        Golosuvanya.gameObject.SetActive(true);
-                    }
+                    Golosuvanya.gameObject.SetActive(true);
                     if (kilkYear == 0)
                     {
                         kilkYear = 5;
@@ -206,7 +203,10 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
                             }
                         }
 
-                        ResultVub.gameObject.SetActive(true);
+                        if (enterNation.countryPlayer.Popularity < 50)
+                        {
+                            ResultVub.gameObject.SetActive(true);
+                        }
                     }
 
                     //Viyskovuy stan 
@@ -232,7 +232,7 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
                     }
 
                     //Facism
-                    if (enterNation.countryPlayer.idelogy == Idelogies.Fascism || skipTurn.Time.Year == 1941)
+                    if (enterNation.countryPlayer.idelogy == Idelogies.Fascism && skipTurn.Time.Year == 1941)
                     {
                         start.CountryList[0].regions.Add(start.RegionList[182]);
                         start.CountryList[29].regions.Remove(start.RegionList[182]);
@@ -250,6 +250,64 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
                         }
                     }
 
+                    //cummunism
+                    if (enterNation.countryPlayer.idelogy == Idelogies.Communism && skipTurn.Time.Year == 1941)
+                    {
+                        start.CountryList[8].regions.Add(start.RegionList[106]);
+                        start.CountryList[9].regions.Remove(start.RegionList[106]);
+
+                        if (start.CountryList[8].NameAlliens == "")
+                        {
+                            start.CountryList[8].NameAlliens = "comintern";
+                            start.CountryList[9].NameAlliens = "comintern";
+                            start.CountryList[8].Types = TypeCountry.Alliens;
+                        }
+                        if (start.CountryList[8].NameAlliens == "comintern")
+                        {
+                            start.CountryList[9].NameAlliens = "comintern";
+                            start.CountryList[8].Types = TypeCountry.Alliens;
+                        }
+                    }
+
+                    //Democraty
+                    if (enterNation.countryPlayer.idelogy == Idelogies.Democraty && skipTurn.Time.Year == 1941)
+                    {
+                        for (int i = 0; i < start.CountryList.Count; i++)
+                        {
+                            if (start.CountryList[i].idelogy == Idelogies.Democraty)
+                            {
+                                if (start.CountryList[i].NameAlliens == "")
+                                {
+                                    start.CountryList[i].NameAlliens = "Michmorya";
+                                    start.CountryList[9].NameAlliens = "Michmorya";
+                                    start.CountryList[i].Types = TypeCountry.Alliens;
+                                }
+                            }
+                        }
+                    }
+
+                    //Monarchy
+                    if (enterNation.countryPlayer.idelogy == Idelogies.Monarchy)
+                    {
+                        if (skipTurn.Time.Year == 1941)
+                        {
+                            start.CountryList[11].Types = TypeCountry.Enemy;
+                            start.CountryList[12].Types = TypeCountry.Enemy;
+                            start.CountryList[13].Types = TypeCountry.Enemy;
+                        }
+                        if (skipTurn.Time.Year == 1942)
+                        {
+                            start.CountryList[1].Types = TypeCountry.Enemy;
+                        }
+                        if (skipTurn.Time.Year == 1943)
+                        {
+                            start.CountryList[0].Types = TypeCountry.Enemy;
+                        }
+                        if (skipTurn.Time.Year == 1944)
+                        {
+                            start.CountryList[8].Types = TypeCountry.Enemy;
+                        }
+                    }
                 }
 
             }

@@ -50587,7 +50587,6 @@ RectTransform:
   - {fileID: 568961697}
   - {fileID: 1885662133}
   - {fileID: 1657139812}
-  - {fileID: 2098063025}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -53680,7 +53679,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Barcelona
+          m_StringArgument: Barselona
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 239824989}
@@ -108193,19 +108192,19 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2098063021}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 90}
+  m_LocalScale: {x: 0.014293799, y: 0.014293799, z: 0.014293799}
   m_Children:
   - {fileID: 428458558}
   - {fileID: 1333376786}
   - {fileID: 858064000}
   - {fileID: 1838178621}
-  m_Father: {fileID: 998843865}
-  m_RootOrder: 5
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 498.6, y: 327.6}
+  m_AnchoredPosition: {x: -34262.227, y: -22590.832}
   m_SizeDelta: {x: 305.7, y: 379.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2101258737

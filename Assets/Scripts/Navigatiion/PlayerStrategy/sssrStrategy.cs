@@ -183,7 +183,10 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
                             }
                         }
 
-                        ResultVub.gameObject.SetActive(true);
+                        if (enterNation.countryPlayer.Popularity < 50)
+                        {
+                            ResultVub.gameObject.SetActive(true);
+                        }
                     }
 
                     //Viyskovuy stan

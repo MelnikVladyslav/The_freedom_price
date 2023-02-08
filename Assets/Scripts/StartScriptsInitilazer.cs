@@ -3782,7 +3782,8 @@ public class StartScriptsInitilazer : MonoBehaviour
                 idelogy = Idelogies.Democraty,
                 Popularity = 60,
                 Flag = flags[20],
-                color = new Color(214, 90, 98)
+                color = new Color(214, 90, 98),
+                NameAlliens = "Aliance"
             },
             //21
             new Country()
