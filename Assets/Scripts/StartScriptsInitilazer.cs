@@ -10,7 +10,7 @@ public class StartScriptsInitilazer : MonoBehaviour
     public List<Country> CountryList;
     public List<Technology> TechnologyList;
     public List<Polk> PolkList;
-    List<Build> BuildList;
+    public List<Build> BuildList;
     public List<Air> AirList;
     public List<Flot> FlotList;
     public List<Region> RegionList;

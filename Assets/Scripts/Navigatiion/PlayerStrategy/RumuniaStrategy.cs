@@ -17,6 +17,8 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
         public GameObject EnterOP;
         public GameObject ResultVub;
         public GameObject ViyskovuyStan;
+        public GameObject Bessarabiya;
+        public GameObject Transilvanya;
         public Text infoText;
         public RawImage fotoIventResVub;
         public List<Texture> listFlagsForIdeol;
@@ -98,6 +100,38 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
             enterNation.countryPlayer.Stabilnisty += 10;
         }
 
+        //Bessarabiya
+        public void Ok()
+        {
+            start.CountryList[8].Types = TypeCountry.Enemy;
+            start.RegionList[81].builds.Add(start.BuildList[6]);
+            start.RegionList[81].builds.Add(start.BuildList[6]);
+            Bessarabiya.gameObject.SetActive(false);
+        }
+
+        public void No()
+        {
+            start.CountryList[7].regions.Remove(start.RegionList[81]);
+            start.CountryList[8].regions.Add(start.RegionList[81]);
+            Bessarabiya.gameObject.SetActive(false);
+        }
+
+        //Transilvanya
+        public void OkTransilvanya()
+        {
+            start.CountryList[10].Types = TypeCountry.Enemy;
+            start.RegionList[83].builds.Add(start.BuildList[6]);
+            start.RegionList[83].builds.Add(start.BuildList[6]);
+            Transilvanya.gameObject.SetActive(false);
+        }
+
+        public void NoTransilvanya()
+        {
+            start.CountryList[7].regions.Remove(start.RegionList[83]);
+            start.CountryList[10].regions.Add(start.RegionList[83]);
+            Transilvanya.gameObject.SetActive(false);
+        }
+
         // Update is called once per frame
         void Update()
         {
@@ -114,10 +148,7 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
                     {
                         kilkYear--;
                     }
-                    if (kilkYear == 1)
-                    {
-                        Golosuvanya.gameObject.SetActive(true);
-                    }
+                    Golosuvanya.gameObject.SetActive(true);
                     if (kilkYear == 0)
                     {
                         kilkYear = 5;
@@ -206,12 +237,8 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
 
                         ResultVub.gameObject.SetActive(true);
                     }
-                }
 
-                //Viyskovuy stan
-                if (skipTurn.Time.Year > currentYear)
-                {
-                    currentYear = skipTurn.Time.Year;
+                    //Viyskovuy stan
                     bool isWar = false;
 
                     for (int i = 0; i < start.CountryList.Count; i++)
@@ -233,6 +260,57 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
                     else
                     {
                         isViysStan = false;
+                    }
+
+                    //Democraty
+                    //Bessarabia
+                    if (enterNation.countryPlayer.idelogy == Idelogies.Democraty && skipTurn.Time.Year == 1939)
+                    {
+                        Bessarabiya.gameObject.SetActive(true);
+                    }
+
+                    //Transilvanya
+                    if ((enterNation.countryPlayer.idelogy == Idelogies.Democraty || enterNation.countryPlayer.idelogy == Idelogies.Fascism) && skipTurn.Time.Year == 1940)
+                    {
+                        Transilvanya.gameObject.SetActive(true);
+                    }
+
+                    //Facsism
+                    //sssr
+                    if (enterNation.countryPlayer.idelogy == Idelogies.Fascism && skipTurn.Time.Year == 1941)
+                    {
+                        start.CountryList[8].Types = TypeCountry.Enemy;
+                    }
+
+                    //Monarchy
+                    //Hungary
+                    if (enterNation.countryPlayer.idelogy == Idelogies.Monarchy && skipTurn.Time.Year == 1941)
+                    {
+                        start.CountryList[10].Types = TypeCountry.Enemy;
+                    }
+
+                    //Bolgaria
+                    if (enterNation.countryPlayer.idelogy == Idelogies.Monarchy && skipTurn.Time.Year == 1942)
+                    {
+                        start.CountryList[5].Types = TypeCountry.Enemy;
+                    }
+
+                    //Grecia
+                    if (enterNation.countryPlayer.idelogy == Idelogies.Monarchy && skipTurn.Time.Year == 1943)
+                    {
+                        start.CountryList[3].Types = TypeCountry.Enemy;
+                    }
+
+                    //Yugoslavya
+                    if (enterNation.countryPlayer.idelogy == Idelogies.Monarchy && skipTurn.Time.Year == 1944)
+                    {
+                        start.CountryList[6].Types = TypeCountry.Enemy;
+                    }
+
+                    //Turcia
+                    if (enterNation.countryPlayer.idelogy == Idelogies.Monarchy && skipTurn.Time.Year == 1945)
+                    {
+                        start.CountryList[4].Types = TypeCountry.Enemy;
                     }
                 }
 

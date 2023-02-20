@@ -229,6 +229,11 @@ namespace Assets.Scripts.Navigatiion.PlayerStrategy
                     {
                         start.CountryList[1].Types = TypeCountry.Enemy;
                     }
+
+                    if (skipTurn.Time.Year == 1939 && enterNation.countryPlayer.idelogy == Idelogies.Communism)
+                    {
+                        start.CountryList[8].Types = TypeCountry.Enemy;
+                    }
                 }
 
             }
