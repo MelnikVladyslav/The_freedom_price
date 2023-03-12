@@ -11,6 +11,7 @@ namespace Assets.Scripts.Navigatiion.Funcs
         public NavigationDown navigationDown;
         public EnterNation enterNation;
         public SkipTurn skipTurn;
+        public StartScriptsInitilazer start;
         public InputField nameFlot;
         public InputField nameReg;
         public Text listsFlot;
@@ -111,6 +112,17 @@ namespace Assets.Scripts.Navigatiion.Funcs
             for (int i = 0; i < enterNation.countryPlayer.regions[navigationDown.idRegion].flotiliya.Count; i++)
             {
                 listsFlot.text += enterNation.countryPlayer.regions[navigationDown.idRegion].flotiliya[i].Name + "\n";
+            }
+
+            for (int i = 0; i < start.CountryList.Count; i++)
+            {
+                if (start.CountryList[i].Types == TypeCountry.Enemy)
+                {
+                    for (int j = 0; j < start.CountryList[i].regions.Count; j++)
+                    {
+                        listRegs.text += start.CountryList[i].regions[j].Name + "\n";
+                    }
+                }
             }
         }
     }

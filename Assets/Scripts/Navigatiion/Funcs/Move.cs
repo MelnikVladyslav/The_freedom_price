@@ -12,6 +12,7 @@ namespace Assets.Scripts.Navigatiion.Funcs
         public NavigationDown navigationDown;
         public EnterNation enterNation;
         public SkipTurn skipTurn;
+        public StartScriptsInitilazer start;
         public InputField nameDiv;
         public InputField nameReg;
         public Text listsDiv;
@@ -58,9 +59,9 @@ namespace Assets.Scripts.Navigatiion.Funcs
         {
             resultReg.text = "";
 
-            for (int i = 0; i < enterNation.countryPlayer.regions.Count; i++)
+            for (int i = 0; i < start.RegionList.Count; i++)
             {
-                if (enterNation.countryPlayer.regions[i].Name == nameReg.text)
+                if (start.RegionList[i].Name == nameReg.text)
                 {
                     idEndRegion = i;
                     resultReg.text += "Region found";
@@ -71,7 +72,7 @@ namespace Assets.Scripts.Navigatiion.Funcs
         public void Moves()
         {
             resultDiv.text = "";
-            int vidstany = (int)Math.Pow(Math.Pow((enterNation.countryPlayer.regions[idEndRegion].town.transform.position.x - enterNation.countryPlayer.regions[navigationDown.idRegion].town.transform.position.x), 2.0) + Math.Pow((enterNation.countryPlayer.regions[idEndRegion].town.transform.position.y - enterNation.countryPlayer.regions[navigationDown.idRegion].town.transform.position.y), 2.0), 0.5);
+            int vidstany = (int)Math.Pow(Math.Pow((start.RegionList[idEndRegion].town.transform.position.x - start.RegionList[navigationDown.idRegion].town.transform.position.x), 2.0) + Math.Pow((start.RegionList[idEndRegion].town.transform.position.y - start.RegionList[navigationDown.idRegion].town.transform.position.y), 2.0), 0.5);
 
             if (vidstany < 0)
             {
@@ -116,6 +117,17 @@ namespace Assets.Scripts.Navigatiion.Funcs
             for (int i = 0; i < enterNation.countryPlayer.regions[navigationDown.idRegion].divisions.Count; i++)
             {
                 listsDiv.text += enterNation.countryPlayer.regions[navigationDown.idRegion].divisions[i].Name + "\n";
+            }
+
+            for (int i = 0; i < start.CountryList.Count; i++)
+            {
+                if (start.CountryList[i].Types == TypeCountry.Enemy)
+                {
+                    for (int j = 0; j < start.CountryList[i].regions.Count; j++)
+                    {
+                        listRegs.text += start.CountryList[i].regions[j].Name + "\n";
+                    }
+                }
             }
         }
     }

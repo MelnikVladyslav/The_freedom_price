@@ -1,4 +1,5 @@
 ﻿using Assets.Class.Army;
+using Assets.Scripts.GeneratorbattleMap;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -17,6 +18,8 @@ namespace Assets.Scripts.Navigatiion.Funcs
         public CreateArmy createArmy;
         public CreateAir createAir;
         public CreateFlot createFlot;
+        public GameObject EnterTheTypeBattle;
+        public EnterTheTypeBatle enter;
         public Text textTime;
         public DateTime Time;
         int day = 1;
@@ -1006,13 +1009,28 @@ namespace Assets.Scripts.Navigatiion.Funcs
                     if (listMovedDiv[i].kilkTurns != 0)
                     {
                         listMovedDiv[i].kilkTurns -= 1;
-
                         if (listMovedDiv[i].kilkTurns == 0)
                         {
-                            enterNation.countryPlayer.regions[listMovedDiv[i].idEndReg].divisions.Add(listMovedDiv[i].movedDiv);
-                            messagesMechanic.Messages.text += "Moved division for region " + enterNation.countryPlayer.regions[listMovedDiv[i].idStartReg].Name + " to " + enterNation.countryPlayer.regions[listMovedDiv[i].idEndReg].Name + " on " + Time.ToString() + "\n";
-                            listMovedDiv.Remove(listMovedDiv[i]);
+                            for (int a = 0; a < start.CountryList.Count; a++)
+                            {
+                                for (int b = 0; b < start.CountryList[a].regions.Count; b++)
+                                {
+                                    if (enterNation.countryPlayer.regions[b] == start.RegionList[listMovedDiv[i].idEndReg])
+                                    {
+                                        enterNation.countryPlayer.regions[listMovedDiv[i].idEndReg].divisions.Add(listMovedDiv[i].movedDiv);
+                                        messagesMechanic.Messages.text += "Moved division for region " + start.RegionList[listMovedDiv[i].idStartReg].Name + " to " + start.RegionList[listMovedDiv[i].idEndReg].Name + " on " + Time.ToString() + "\n";
+                                        listMovedDiv.Remove(listMovedDiv[i]);
+                                    }
+                                    else
+                                    {
+                                        EnterTheTypeBattle.gameObject.SetActive(true);
+                                        enter.idMovedDiv = i;
+                                    }
+                                }
+                            }
                         }
+                            
+                        
                     }
                 }
             }
