@@ -13,6 +13,10 @@ namespace Assets.Scripts.GeneratorbattleMap.ArmyBattle
         public EnterTheTypeBatle enter;
         public RawImage currentImg;
         public bool isNull = true;
+        public List<RawImage> cells = new List<RawImage>();
+        int colls = 13;
+        int cellId = 0;
+
 
         //Polk
         public Text listPolks;
@@ -61,15 +65,41 @@ namespace Assets.Scripts.GeneratorbattleMap.ArmyBattle
             {
                 currentImg = cellImage;
 
-                listPolks.text = "";
-                for (int i = 0; i < youPolks.Count; i++)
+                if (youPolks.Count > 0)
                 {
-                    listPolks.text += youPolks[i].polk.Name + "\n";
+                    listPolks.text = "";
+                    for (int i = 0; i < youPolks.Count; i++)
+                    {
+                        listPolks.text += youPolks[i].polk.Name + "\n";
+                    }
+
+                    EnterPolks.gameObject.SetActive(true);
+                }
+            }
+            else
+            {
+                for (int i = 0; i < cells.Count; i++)
+                {
+                    if (cells[i].texture == currentImg.texture)
+                    {
+                        cellId = i;
+                    }
                 }
 
-                EnterPolks.gameObject.SetActive(true);
+
+                if (cellId == 12 || cellId == 25 || cellId == 38 || cellId == 51 || cellId == 64 || cellId == 77)
+                {
+                    cells[cellId + 1].GetComponent<RawImage>().color = Color.cyan;
+                    cells[cellId - 13].GetComponent<RawImage>().color = Color.cyan;
+                    cells[cellId + 13].GetComponent<RawImage>().color = Color.cyan;
+                }
+                if (cellId > 0 && cellId < 13)
+                {
+
+                }
             }
         }
+
 
         public void Enter()
         {
