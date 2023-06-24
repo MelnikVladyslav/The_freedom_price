@@ -1,5 +1,4 @@
 ﻿using Assets.Class.Army;
-using Assets.Scripts.GeneratorbattleMap;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -18,8 +17,6 @@ namespace Assets.Scripts.Navigatiion.Funcs
         public CreateArmy createArmy;
         public CreateAir createAir;
         public CreateFlot createFlot;
-        public GameObject EnterTheTypeBattle;
-        public EnterTheTypeBatle enter;
         public Text textTime;
         public DateTime Time;
         int day = 1;
@@ -1020,11 +1017,6 @@ namespace Assets.Scripts.Navigatiion.Funcs
                                         enterNation.countryPlayer.regions[listMovedDiv[i].idEndReg].divisions.Add(listMovedDiv[i].movedDiv);
                                         messagesMechanic.Messages.text += "Moved division for region " + start.RegionList[listMovedDiv[i].idStartReg].Name + " to " + start.RegionList[listMovedDiv[i].idEndReg].Name + " on " + Time.ToString() + "\n";
                                         listMovedDiv.Remove(listMovedDiv[i]);
-                                    }
-                                    else
-                                    {
-                                        EnterTheTypeBattle.gameObject.SetActive(true);
-                                        enter.idMovedDiv = i;
                                     }
                                 }
                             }
